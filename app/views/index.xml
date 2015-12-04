@@ -1,5 +1,23 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">A bello,dddd World</Label>
+	<Window navBarHidden="true">
+		<ScrollView id="loginView" width="Ti.UI.FILL" height="Ti.UI.FILL" layout="vertical" backgroundColor="#D4D4D4">
+			<View class="loginForm" layout="vertical">
+				<View class="user">
+					<TextField id="user" ></TextField>
+					<Button class="closeButton" onClick="emptyTextFieldUser" ></Button>
+				</View>
+				<View class="password">
+					<TextField id="password" passwordMask="true"></TextField>
+					<Button class="closeButton" onClick="emptyTextFieldPassword"></Button>					
+				</View>
+				<View class="showPassword">
+					<View id="checkBox" onClick="changeStatus">
+						<ImageView image="tick.png" id="tick"></ImageView>
+					</View>
+					<Label class="mostraPasswordLbl" text="L('SHOW_PASSWORD')"/>
+				</View>				
+				<Button class="buttonToLogin" onClick="login">Login</Button>
+			</View>
+		</ScrollView>
 	</Window>
 </Alloy>

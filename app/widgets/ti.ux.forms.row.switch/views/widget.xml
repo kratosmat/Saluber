@@ -1,0 +1,15 @@
+<Alloy>
+	<TableViewRow class="tableviewrow-form-row"  id="row" >
+		
+		<Widget src="ti.ux.iconfont" class="fa-row-icon" id="icon" ></Widget>
+		
+		<Label class="label-row-title" id="titleLbl" />
+
+		<Switch class="switch-row-control" id="switchControl" />
+		
+		<View class="view-row-separator" />
+		
+	</TableViewRow>
+</Alloy>
+
+

@@ -1,0 +1,59 @@
+"#pickerView": {
+  top: '5%',
+  width: '85%',
+  height: '90%',
+  backgroundColor: 'black',
+  borderColor: '#636363',
+  borderWidth: 1,
+  borderRadius: 1,
+  zIndex: 99,
+  layout: 'composite'
+}
+
+"#picker": {
+  top: 5,
+  selectionIndicator: true,
+  useSpinner: true,
+  visibleItems: 10,
+  type: Ti.UI.PICKER_TYPE_PLAIN
+}
+
+"#pickerTime": {
+  top: 170,
+  selectionIndicator: true,
+  useSpinner: true,
+  visibleItems: 10,
+  type: Ti.UI.PICKER_TYPE_PLAIN
+}
+
+"#toolbar": {
+  bottom: '2%',
+  height: 25,
+  backgroundColor: 'transparent',
+  width: Ti.UI.FILL,
+  layout: 'composite'
+}
+
+"Button": {
+  backgroundGradient: {
+    type: 'linear',
+    colors: [{color: '#55acee', offset: 0.0}, {color: '#359ade', offset: 1.0}]
+  },
+  borderRadius: 2,
+  borderColor: '#3399dd',
+  color: 'white',
+  font: {
+    fontWeight: 'bold'
+  },
+  height: 40
+}
+
+"#buttonCancel": {
+  width: '42%',
+  left: '5%',
+}
+
+"#buttonDone": {
+  width: '42%',
+  right: '5%',
+}

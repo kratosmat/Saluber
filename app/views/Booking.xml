@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="mainView">
+		<View id="mainTopBar">
+			<View id="menuButton"/>
+		</View>
+		<View layout="vertical" bubbleParent="false">
+			<Label text="Bookings"></Label>
+		</View>
+	</View>
+</Alloy>

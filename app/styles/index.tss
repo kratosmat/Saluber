@@ -1,15 +1,150 @@
 ".container": {
-	backgroundColor:"white"
+backgroundColor:"white"
 }
 
 "Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
+width: Ti.UI.SIZE,
+height: Ti.UI.SIZE,
+color: "#000"
 }
 
 "#label": {
-	font: {
-		fontSize: 12
-	}
+font: {
+fontSize: 12
 }
+}
+
+".loginForm":{
+width : Titanium.UI.FILL,
+top : 20,
+height : Ti.UI.SIZE
+}
+
+".buttonToLogin":{
+width : 250,
+height : 50,
+top : 10,
+borderRadius : 5,
+color : "black",
+borderColor : "black",
+backgroundColor : "#A7A7A7"
+}
+
+".closeButton":{
+backgroundImage : "/images/close_button.png",
+width : "32",
+height : "32",
+right : 5
+}
+
+".user":{
+width : 250,
+height : 50,
+top : 10,
+borderRadius : 5,
+borderWidth : 1,
+backgroundColor : "white",
+borderColor : "black"
+}
+
+"#veichleList":{
+width : 300,
+height: 100,
+top : 0,
+backgroundColor : "white",
+separatorColor : "black",
+borderWidth : "1dp",
+borderRadius : 4,
+borderColor : "black"
+}
+
+".addVehicle":{
+width : 300,
+height : 50,
+top : 120,
+borderRadius : 5,
+borderWidth : 1,
+backgroundColor : "white",
+borderColor : "black"
+}
+
+".buttonToAddVehicle":{
+width : 300,
+height : 50,
+top : 200,
+borderRadius : 5,
+color : "black",
+borderColor : "black",
+backgroundColor : "#A7A7A7"
+}
+
+"#vehicleName":{
+left : 5,
+right : 37,
+height : Titanium.UI.SIZE,
+hintText : "Nuovo Veicolo",
+color : "black"
+}
+
+"#user":{
+left : 5,
+right : 37,
+height : Titanium.UI.SIZE,
+hintText : "Username",
+color : "black"
+}
+
+"#password":{
+left : 5,
+right : 37,
+height : Titanium.UI.SIZE,
+hintText : "Password",
+color : "black"
+}
+
+".password":{
+width : 250,
+height : 50,
+top : 10,
+borderRadius : 5,
+borderWidth : 1,
+backgroundColor : "white",
+borderColor : "black"
+}
+
+"#checkBox":{
+	width:32,
+	height:32,
+	left:5,
+	borderWidth:1,
+	borderRadius:5,
+	borderColor:"black"
+}
+
+".showPassword":{
+width : 250,
+height : 50,
+top : 10,
+//borderRadius : 5,
+//borderWidth : 1,
+//backgroundColor : "white",
+//borderColor : "black"
+}
+
+".mostraPasswordLbl":{
+	 left:42,
+	 right:5,
+	 textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	 font : {
+	 	fontSize : 15,
+	 	fontWeight : "bold"
+	 }
+}
+
+".veichleForm":{
+width : Titanium.UI.FILL,
+height : Titanium.UI.SIZE,
+top : 10
+}
+
+

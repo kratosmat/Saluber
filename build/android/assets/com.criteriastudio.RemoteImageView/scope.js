@@ -1,0 +1,1 @@
+/home/kratos/git/Saluber/Resources/android/com.criteriastudio.RemoteImageView/scope.js

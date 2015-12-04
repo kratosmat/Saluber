@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="SESSION_TIMEOUT_ERROR_MESSAGE">Unexpected Authentication Challenge</string>
+	
+    <string name="AREA_NOT_EXISTS">L area selezionata non esiste</string>
+    <string name="SERVICE_NOT_EXISTS">Servizio non trovato</string>
+    <string name="SERVICE_NOT_AVAILABLE_IN_AREA">Servizio non disponibile in questa area</string>
+    <string name="SERVICE_NOT_AVAILABLE_IN_PERIOD">Servizio non disponibile nel periodo selezionato</string>
+    <string name="AREA_CLOSED_CHECKIN">Data di CHECKIN errata: Area chiusa!</string>
+    <string name="AREA_CLOSED_CHECKOUT">Data di CHECKOUT errata: Area chiusa!</string>
+    <string name="PARKING_STALL_NOT_AVAILABLE_IN_AREA">Tipo di stallo non disponibile nella area selezionata</string>
+    <string name="PARKING_STALL_INSUFFICIENT">Numero di stalli insufficiente</string>
+    <string name="AUNCHANGEABLE_RESERVATION">Prenotazione non modificabile</string>
+    
+    <string name="ERRORI_VALIDAZIONE_TITOLO_VEICOLO1">Errori di validazione Veicolo 1</string>
+    <string name="ERRORI_VALIDAZIONE_TITOLO_VEICOLO2">Errori di validazione Veicolo 2</string>
+    
+    <string name="DATE_FROM_GR_THAN_NOW">La data di inzio deve essere successiva alla data corrente</string>
+    <string name="DATE_TO_GR_THAN_DATE_FROM">La data di fine deve essere successiva alla data di inizio</string>
+    <string name="VEICLE_LENGTH_LO_STALL_LENGTH">La lunghezza del veicolo deve essere minore o uguale della lunghezza dello stallo</string>
+
+	<string name="HEADER_TITLE_ADDRESS">Lista Indirizzi</string>
+    <string name="CHANGE_TRAILER_BOOKING">Prenotazione Scambio Rimorchio</string>
+    
+    <string name="SHOW_PASSWORD">Mostra Password!</string>
+    
+    <string name="BACK">Indietro</string>
+    <string name="NEXT">Avanti</string>    
+    <string name="CONFIRM">Conferma</string>    
+    <string name="CANCEL">Annulla</string>    
+    <string name="EXIT_THE_APP">Sei sicuro di voler uscire dalla applicazione?</string>    
+    <string name="CONFIRM_EXIT">Conferma uscita</string>
+    
+    
+    <!--VALORI NELLE PAGINE DI VISUALIZZAZIONE-->
+    <string name="REST_AREA">Area di Sosta</string>
+    <string name="BOOKING_STATE">Stato Prenotazione</string>
+    <string name="SERVICE">Servizio</string>
+    <string name="CHECK_IN">Check in</string>
+    <string name="CHECK_OUT">Check out</string>
+    <string name="COMPANY_ID">Id Società</string>
+    <string name="PHONE_NUMBER">Num Tel</string>
+    <string name=""></string>
+    <string name=""></string>
+    
+    <!--VALORI DEI FORM-->
+    <string name="FROM">Da</string>
+    <string name="TO">A</string>
+    <string name="EMAIL">Email</string>
+    <string name="PHONE">Telefono</string>
+    <string name="STALL_TYPE">Tipo Stallo</string>
+    <string name="VEHICLE_TYPE">Tipo Veicolo</string>
+    <string name="DANGEROUS_GOODS">Merci Pericolose</string>
+    <string name="DRIVER">Conducente</string>
+    <string name="NUMBER_PLATE">Targa</string>
+    <string name="LENGTH">Lunghezza</string>
+    <string name="NATIONALITY">Nazionalità</string>
+    <string name="TRAILER">Rimorchio</string>    
+    <string name="MOTOR">Motrice</string>
+    <string name="TERMS_AND_CONDITIONS">Condizioni di contratto</string>
+    <string name="CHANGE_DRIVER">Scambio Conducente</string>
+    <string name="EMERGENCY_BOOKING">Prenotazione Sosta in Emergenza</string>
+    
+    <!--VALORI IN LISTAPRENOTAZIONIDIEMERGENZA.XML-->
+    <string name="EMERGENCY_BOOKING_LIST">Lista missioni in emergenza</string>
+    
+    <!--VALORI IN MENU.XML-->
+    <string name="MAP">Mappa</string>
+    <string name="BOOKING_LIST">Lista Prenotazioni</string>
+    <string name="EMERGENCY_MISSION_LIST">Lista Missioni Emergenza</string>
+    <string name="SETTINGS">Impostazioni</string>
+    <string name="AREAS_LIST">Lista Aree</string>
+    
+    <!--VALORI IN OPTIONS.XML-->
+    <string name="SEARCH_OPTIONS">Opzioni Ricerca</string>
+    <string name="OPTIONS">Opzioni</string>
+    <string name="SERVICE_OPTIONS">Scelta Servizi</string>
+    
+   	<!--VALORE IN PLACES.XML-->
+    <string name="SEARCH_BY_NAME">Ricerca per Nome</string>
+    
+    <!--VALORE IN TABELLAPRENOTAZIONI.XML-->
+    <string name="SEARCH">Ricerca</string>
+    
+    <!--STATI PRENOTAZIONE-->
+    <string name="BOZ">Bozza</string>
+    <string name="INS">Inserita</string>
+    <string name="RIF">Rifiutata</string>
+    <string name="APP">Approvata</string>
+    <string name="ACC">Accettata</string>
+    <string name="LAV">Lavorazione</string>
+    <string name="CAN">Cancellata</string>
+    <string name="INO">Inoltrata</string>
+    <string name="CHI">Chiusa</string>
+    <string name="CHN">Chiusa non evasa</string>
+    <string name="CHA">Chiusa in automatico</string>
+    
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="AREA_NOT_EXISTS">L area selezionata non esiste</string>
+    <string name="SERVICE_NOT_EXISTS">Servizio non trovato</string>
+    <string name="SERVICE_NOT_AVAILABLE_IN_AREA">Servizio non disponibile in questa area</string>
+    <string name="SERVICE_NOT_AVAILABLE_IN_PERIOD">Servizio non disponibile nel periodo selezionato</string>
+    <!--string name="AREA_CLOSED_CHECKIN">Data di CHECKIN errata: Area chiusa!</string>
+    <string name="AREA_CLOSED_CHECKOUT">Data di CHECKOUT errata: Area chiusa!</string-->
+    <string name="PARKING_STALL_NOT_AVAILABLE_IN_AREA">Tipo di stallo non disponibile nella area selezionata</string>
+    <string name="PARKING_STALL_INSUFFICIENT">Numero di stalli insufficiente</string>
+    <string name="AUNCHANGEABLE_RESERVATION">Prenotazione non modificabile</string>
+</resources>

@@ -1,0 +1,1294 @@
+
+Fri Dec 04 2015 14:51:59 GMT+0100 (CET)
+
+Operating System
+  Name                        = Ubuntu 14.04.3 LTS
+  Version                     = 14.04
+  Architecture                = 64bit
+  # CPUs                      = 8
+  Memory                      = 12561018880
+
+Node.js
+  Node.js Version             = 0.12.7
+  npm Version                 = 2.11.3
+
+Titanium CLI
+  CLI Version                 = 5.0.5
+
+Titanium SDK
+  SDK Version                 = 4.1.0.GA
+  SDK Path                    = /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA
+  Target Platform             = android
+
+Command
+  /home/kratos/.nvm/versions/v0.12.7/bin/node /home/kratos/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform android --log-level trace --sdk 4.1.0.GA --project-dir /home/kratos/git/Saluber --target device --android-sdk /data/development/android/android-sdk-linux --device-id 192.168.58.101:5555 --skip-js-minify --liveview --deploy-type development --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 52220 --username cusmaimatteo@gmail.com --password eleonora --plugin-paths /home/kratos/.appcelerator/install/5.1.0/package/node_modules --config-file /tmp/build-1449237115628.json --no-banner
+
+[DEBUG]  Detecting modules in /home/kratos/.titanium/modules
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.1 @ /home/kratos/.titanium/modules/android/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.5 @ /home/kratos/.titanium/modules/android/com.appcelerator.apm/1.1.5
+[DEBUG]  Detected android module: com.rkam.swiperefreshlayout 0.4.1 @ /home/kratos/.titanium/modules/android/com.rkam.swiperefreshlayout/0.4.1
+[DEBUG]  Detected android module: com.rkam.swiperefreshlayout 0.6 @ /home/kratos/.titanium/modules/android/com.rkam.swiperefreshlayout/0.6
+[DEBUG]  Detected android module: dk.napp.drawer 1.1.5 @ /home/kratos/.titanium/modules/android/dk.napp.drawer/1.1.5
+[DEBUG]  Detected android module: facebook 3.0.3 @ /home/kratos/.titanium/modules/android/facebook/3.0.3
+[DEBUG]  Detected android module: facebook 4.0.3 @ /home/kratos/.titanium/modules/android/facebook/4.0.3
+[DEBUG]  Detected android module: facebook 4.0.5 @ /home/kratos/.titanium/modules/android/facebook/4.0.5
+[DEBUG]  Detected android module: ti.cloudpush 3.3.7 @ /home/kratos/.titanium/modules/android/ti.cloudpush/3.3.7
+[DEBUG]  Detected android module: ti.cloudpush 3.3.8 @ /home/kratos/.titanium/modules/android/ti.cloudpush/3.3.8
+[DEBUG]  Detected android module: ti.cloudpush 3.4.0 @ /home/kratos/.titanium/modules/android/ti.cloudpush/3.4.0
+[DEBUG]  Detected android module: ti.map 2.2.3 @ /home/kratos/.titanium/modules/android/ti.map/2.2.3
+[DEBUG]  Detected android module: ti.map 2.3.0 @ /home/kratos/.titanium/modules/android/ti.map/2.3.0
+[DEBUG]  Detected android module: ti.map 2.3.1 @ /home/kratos/.titanium/modules/android/ti.map/2.3.1
+[DEBUG]  Detected android module: ti.map 2.3.3 @ /home/kratos/.titanium/modules/android/ti.map/2.3.3
+[DEBUG]  Detected android module: ti.map 2.3.4 @ /home/kratos/.titanium/modules/android/ti.map/2.3.4
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.7 @ /home/kratos/.titanium/modules/commonjs/ti.cloud/3.2.7
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.8 @ /home/kratos/.titanium/modules/commonjs/ti.cloud/3.2.8
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.9 @ /home/kratos/.titanium/modules/commonjs/ti.cloud/3.2.9
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.1 @ /home/kratos/.titanium/modules/iphone/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.5 @ /home/kratos/.titanium/modules/iphone/com.appcelerator.apm/1.1.5
+[DEBUG]  Detected iphone module: dk.napp.drawer 1.2.2 @ /home/kratos/.titanium/modules/iphone/dk.napp.drawer/1.2.2
+[DEBUG]  Detecting plugins in /home/kratos/git/Saluber/plugins
+[DEBUG]  Detected plugin: ti.alloy @ /home/kratos/git/Saluber/plugins/ti.alloy
+[DEBUG]  Detecting plugins in /home/kratos/.titanium/plugins
+[DEBUG]  Detected plugin: com.appcelerator.test @ /home/kratos/.titanium/plugins/com.appcelerator.test
+[DEBUG]  Looking for Titanium plugin id=ti.alloy version=1.0
+[INFO]   Found Titanium plugin id=ti.alloy version=1.0 
+[DEBUG]  Titanium SDK Android directory: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android
+[INFO]   Deploy type: development
+[INFO]   Building for target: device
+[INFO]   Building for device: 192.168.58.101:5555
+[INFO]   Targeting Android SDK: 22
+[INFO]   Building for the following architectures: armeabi, armeabi-v7a, x86
+[INFO]   Signing with keystore: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/dev_keystore (tidev)
+[DEBUG]  App ID: it.storelink.saluber
+[DEBUG]  Classname: Saluber
+[INFO]   Debugging disabled
+[INFO]   Profiler disabled
+[INFO]   Forcing rebuild: JavaScript encryption flag changed
+[INFO]     Was: true
+[INFO]     Now: false
+[INFO]   Found Alloy app in /home/kratos/git/Saluber/app
+[INFO]   Executing Alloy compile: /home/kratos/.nvm/versions/v0.12.7/bin/node /home/kratos/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/alloy/bin/alloy compile /home/kratos/git/Saluber/app --config platform=android,version=0,simtype=none,devicefamily=none,deploytype=development,target=device --no-colors
+[DEBUG]         .__  .__                
+[DEBUG]  _____  |  | |  |   ____ ___.__.
+[DEBUG]  \__  \ |  | |  |  /  _ <   |  |
+[DEBUG]   / __ \|  |_|  |_(  <_> )___  |
+[DEBUG]  (____  /____/____/\____// ____|
+[DEBUG]       \/                 \/
+[DEBUG]  Alloy 1.7.26 by Appcelerator. The MVC app framework for Titanium.
+[DEBUG]  ----- CONFIGURATION -----
+[DEBUG]  raw config = "platform=android,version=0,simtype=none,devicefamily=none,deploytype=development,target=device"
+[DEBUG]  platform = android
+[DEBUG]  version = 0
+[DEBUG]  simtype = none
+[DEBUG]  devicefamily = none
+[DEBUG]  deploytype = development
+[DEBUG]  target = device
+[DEBUG]  project path = /home/kratos/git/Saluber
+[DEBUG]  app path = /home/kratos/git/Saluber/app
+[DEBUG]  
+[DEBUG]  ----- CONFIG.JSON -----
+[DEBUG]  dependencies = {"com.alcoapps.drawermenu":"1.0","com.criteriastudio.RemoteImageView":"1.0","ti.ux.title":"1.0","ti.ux.alignview":"1.0","ti.ux.iconfont":"1.0","ti.ux.iconlabel":"1.0","ti.ux.iconvalue":"1.0","ti.ux.iconbutton":"1.0","ti.ux.image":"1.0","ti.ux.spacer":"1.0","ti.ux.expandabletext":"1.0","ti.ux.scrollableview":"1.0","ti.ux.pagingcontrol":"1.0","ti.ux.rowitem":"1.0","ti.ux.forms.row.switch":"1.0","ti.ux.forms.row.text":"1.0","ti.ux.forms.row.picker":"1.0","nl.fokkezb.pullToRefresh":"2.2.1","nl.fokkezb.infiniteScroll":"1.4.4"}
+[INFO]   [config.json] config.json unchanged, using cached config.json...
+[DEBUG]  {
+[DEBUG]  "dependencies": {
+[DEBUG]  "com.alcoapps.drawermenu": "1.0",
+[DEBUG]  "com.criteriastudio.RemoteImageView": "1.0",
+[DEBUG]  "ti.ux.title": "1.0",
+[DEBUG]  "ti.ux.alignview": "1.0",
+[DEBUG]  "ti.ux.iconfont": "1.0",
+[DEBUG]  "ti.ux.iconlabel": "1.0",
+[DEBUG]  "ti.ux.iconvalue": "1.0",
+[DEBUG]  "ti.ux.iconbutton": "1.0",
+[DEBUG]  "ti.ux.image": "1.0",
+[DEBUG]  "ti.ux.spacer": "1.0",
+[DEBUG]  "ti.ux.expandabletext": "1.0",
+[DEBUG]  "ti.ux.scrollableview": "1.0",
+[DEBUG]  "ti.ux.pagingcontrol": "1.0",
+[DEBUG]  "ti.ux.rowitem": "1.0",
+[DEBUG]  "ti.ux.forms.row.switch": "1.0",
+[DEBUG]  "ti.ux.forms.row.text": "1.0",
+[DEBUG]  "ti.ux.forms.row.picker": "1.0",
+[DEBUG]  "nl.fokkezb.pullToRefresh": "2.2.1",
+[DEBUG]  "nl.fokkezb.infiniteScroll": "1.4.4"
+[DEBUG]  },
+[DEBUG]  "sourcemap": true,
+[DEBUG]  "autoStyle": false,
+[DEBUG]  "adapters": [
+[DEBUG]  "localStorage",
+[DEBUG]  "properties",
+[DEBUG]  "sql"
+[DEBUG]  ]
+[DEBUG]  }
+[DEBUG]  
+[DEBUG]  ----- CLEANING RESOURCES -----
+[DEBUG]  Removing orphaned controllers ...
+[DEBUG]  Removing orphaned models ...
+[DEBUG]  Removing orphaned styles ...
+[DEBUG]  Removing orphaned sync adapters...
+[DEBUG]  Removing orphaned assets and libs...
+[DEBUG]  
+[DEBUG]  ----- BASE RUNTIME FILES -----
+[TRACE]  SRC_DIR=/home/kratos/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/alloy/Alloy/lib
+[TRACE]  Copying SRC_DIR/alloy/sync/sql.js --> Resources/android/alloy/sync/sql.js
+[TRACE]  Copying SRC_DIR/alloy/sync/properties.js --> Resources/android/alloy/sync/properties.js
+[TRACE]  Copying SRC_DIR/alloy/sync/localStorage.js --> Resources/android/alloy/sync/localStorage.js
+[TRACE]  Copying SRC_DIR/alloy/controllers/BaseController.js --> Resources/android/alloy/controllers/BaseController.js
+[TRACE]  Copying SRC_DIR/alloy/widget.js --> Resources/android/alloy/widget.js
+[TRACE]  Copying SRC_DIR/alloy/underscore.js --> Resources/android/alloy/underscore.js
+[TRACE]  Copying SRC_DIR/alloy.js --> Resources/android/alloy.js
+[TRACE]  
+[TRACE]  SRC_DIR=/home/kratos/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/alloy/Alloy/common
+[TRACE]  Copying SRC_DIR/constants.js --> Resources/android/alloy/constants.js
+[TRACE]  
+[TRACE]  SRC_DIR=/home/kratos/git/Saluber/app/assets
+[TRACE]  
+[TRACE]  SRC_DIR=/home/kratos/git/Saluber/app/lib
+[TRACE]  Copying SRC_DIR/validators.js --> Resources/android/validators.js
+[TRACE]  Copying SRC_DIR/geo.js --> Resources/android/geo.js
+[TRACE]  Copying SRC_DIR/WidgetTools.js --> Resources/android/WidgetTools.js
+[TRACE]  
+[DEBUG]  
+[INFO]   ----- MVC GENERATION -----
+[INFO]   [global style] loading from cache...
+[INFO]   [widget.xml] com.alcoapps.drawermenu view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/com.alcoapps.drawermenu/styles/widget.js"
+[INFO]   [widget.xml] com.criteriastudio.RemoteImageView view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  WIDGET_SRC=app/widgets/com.criteriastudio.RemoteImageView/lib
+[TRACE]  Copying scope.js --> Resources/android/com.criteriastudio.RemoteImageView/scope.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/widget.js"
+[INFO]   [zoomWin.xml] com.criteriastudio.RemoteImageView view processing...
+[INFO]   style:      "zoomWin.tss"
+[INFO]   view:       "zoomWin.xml"
+[INFO]   controller: "zoomWin.js"
+[TRACE]  WIDGET_SRC=app/widgets/com.criteriastudio.RemoteImageView/lib
+[TRACE]  Copying scope.js --> Resources/android/com.criteriastudio.RemoteImageView/scope.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/zoomWin.js"
+[INFO]   [widget.xml] ti.ux.title view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.title/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.title/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.title/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.alignview view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.alignview/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.alignview/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.alignview/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.iconfont view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  WIDGET_SRC=app/widgets/ti.ux.iconfont/lib
+[TRACE]  Copying FontAwesome.js --> Resources/android/ti.ux.iconfont/FontAwesome.js...
+[TRACE]  Copying IconicFont.js --> Resources/android/ti.ux.iconfont/IconicFont.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.iconfont/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.iconfont/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.iconfont/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.iconlabel view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.iconlabel/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.iconlabel/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.iconlabel/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.iconvalue view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.iconvalue/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.iconvalue/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.iconvalue/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.iconbutton view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  WIDGET_SRC=app/widgets/ti.ux.iconbutton/lib
+[TRACE]  Copying FontAwesome.js --> Resources/android/ti.ux.iconbutton/FontAwesome.js...
+[TRACE]  Copying IconicFont.js --> Resources/android/ti.ux.iconbutton/IconicFont.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.iconbutton/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.iconbutton/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.iconbutton/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.image view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  WIDGET_SRC=app/widgets/ti.ux.image/assets
+[TRACE]  Copying no_image.jpg --> Resources/android/ti.ux.image/no_image.jpg...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.image/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.image/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.image/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.spacer view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.spacer/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.spacer/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.spacer/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.expandabletext view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.expandabletext/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.expandabletext/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.expandabletext/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.scrollableview view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.scrollableview/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.scrollableview/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.scrollableview/styles/widget.js"
+[INFO]   [dot.xml] ti.ux.pagingcontrol view processing...
+[INFO]   style:      "dot.tss"
+[INFO]   view:       "dot.xml"
+[INFO]   controller: "dot.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.pagingcontrol/styles/dot.js"
+[INFO]   [widget.xml] ti.ux.pagingcontrol view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.pagingcontrol/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.rowitem view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.rowitem/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.rowitem/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.rowitem/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.forms.row.switch view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.forms.row.switch/styles/widget.js"
+[INFO]   [TextAreaWin.xml] ti.ux.forms.row.text view processing...
+[INFO]   view:       "TextAreaWin.xml"
+[INFO]   controller: "TextAreaWin.js"
+[TRACE]  WIDGET_SRC=app/widgets/ti.ux.forms.row.text/lib
+[TRACE]  Copying Scope.js --> Resources/android/ti.ux.forms.row.text/Scope.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.forms.row.text/styles/TextAreaWin.js"
+[INFO]   [widget.xml] ti.ux.forms.row.text view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  WIDGET_SRC=app/widgets/ti.ux.forms.row.text/lib
+[TRACE]  Copying Scope.js --> Resources/android/ti.ux.forms.row.text/Scope.js...
+[TRACE]  
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.forms.row.text/styles/widget.js"
+[INFO]   [widget.xml] ti.ux.forms.row.picker view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/ti.ux.forms.row.picker/styles/widget.js"
+[INFO]   [widget.xml] nl.fokkezb.pullToRefresh view processing...
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/nl.fokkezb.pullToRefresh/styles/widget.js"
+[INFO]   [widget.xml] nl.fokkezb.infiniteScroll view processing...
+[INFO]   style:      "widget.tss"
+[INFO]   view:       "widget.xml"
+[INFO]   controller: "widget.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js.map"
+[INFO]   created:     "Resources/android/alloy/widgets/nl.fokkezb.infiniteScroll/styles/widget.js"
+[INFO]   [Booking.xml] view processing...
+[INFO]   style:      "Booking.tss"
+[INFO]   view:       "Booking.xml"
+[INFO]   controller: "Booking.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/Booking.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/Booking.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/Booking.js"
+[INFO]   [ListBookings.xml] view processing...
+[INFO]   style:      "ListBookings.tss"
+[INFO]   view:       "ListBookings.xml"
+[INFO]   controller: "ListBookings.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/ListBookings.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/ListBookings.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/ListBookings.js"
+[INFO]   [UserProfile.xml] view processing...
+[INFO]   style:      "UserProfile.tss"
+[INFO]   view:       "UserProfile.xml"
+[INFO]   controller: "UserProfile.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/UserProfile.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/UserProfile.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/UserProfile.js"
+[INFO]   [home.xml] view processing...
+[INFO]   style:      "home.tss"
+[INFO]   view:       "home.xml"
+[INFO]   controller: "home.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/home.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/home.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/home.js"
+[INFO]   [index.xml] view processing...
+[INFO]   style:      "index.tss"
+[INFO]   view:       "index.xml"
+[INFO]   controller: "index.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/index.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/index.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/index.js"
+[INFO]   [mainview.xml] view processing...
+[INFO]   view:       "mainview.xml"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/mainview.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/mainview.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/mainview.js"
+[INFO]   [menuview.xml] view processing...
+[INFO]   view:       "menuview.xml"
+[INFO]   controller: "menuview.js"
+[TRACE]  - Processing "builtins" module...
+[TRACE]  - Processing "optimizer" module...
+[TRACE]  - Processing "compress" module...
+[INFO]   created:    "Resources/android/alloy/controllers/menuview.js"
+[DEBUG]  map:        "build/map/Resources/android/alloy/controllers/menuview.js.map"
+[INFO]   created:     "Resources/android/alloy/styles/menuview.js"
+[INFO]   
+[INFO]   
+[INFO]   [app.js] using cached app.js...
+[INFO]   
+[INFO]   ----- OPTIMIZING -----
+[INFO]   - alloy/animation.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/WidgetTools.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/geo.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/validators.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/sync/localStorage.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/sync/properties.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/sync/sql.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.alcoapps.drawermenu/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/zoomWin.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/nl.fokkezb.infiniteScroll/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/nl.fokkezb.pullToRefresh/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.alignview/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.alignview/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.expandabletext/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.expandabletext/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.picker/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.switch/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.text/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.text/styles/TextAreaWin.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.forms.row.text/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconbutton/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconbutton/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconfont/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconfont/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconlabel/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconlabel/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconvalue/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.iconvalue/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.image/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.image/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.pagingcontrol/styles/dot.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.pagingcontrol/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.rowitem/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.rowitem/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.scrollableview/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.scrollableview/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.spacer/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.spacer/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.title/controllers/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/alloy/widgets/ti.ux.title/styles/widget.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/com.criteriastudio.RemoteImageView/scope.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/ti.ux.forms.row.text/Scope.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/ti.ux.iconbutton/FontAwesome.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/ti.ux.iconbutton/IconicFont.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/ti.ux.iconfont/FontAwesome.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[INFO]   - android/ti.ux.iconfont/IconicFont.js
+[TRACE]  processing "builtins" module...
+[TRACE]  processing "optimizer" module...
+[TRACE]  processing "compress" module...
+[TRACE]  
+[TRACE]  Benchmarking
+[TRACE]  ------------
+[TRACE]  [2.74546s] TOTAL
+[INFO]   
+[INFO]   Alloy compiled in 2.74546s
+[INFO]   Alloy compiler completed successfully
+[TRACE]  offline build file /tmp/build-974fb984a5cb9653c4b33d2a5799d560a247ac2a.json
+[TRACE]  online 1
+[TRACE]  optimizing build, last build was 11641.515 sec ago
+[DEBUG]  Ignoring /home/kratos/git/Saluber/Resources/android
+[WARN]   Overwriting file /home/kratos/git/Saluber/build/android/bin/assets/Resources/106-sliders.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/106-sliders.png => /home/kratos/git/Saluber/build/android/bin/assets/Resources/106-sliders.png
+[WARN]   Overwriting file /home/kratos/git/Saluber/build/android/bin/assets/Resources/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/appicon.png => /home/kratos/git/Saluber/build/android/bin/assets/Resources/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/default.png => /home/kratos/git/Saluber/build/android/res/drawable/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-long-land-hdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-long-land-hdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-long-land-ldpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-long-land-ldpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-long-land-mdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-long-land-mdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-long-port-hdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-long-port-hdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-long-port-ldpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-long-port-ldpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-land-hdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-land-hdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-land-ldpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-land-ldpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-land-mdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-land-mdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-port-hdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-port-hdpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-port-ldpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-port-ldpi/background.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/images/res-notlong-port-mdpi/default.png => /home/kratos/git/Saluber/build/android/res/drawable-notlong-port-mdpi/background.png
+[WARN]   Overwriting file /home/kratos/git/Saluber/build/android/bin/assets/Resources/ti.ux.image/no_image.jpg
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.image/no_image.jpg => /home/kratos/git/Saluber/build/android/bin/assets/Resources/ti.ux.image/no_image.jpg
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-hdpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-hdpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-ldpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-ldpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-mdpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-mdpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-xhdpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-xhdpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-xxhdpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-xxhdpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/platform/android/res/drawable-xxxhdpi/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable-xxxhdpi/appicon.png
+[DEBUG]  Symlinking /home/kratos/git/Saluber/build/android/bin/assets/Resources/appicon.png => /home/kratos/git/Saluber/build/android/res/drawable/appicon.png
+[INFO]   Processing JavaScript files
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/CFG.js => /home/kratos/git/Saluber/build/android/assets/alloy/CFG.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/alloy/animation.js => /home/kratos/git/Saluber/build/android/assets/alloy/animation.js
+[DEBUG]  Symlinking /tmp/liveview.js => /home/kratos/git/Saluber/build/android/assets/app.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/WidgetTools.js => /home/kratos/git/Saluber/build/android/assets/WidgetTools.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/backbone.js => /home/kratos/git/Saluber/build/android/assets/alloy/backbone.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/constants.js => /home/kratos/git/Saluber/build/android/assets/alloy/constants.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/BaseController.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/BaseController.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/Booking.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/Booking.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/ListBookings.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/ListBookings.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/UserProfile.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/UserProfile.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/home.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/home.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/index.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/index.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/mainview.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/mainview.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/controllers/menuview.js => /home/kratos/git/Saluber/build/android/assets/alloy/controllers/menuview.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/Booking.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/Booking.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/ListBookings.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/ListBookings.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/UserProfile.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/UserProfile.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/home.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/home.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/index.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/index.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/mainview.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/mainview.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/styles/menuview.js => /home/kratos/git/Saluber/build/android/assets/alloy/styles/menuview.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/sync/localStorage.js => /home/kratos/git/Saluber/build/android/assets/alloy/sync/localStorage.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/sync/properties.js => /home/kratos/git/Saluber/build/android/assets/alloy/sync/properties.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/sync/sql.js => /home/kratos/git/Saluber/build/android/assets/alloy/sync/sql.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/underscore.js => /home/kratos/git/Saluber/build/android/assets/alloy/underscore.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.alcoapps.drawermenu/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.alcoapps.drawermenu/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.criteriastudio.RemoteImageView/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/com.criteriastudio.RemoteImageView/styles/zoomWin.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/com.criteriastudio.RemoteImageView/styles/zoomWin.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/nl.fokkezb.infiniteScroll/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/nl.fokkezb.infiniteScroll/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/nl.fokkezb.pullToRefresh/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/nl.fokkezb.pullToRefresh/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.alignview/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.alignview/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.alignview/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.alignview/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.expandabletext/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.expandabletext/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.expandabletext/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.expandabletext/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.picker/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.picker/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.switch/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.switch/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.text/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.text/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.text/styles/TextAreaWin.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.text/styles/TextAreaWin.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.text/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.forms.row.text/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconbutton/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconbutton/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconbutton/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconbutton/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconfont/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconfont/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconfont/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconfont/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconlabel/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconlabel/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconlabel/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconlabel/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconvalue/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconvalue/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconvalue/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.iconvalue/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.image/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.image/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.image/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.image/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.pagingcontrol/styles/dot.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.pagingcontrol/styles/dot.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.pagingcontrol/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.pagingcontrol/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.rowitem/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.rowitem/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.rowitem/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.rowitem/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.scrollableview/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.scrollableview/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.scrollableview/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.scrollableview/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.spacer/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.spacer/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.spacer/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.spacer/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.title/controllers/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.title/controllers/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.title/styles/widget.js => /home/kratos/git/Saluber/build/android/assets/alloy/widgets/ti.ux.title/styles/widget.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/alloy.js => /home/kratos/git/Saluber/build/android/assets/alloy.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/com.criteriastudio.RemoteImageView/scope.js => /home/kratos/git/Saluber/build/android/assets/com.criteriastudio.RemoteImageView/scope.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/geo.js => /home/kratos/git/Saluber/build/android/assets/geo.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.forms.row.text/Scope.js => /home/kratos/git/Saluber/build/android/assets/ti.ux.forms.row.text/Scope.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.iconbutton/FontAwesome.js => /home/kratos/git/Saluber/build/android/assets/ti.ux.iconbutton/FontAwesome.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.iconbutton/IconicFont.js => /home/kratos/git/Saluber/build/android/assets/ti.ux.iconbutton/IconicFont.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.iconfont/FontAwesome.js => /home/kratos/git/Saluber/build/android/assets/ti.ux.iconfont/FontAwesome.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/ti.ux.iconfont/IconicFont.js => /home/kratos/git/Saluber/build/android/assets/ti.ux.iconfont/IconicFont.js
+[DEBUG]  Symlinking /home/kratos/git/Saluber/Resources/android/validators.js => /home/kratos/git/Saluber/build/android/assets/validators.js
+[INFO]   Encrypting JavaScript files: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/titanium_prep.linux64 "it.storelink.saluber" "/home/kratos/git/Saluber/build/android/assets" "alloy/CFG.js" "alloy/animation.js" "app.js" "WidgetTools.js" "alloy/backbone.js" "alloy/constants.js" "alloy/controllers/BaseController.js" "alloy/controllers/Booking.js" "alloy/controllers/ListBookings.js" "alloy/controllers/UserProfile.js" "alloy/controllers/home.js" "alloy/controllers/index.js" "alloy/controllers/mainview.js" "alloy/controllers/menuview.js" "alloy/styles/Booking.js" "alloy/styles/ListBookings.js" "alloy/styles/UserProfile.js" "alloy/styles/home.js" "alloy/styles/index.js" "alloy/styles/mainview.js" "alloy/styles/menuview.js" "alloy/sync/localStorage.js" "alloy/sync/properties.js" "alloy/sync/sql.js" "alloy/underscore.js" "alloy/widget.js" "alloy/widgets/com.alcoapps.drawermenu/controllers/widget.js" "alloy/widgets/com.alcoapps.drawermenu/styles/widget.js" "alloy/widgets/com.criteriastudio.RemoteImageView/controllers/widget.js" "alloy/widgets/com.criteriastudio.RemoteImageView/controllers/zoomWin.js" "alloy/widgets/com.criteriastudio.RemoteImageView/styles/widget.js" "alloy/widgets/com.criteriastudio.RemoteImageView/styles/zoomWin.js" "alloy/widgets/nl.fokkezb.infiniteScroll/controllers/widget.js" "alloy/widgets/nl.fokkezb.infiniteScroll/styles/widget.js" "alloy/widgets/nl.fokkezb.pullToRefresh/controllers/widget.js" "alloy/widgets/nl.fokkezb.pullToRefresh/styles/widget.js" "alloy/widgets/ti.ux.alignview/controllers/widget.js" "alloy/widgets/ti.ux.alignview/styles/widget.js" "alloy/widgets/ti.ux.expandabletext/controllers/widget.js" "alloy/widgets/ti.ux.expandabletext/styles/widget.js" "alloy/widgets/ti.ux.forms.row.picker/controllers/widget.js" "alloy/widgets/ti.ux.forms.row.picker/styles/widget.js" "alloy/widgets/ti.ux.forms.row.switch/controllers/widget.js" "alloy/widgets/ti.ux.forms.row.switch/styles/widget.js" "alloy/widgets/ti.ux.forms.row.text/controllers/TextAreaWin.js" "alloy/widgets/ti.ux.forms.row.text/controllers/widget.js" "alloy/widgets/ti.ux.forms.row.text/styles/TextAreaWin.js" "alloy/widgets/ti.ux.forms.row.text/styles/widget.js" "alloy/widgets/ti.ux.iconbutton/controllers/widget.js" "alloy/widgets/ti.ux.iconbutton/styles/widget.js" "alloy/widgets/ti.ux.iconfont/controllers/widget.js" "alloy/widgets/ti.ux.iconfont/styles/widget.js" "alloy/widgets/ti.ux.iconlabel/controllers/widget.js" "alloy/widgets/ti.ux.iconlabel/styles/widget.js" "alloy/widgets/ti.ux.iconvalue/controllers/widget.js" "alloy/widgets/ti.ux.iconvalue/styles/widget.js" "alloy/widgets/ti.ux.image/controllers/widget.js" "alloy/widgets/ti.ux.image/styles/widget.js" "alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js" "alloy/widgets/ti.ux.pagingcontrol/controllers/widget.js" "alloy/widgets/ti.ux.pagingcontrol/styles/dot.js" "alloy/widgets/ti.ux.pagingcontrol/styles/widget.js" "alloy/widgets/ti.ux.rowitem/controllers/widget.js" "alloy/widgets/ti.ux.rowitem/styles/widget.js" "alloy/widgets/ti.ux.scrollableview/controllers/widget.js" "alloy/widgets/ti.ux.scrollableview/styles/widget.js" "alloy/widgets/ti.ux.spacer/controllers/widget.js" "alloy/widgets/ti.ux.spacer/styles/widget.js" "alloy/widgets/ti.ux.title/controllers/widget.js" "alloy/widgets/ti.ux.title/styles/widget.js" "alloy.js" "com.criteriastudio.RemoteImageView/scope.js" "geo.js" "ti.ux.forms.row.text/Scope.js" "ti.ux.iconbutton/FontAwesome.js" "ti.ux.iconbutton/IconicFont.js" "ti.ux.iconfont/FontAwesome.js" "ti.ux.iconfont/IconicFont.js" "validators.js" "_app_props_.json"
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-v8.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/aps-analytics.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-common.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/titanium.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v4.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Adding dependency library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/thirdparty.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-utils.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-geolocation.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-accelerometer.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-contacts.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-map.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-calendar.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-gesture.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-platform.jar
+[DEBUG]  Adding library /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-database.jar
+[DEBUG]  Unknown namespace api, skipping
+[DEBUG]  Unknown namespace stream, skipping
+[DEBUG]  Unknown namespace platform.displaycaps, skipping
+[INFO]   Writing /home/kratos/git/Saluber/build/android/bin/assets/app.json
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-analytics.res.zip
+[DEBUG]  Copying /home/kratos/tmp/115114-23261-18o8uy8/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-android.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-l6lb4q/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-app.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-104vl4y/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-filesystem.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-500n0a/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-media.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-pb1s0l/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-locale.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-jq9we6/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-network.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-11n355i/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-xml.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-oxlwik/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-utils.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-f18fae/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-geolocation.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-1b4r7at/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-accelerometer.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-1eqe4me/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-contacts.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-qezf2j/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-map.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-1dav4y2/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-calendar.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-1whqu4u/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-gesture.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-dcvue8/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-platform.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-z3ao85/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-database.res.zip
+[DEBUG]  Merging /home/kratos/tmp/115114-23261-i07czr/res/values/strings.xml => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/.classpath
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/.gitignore
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/.project
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/AndroidManifest.xml
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/default.properties
+[DEBUG]  Removing old file: /home/kratos/git/Saluber/build/android/java-sources.txt
+[DEBUG]  Copying template /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/AppInfo.java => /home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberAppInfo.java
+[DEBUG]  Copying template /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/App.java => /home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberApplication.java
+[DEBUG]  Copying template /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/Activity.java => /home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberActivity.java
+[DEBUG]  Copying template /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/project => /home/kratos/git/Saluber/build/android/.project
+[DEBUG]  Copying template /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/default.properties => /home/kratos/git/Saluber/build/android/default.properties
+[DEBUG]  Copying /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/gitignore => /home/kratos/git/Saluber/build/android/.gitignore
+[DEBUG]  Copying /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/templates/build/classpath => /home/kratos/git/Saluber/build/android/.classpath
+[INFO]   No aidl files to compile, continuing
+[INFO]   Generating i18n files
+[DEBUG]  Merging en strings => /home/kratos/git/Saluber/build/android/res/values/strings.xml
+[INFO]   Generating /home/kratos/git/Saluber/build/android/res/values/theme.xml
+[INFO]   Packaging application: /data/development/android/android-sdk-linux/build-tools/23.0.2/aapt "package" "-f" "-m" "-J" "/home/kratos/git/Saluber/build/android/gen" "-M" "/home/kratos/git/Saluber/build/android/AndroidManifest.xml" "-A" "/home/kratos/git/Saluber/build/android/bin/assets" "-S" "/home/kratos/git/Saluber/build/android/res" "-I" "/data/development/android/android-sdk-linux/platforms/android-22/android.jar" "-F" "/home/kratos/git/Saluber/build/android/bin/app.ap_" "--auto-add-overlay" "--extra-packages" "ti.modules.titanium.ui:android.support.v7.appcompat" "-S" "/home/kratos/tmp/115114-23261-1w5sd7u/res" "-S" "/home/kratos/tmp/115114-23261-x4c0e6/res"
+[INFO]   Building Java source files: /data/development/jdk1.7.0_45/bin/javac "-J-Xmx256M" "-encoding" "utf8" "-bootclasspath" "/data/development/android/android-sdk-linux/platforms/android-22/android.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-v8.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-analytics.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/aps-analytics.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-android.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/jaxen-1.1.1.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/ti-commons-codec-1.3.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-common.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/titanium.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-app.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-ui.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/nineoldandroids-appc-2.4.0.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-filesystem.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-media.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-appcompat.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v4.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v7-appcompat.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-locale.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-network.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/thirdparty.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-xml.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-utils.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-geolocation.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-accelerometer.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-contacts.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-map.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-calendar.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-gesture.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-platform.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-database.jar:/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/lib/titanium-verify.jar:R.class:ApplicationStylesheet.class:AssetCryptImpl.class:SaluberActivity.class:SaluberAppInfo.class:SaluberApplication.class" "-d" "/home/kratos/git/Saluber/build/android/bin/classes" "-proc:none" "-target" "1.6" "-source" "1.6" "@/home/kratos/git/Saluber/build/android/java-sources.txt"
+[INFO]   Running dexer: /data/development/jdk1.7.0_45/bin/java "-Xmx1024M" "-XX:-UseGCOverheadLimit" "-Djava.ext.dirs=/data/development/android/android-sdk-linux/platform-tools" "-jar" "/data/development/android/android-sdk-linux/build-tools/23.0.2/lib/dx.jar" "--dex" "--output=/home/kratos/git/Saluber/build/android/bin/classes.dex" "/home/kratos/git/Saluber/build/android/bin/classes" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/lib/titanium-verify.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-v8.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-analytics.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/aps-analytics.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-android.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/jaxen-1.1.1.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/ti-commons-codec-1.3.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-common.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/titanium.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-app.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-ui.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/nineoldandroids-appc-2.4.0.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-filesystem.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-media.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-appcompat.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v4.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v7-appcompat.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-locale.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-network.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/thirdparty.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-xml.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-utils.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-geolocation.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-accelerometer.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-contacts.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-map.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-calendar.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-gesture.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-platform.jar" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-database.jar"
+[INFO]   Creating unsigned apk
+[DEBUG]  Processing /home/kratos/git/Saluber/build/android/bin/app.ap_
+[DEBUG]  Deflating AndroidManifest.xml
+[DEBUG]  Adding assets/Resources/106-sliders.png
+[DEBUG]  Adding assets/Resources/appicon.png
+[DEBUG]  Adding assets/Resources/ti.ux.image/no_image.jpg
+[DEBUG]  Deflating assets/app.json
+[DEBUG]  Deflating assets/index.json
+[DEBUG]  Deflating res/anim/abc_fade_in.xml
+[DEBUG]  Deflating res/anim/abc_fade_out.xml
+[DEBUG]  Deflating res/anim/abc_grow_fade_in_from_bottom.xml
+[DEBUG]  Deflating res/anim/abc_popup_enter.xml
+[DEBUG]  Deflating res/anim/abc_popup_exit.xml
+[DEBUG]  Deflating res/anim/abc_shrink_fade_out_from_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_top.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_top.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_light.xml
+[DEBUG]  Deflating res/color/abc_search_url_text.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_light.xml
+[DEBUG]  Deflating res/color/switch_thumb_material_dark.xml
+[DEBUG]  Deflating res/color/switch_thumb_material_light.xml
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_text_cursor_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/appicon.png
+[DEBUG]  Adding res/drawable-ldpi-v4/appicon.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-long-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-land-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-land-mdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_text_cursor_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/appicon.png
+[DEBUG]  Adding res/drawable-notlong-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-land-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-land-mdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-mdpi-v4/background.png
+[DEBUG]  Adding res/drawable-tvdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-tvdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_text_cursor_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/appicon.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_text_cursor_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/appicon.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/appicon.png
+[DEBUG]  Deflating res/drawable/abc_btn_borderless_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_check_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_default_mtrl_shape.xml
+[DEBUG]  Deflating res/drawable/abc_btn_radio_material.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_internal_bg.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_top_material.xml
+[DEBUG]  Deflating res/drawable/abc_dialog_material_background_dark.xml
+[DEBUG]  Deflating res/drawable/abc_dialog_material_background_light.xml
+[DEBUG]  Deflating res/drawable/abc_edit_text_material.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_ratingbar_full_material.xml
+[DEBUG]  Deflating res/drawable/abc_spinner_textfield_background_material.xml
+[DEBUG]  Deflating res/drawable/abc_switch_thumb_material.xml
+[DEBUG]  Deflating res/drawable/abc_tab_indicator_material.xml
+[DEBUG]  Deflating res/drawable/abc_textfield_search_material.xml
+[DEBUG]  Adding res/drawable/appicon.png
+[DEBUG]  Adding res/drawable/background.png
+[DEBUG]  Adding res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding res/drawable/btn_more_64.png
+[DEBUG]  Adding res/drawable/disclosure_64.png
+[DEBUG]  Deflating res/layout-v11/abc_screen_content_include.xml
+[DEBUG]  Deflating res/layout-v17/abc_alert_dialog_material.xml
+[DEBUG]  Deflating res/layout-v17/abc_dialog_title_material.xml
+[DEBUG]  Deflating res/layout-v17/abc_search_view.xml
+[DEBUG]  Deflating res/layout-v21/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_title_item.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_up_container.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_view_list_nav_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_bar.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_close_item_material.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view_list_item.xml
+[DEBUG]  Deflating res/layout/abc_alert_dialog_material.xml
+[DEBUG]  Deflating res/layout/abc_dialog_title_material.xml
+[DEBUG]  Deflating res/layout/abc_expanded_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_checkbox.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_icon.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_radio.xml
+[DEBUG]  Deflating res/layout/abc_popup_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_screen_content_include.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple_overlay_action_mode.xml
+[DEBUG]  Deflating res/layout/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout/abc_search_dropdown_item_icons_2line.xml
+[DEBUG]  Deflating res/layout/abc_search_view.xml
+[DEBUG]  Deflating res/layout/abc_select_dialog_material.xml
+[DEBUG]  Deflating res/layout/abc_simple_dropdown_hint.xml
+[DEBUG]  Deflating res/layout/select_dialog_item_material.xml
+[DEBUG]  Deflating res/layout/select_dialog_multichoice_material.xml
+[DEBUG]  Deflating res/layout/select_dialog_singlechoice_material.xml
+[DEBUG]  Deflating res/layout/support_simple_spinner_dropdown_item.xml
+[DEBUG]  Deflating res/layout/titanium_tabgroup.xml
+[DEBUG]  Deflating res/layout/titanium_ui_checkbox.xml
+[DEBUG]  Deflating res/layout/titanium_ui_edittext.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_item.xml
+[DEBUG]  Deflating res/layout/titanium_ui_spinner.xml
+[DEBUG]  Deflating res/layout/titanium_ui_switchcompat.xml
+[DEBUG]  Deflating resources.arsc
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-v8.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/aps-analytics.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/kroll-common.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/titanium.jar
+[DEBUG]  Deflating org/appcelerator/titanium/build.properties
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/background.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v4.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/thirdparty.jar
+[DEBUG]  Deflating org/apache/Commons-NOTICE.txt
+[DEBUG]  Deflating org/apache/HttpComponents-NOTICE.txt
+[DEBUG]  Deflating org/apache/mime4j-NOTICE.txt
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-utils.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-geolocation.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-accelerometer.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-contacts.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-map.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-calendar.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-gesture.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-platform.jar
+[DEBUG]  Processing /home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/modules/titanium-database.jar
+[DEBUG]  Adding classes.dex
+[INFO]   Processing /home/kratos/git/Saluber/build/android/src
+[DEBUG]  Adding lib/armeabi/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi/libtiverify.so
+[DEBUG]  Adding lib/armeabi-v7a/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi-v7a/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi-v7a/libtiverify.so
+[DEBUG]  Adding lib/x86/libkroll-v8.so
+[DEBUG]  Adding lib/x86/libstlport_shared.so
+[DEBUG]  Adding lib/x86/libtiverify.so
+[INFO]   Writing unsigned apk: /home/kratos/git/Saluber/build/android/bin/app-unsigned.apk
+[INFO]   Using MD5withRSA signature algorithm
+[INFO]   Signing apk: /data/development/jdk1.7.0_45/bin/jarsigner "-sigalg" "MD5withRSA" "-digestalg" "SHA1" "-keystore" "/home/kratos/.titanium/mobilesdk/linux/4.1.0.GA/android/dev_keystore" "-storepass" "*******" "-signedjar" "/home/kratos/git/Saluber/build/android/bin/Saluber.apk" "/home/kratos/git/Saluber/build/android/bin/app-unsigned.apk" "tidev"
+[INFO]   Aligning zip file: /data/development/android/android-sdk-linux/build-tools/23.0.2/zipalign "-v" "4" "/home/kratos/git/Saluber/build/android/bin/Saluber.apk" "/home/kratos/git/Saluber/build/android/bin/Saluber.apkz"
+[INFO]   Writing build manifest: /home/kratos/git/Saluber/build/android/build-manifest.json
+[INFO]   Making sure the adb server is running
+[INFO]   Installing apk: /home/kratos/git/Saluber/build/android/bin/Saluber.apk
+[INFO]   Installing app on device: Genymobile
+[TRACE]  Checking if package manager service is started
+[TRACE]  Package manager has started
+[TRACE]  Executing: /data/development/android/android-sdk-linux/platform-tools/adb -s 192.168.58.101:5555 install -r /home/kratos/git/Saluber/build/android/bin/Saluber.apk
+[INFO]   App successfully installed
+[INFO]   Starting app: it.storelink.saluber/.SaluberActivity
+[DEBUG]  Trying to start the app...
+[INFO]   Application pid: 9036
+[INFO]   Project built successfully in 41s 378ms

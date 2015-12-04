@@ -1,0 +1,13 @@
+{
+	"id": "it.fusedcloud.pickerWidget",
+	"name": "Cross-Platform Picker Widget",
+	"description": "Picker widget that attempts to normalize cross-platform differences and general idiosyncrasies with the Titanium SDK.",
+	"author": "Vitrociset",
+	"version": "1.0",
+	"copyright": "Copyright (c) 2015",
+	"license": "MIT",
+	"min-alloy-version": "1.0",
+	"min-titanium-version": "2.1",
+	"tags": "picker, date, date_time, column, age, range",
+	"platforms": "ios,android"
+}

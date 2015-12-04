@@ -1,0 +1,8 @@
+"/home/kratos/git/Saluber/build/android/gen/android/support/v7/appcompat/R.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/ApplicationStylesheet.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/AssetCryptImpl.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/R.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberActivity.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberAppInfo.java"
+"/home/kratos/git/Saluber/build/android/gen/it/storelink/saluber/SaluberApplication.java"
+"/home/kratos/git/Saluber/build/android/gen/ti/modules/titanium/ui/R.java"

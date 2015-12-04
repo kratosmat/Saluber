@@ -1,0 +1,16 @@
+{
+	"id": "ti.ux.forms.row.picker",
+	"name": "ti.ux.forms.row.optionspicker",
+	"description" : "An extended TableViewRow to be used in settings forms. It opens an options dialog.",
+	"author": "Javier Rayon",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2014",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.1",
+	"tags":"",
+	"platforms":"android,ios",
+	"dependency": {
+		"it.fusedcloud.pickerWidget": "1.0"
+	}
+}

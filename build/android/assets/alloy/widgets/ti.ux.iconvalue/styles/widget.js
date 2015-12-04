@@ -1,0 +1,1 @@
+/home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.iconvalue/styles/widget.js

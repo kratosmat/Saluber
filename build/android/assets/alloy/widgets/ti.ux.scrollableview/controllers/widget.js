@@ -1,0 +1,1 @@
+/home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.scrollableview/controllers/widget.js

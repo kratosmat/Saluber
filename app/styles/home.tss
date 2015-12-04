@@ -1,0 +1,30 @@
+".container": {
+	backgroundColor:"white"
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}
+
+"#mainView":{
+	layout: 'vertical',
+	backgroundColor: '#cacaca'
+},
+"#mainTopBar":{
+	width: Ti.UI.FILL,
+	height: "60dp",
+	backgroundColor: '#5B96B2',
+	layout: 'horizontal'
+},
+"#menuButton":{
+	width: "60dp",
+	height: "60dp"
+}

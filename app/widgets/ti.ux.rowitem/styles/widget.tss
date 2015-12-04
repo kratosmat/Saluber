@@ -1,0 +1,10 @@
+
+ "#childrenImage":{
+	height:28, width:15,
+ },
+"#line":{
+  bottom:0,
+  height:'2dp',
+  backgroundColor:'#6000'
+}
+

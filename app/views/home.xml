@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container" platform="android" navBarHidden="true">
+		<Require type="widget" src="com.alcoapps.drawermenu" id="drawermenu"/>
+	</Window>
+	<NavigationWindow platform="ios">
+        <Window backgroundColor="white" navBarHidden="true">
+        	<Require type="widget" src="com.alcoapps.drawermenu" id="drawermenu"/>
+		</Window>
+	</NavigationWindow>
+</Alloy>
