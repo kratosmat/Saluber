@@ -4,7 +4,7 @@
     <name>Saluber</name>
     <version>1.0</version>
     <publisher>kratos</publisher>
-    <url/>
+    <url>http://</url>
     <description/>
     <copyright>2015 by kratos</copyright>
     <icon>appicon.png</icon>
@@ -49,7 +49,7 @@
     </mobileweb>
     <modules/>
     <deployment-targets>
-        <target device="iphone">false</target>
+        <target device="iphone">true</target>
         <target device="ipad">false</target>
         <target device="android">true</target>
         <target device="mobileweb">false</target>

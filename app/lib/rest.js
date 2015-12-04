@@ -3,6 +3,12 @@
 var url = "http://192.168.58.1:8080/saluber-services/";
 
 var loadedBookings = [];
+var loadedDoctors = [];
+var loadedPatients = [];
+var loadedHospitals = [];
+var loadedMedicalTests = [];
+var loadedSpecializations = [];
+
 
 var getInfo = function(specificType, callback, idParameter, idValue, index) {
 	//serve solo per le prove in locale
@@ -73,17 +79,79 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 
 
 var getListBookings = function(callback) {
-	Ti.API.debug("crud: getListBookings LOADING.......");
+	Ti.API.info("crud: getListBookings LOADING.......");
 	if(loadedBookings!=null && loadedBookings.length>0) callback(loadedBookings);
 	
 	getInfo("booking/list", function(listBookings) {
 		loadedBookings = listBookings;
-		/*
-		_.each(listBookings, function(booking) {
-			loadedBookings.push(booking);
-		});
-		*/
 		callback(loadedBookings);
 	});	
 };
 exports.getListBookings = getListBookings;
+
+
+var getListDoctors = function(callback) {
+	Ti.API.info("crud: getListDoctors LOADING.......");
+	if(loadedDoctors!=null && loadedDoctors.length>0) callback(loadedDoctors);
+	
+	getInfo("doctor/list", function(results) {
+		loadedDoctors = results;
+		callback(loadedDoctors);
+	});	
+};
+exports.getListDoctors = getListDoctors;
+
+var getListPatients = function(callback) {
+	Ti.API.info("crud: getListPatients LOADING.......");
+	if(loadedPatients!=null && loadedPatients.length>0) callback(loadedPatients);
+	
+	getInfo("patient/list", function(results) {
+		loadedPatients = results;
+		callback(loadedPatients);
+	});	
+};
+exports.getListPatients = getListPatients;
+
+var getListHospitals = function(callback) {
+	Ti.API.info("crud: getListHospitals LOADING.......");
+	if(loadedHospitals!=null && loadedHospitals.length>0) callback(loadedHospitals);
+	
+	getInfo("hospital/list", function(results) {
+		loadedHospitals = results;
+		callback(loadedHospitals);
+	});	
+};
+exports.getListHospitals = getListHospitals;
+
+var getListHospitals = function(callback) {
+	Ti.API.info("crud: getListHospitals LOADING.......");
+	if(loadedHospitals!=null && loadedHospitals.length>0) callback(loadedHospitals);
+	
+	getInfo("hospital/list", function(results) {
+		loadedHospitals = results;
+		callback(loadedHospitals);
+	});	
+};
+exports.getListHospitals = getListHospitals;
+
+var getListSpecializations = function(callback) {
+	Ti.API.info("crud: getListSpecializations LOADING.......");
+	if(loadedSpecializations!=null && loadedSpecializations.length>0) callback(loadedSpecializations);
+	
+	getInfo("specialization/list", function(results) {
+		loadedSpecializations = results;
+		callback(loadedSpecializations);
+	});	
+};
+exports.getListSpecializations = getListSpecializations;
+
+var getListMedicalTests = function(callback) {
+	Ti.API.info("crud: getListMedicalTests LOADING.......");
+	if(loadedMedicalTests!=null && loadedMedicalTests.length>0) callback(loadedMedicalTests);
+	
+	getInfo("specialization/list", function(results) {
+		loadedMedicalTests = results;
+		callback(loadedMedicalTests);
+	});	
+};
+exports.getListSpecializations = getListSpecializations;
