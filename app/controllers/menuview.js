@@ -6,16 +6,8 @@ var menus = [];
 
 menus.push(createMenuRow('row1', 'rowSkull', 'ListBookings'));
 menus.push(createMenuRow('row2', 'rowGear', 'Booking'));
-
-/*
-if(Ti.App.Properties.getString('role') != "ROLE_GBS02") {
-	menus.push(createMenuRow('row3', 'rowGear', 'Lista Missioni Emergenza'));	
-}
-*/
-
 menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
-
-Ti.API.info("menu row1: " + JSON.stringify(menus));
+menus.push(createMenuRow('row4', 'rowGear', 'Calendar'));
 
 $.menuTable.data = menus;
 

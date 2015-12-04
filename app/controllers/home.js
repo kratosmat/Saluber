@@ -9,7 +9,6 @@ var mainView;
 var activeView = 1;
 
 function getListBookingsView(){
-	Ti.API.info("home: getListBookingsView richiesta creazione del controller main");
 	view = Alloy.createController('ListBookings');
 	view.menuButton.add(getMenuButton({
 		h: '60',
@@ -19,8 +18,7 @@ function getListBookingsView(){
 		$.drawermenu.showhidemenu();
 	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
 	 }); 
-	Ti.API.info("getListBookingsView: " + JSON.stringify(view.menuButton));
-    return view;
+	return view;
 };
 
 function getBookingsView(){
@@ -40,6 +38,20 @@ function getBookingsView(){
 function getUserProileView() {
 	Ti.API.info("home: getUserProileView ");
 	view = Alloy.createController("UserProfile");
+	view.menuButton.add(getMenuButton({
+	    h: '60',
+	    w: '60'
+	 }));
+	view.menuButton.addEventListener('click',function(){
+		$.drawermenu.showhidemenu();
+	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
+	 }); 
+    return view;
+};
+
+function getCalendarView() {
+	Ti.API.info("home: getCalendarView ");
+	view = Alloy.createController("Calendar");
 	view.menuButton.add(getMenuButton({
 	    h: '60',
 	    w: '60'
@@ -77,20 +89,18 @@ function getMenuView(){
 		        activeView = 2;
 		    }
 		    if(e.rowData.id==="row3"){
-				/*
-  				if (Ti.App.Properties.getString('role')=="ROLE_GBS02"){
-			        Ti.API.info("home: il ruolo  "+Ti.App.Properties.getString('role')+" Non può prenotare questo servizio");
-				    alert("Funzionalità non disponibile per il tuo profilo!");
-				    
-			    }
-			    else {
-				*/
-		            if(activeView!=3){
-		        	    $.drawermenu.drawermainview.removeAllChildren();
-		                $.drawermenu.drawermainview.add(getUserProileView().getView());
-		            }
-		        //}
+				if(activeView!=3){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(getUserProileView().getView());
+	            }
 		        activeView = 3;
+		    }
+		    if(e.rowData.id==="row4"){
+				if(activeView!=4){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(getCalendarView().getView());
+	            }
+		        activeView = 4;
 		    }
 		    Ti.API.debug(e.rowData.id); 
 		});
@@ -98,8 +108,8 @@ function getMenuView(){
     return menuView;   
 };
 
+
 function getMenuButton(args){
-	Ti.API.info("getMenuButton");
     var v=Ti.UI.createView({
         height: args.h,
         width: args.w,
@@ -113,7 +123,6 @@ function getMenuButton(args){
     });
     
     v.add(b);
-	Ti.API.info("getMenuButton: " + JSON.stringify(v));
     return v;
 };
 
@@ -127,8 +136,7 @@ $.drawermenu.init({
 $.home.open();
 
 if (!OS_IOS) {
-	Ti.API.info("home: main win "+$.home);
-    $.home.addEventListener('android:back',function (e){
+	$.home.addEventListener('android:back',function (e){
 	var dialog = Ti.UI.createAlertDialog({
 	      cancel: 1,
 	      buttonNames: [L("CONFIRM"),L("CANCEL")],

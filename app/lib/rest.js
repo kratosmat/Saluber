@@ -6,8 +6,8 @@ var loadedBookings = [];
 var loadedDoctors = [];
 var loadedPatients = [];
 var loadedHospitals = [];
-var loadedMedicalTests = [];
-var loadedSpecializations = [];
+var loadedMedicalTests = [];
+var loadedSpecializations = [];
 
 
 var getInfo = function(specificType, callback, idParameter, idValue, index) {
@@ -37,8 +37,8 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 	
 	httpClient.onerror = function(e){
 		Ti.API.error("crud: http error: " + e.source.status);
-		Titanium.API.error("crud - getInfo errore mentre stavo servendo la richiesta "+url);
-		callback(this.responseText);
+		Titanium.API.error("crud - getInfo errore mentre stavo servendo la richiesta " + _url);
+		callback([]);
 	};
 
 //	var url ="";
@@ -107,7 +107,7 @@ var getListPatients = function(callback) {
 	
 	getInfo("patient/list", function(results) {
 		loadedPatients = results;
-		callback(loadedPatients);
+		callback(loadedPatients);			
 	});	
 };
 exports.getListPatients = getListPatients;
@@ -116,18 +116,7 @@ var getListHospitals = function(callback) {
 	Ti.API.info("crud: getListHospitals LOADING.......");
 	if(loadedHospitals!=null && loadedHospitals.length>0) callback(loadedHospitals);
 	
-	getInfo("hospital/list", function(results) {
-		loadedHospitals = results;
-		callback(loadedHospitals);
-	});	
-};
-exports.getListHospitals = getListHospitals;
-
-var getListHospitals = function(callback) {
-	Ti.API.info("crud: getListHospitals LOADING.......");
-	if(loadedHospitals!=null && loadedHospitals.length>0) callback(loadedHospitals);
-	
-	getInfo("hospital/list", function(results) {
+	getInfo("reference/hospitals", function(results) {
 		loadedHospitals = results;
 		callback(loadedHospitals);
 	});	
@@ -138,7 +127,7 @@ var getListSpecializations = function(callback) {
 	Ti.API.info("crud: getListSpecializations LOADING.......");
 	if(loadedSpecializations!=null && loadedSpecializations.length>0) callback(loadedSpecializations);
 	
-	getInfo("specialization/list", function(results) {
+	getInfo("reference/specializations", function(results) {
 		loadedSpecializations = results;
 		callback(loadedSpecializations);
 	});	
@@ -149,9 +138,9 @@ var getListMedicalTests = function(callback) {
 	Ti.API.info("crud: getListMedicalTests LOADING.......");
 	if(loadedMedicalTests!=null && loadedMedicalTests.length>0) callback(loadedMedicalTests);
 	
-	getInfo("specialization/list", function(results) {
+	getInfo("reference/medicaltests", function(results) {
 		loadedMedicalTests = results;
 		callback(loadedMedicalTests);
 	});	
 };
-exports.getListSpecializations = getListSpecializations;
+exports.getListMedicalTests = getListMedicalTests;

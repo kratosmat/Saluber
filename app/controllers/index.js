@@ -63,6 +63,7 @@ function emptyTextFieldVehicle(e) {
 $.user.value = Ti.App.Properties.getString('username');
 $.password.value = Ti.App.Properties.getString('password');
 
+
 function login() {
     //activityIndicator.show();
     
@@ -113,10 +114,35 @@ function login() {
     },username,password,false);
     */
    
-  	REST.getListBookings(function(listBookings) {
-		_.each(listBookings, function(booking) {
-			Ti.API.info(JSON.stringify(booking));
+  	REST.getListBookings(function(results) {
+		_.each(results, function(result) {
+			Ti.API.info(JSON.stringify(result));
 		});
+		REST.getListDoctors(function(results) {
+			_.each(results, function(result) {
+				Ti.API.info(JSON.stringify(result));
+			});	
+		});			
+		REST.getListPatients(function(results) {
+			_.each(results, function(result) {
+				Ti.API.info(JSON.stringify(result));
+			});	
+		});
+		REST.getListHospitals(function(results) {
+			_.each(results, function(result) {
+				Ti.API.info(JSON.stringify(result));
+			});	
+		});
+		REST.getListMedicalTests(function(results) {
+			_.each(results, function(result) {
+				Ti.API.info(JSON.stringify(result));
+			});
+		});
+		REST.getListSpecializations(function(results) {
+			_.each(results, function(result) {
+				Ti.API.info(JSON.stringify(result));
+			});
+		});		
 		
 		var homeCtrl = Alloy.createController('home');
    		activityIndicator.hide();
