@@ -1,1 +1,0 @@
-/home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.pagingcontrol/controllers/dot.js

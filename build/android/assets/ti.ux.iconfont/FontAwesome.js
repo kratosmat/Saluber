@@ -1,1 +1,0 @@
-/home/kratos/git/Saluber/Resources/android/ti.ux.iconfont/FontAwesome.js

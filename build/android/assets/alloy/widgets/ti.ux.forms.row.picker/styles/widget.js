@@ -1,1 +1,0 @@
-/home/kratos/git/Saluber/Resources/android/alloy/widgets/ti.ux.forms.row.picker/styles/widget.js
