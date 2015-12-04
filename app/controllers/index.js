@@ -1,7 +1,7 @@
 /*
  * Matteo require ACS
  */
-//var acs = require("acs");
+var REST = require("rest");
 //var oauth = require("oauth");
 var rows = [];
 var countRow = 0;
@@ -113,6 +113,14 @@ function login() {
     },username,password,false);
     */
    
-   var homeCtrl = Alloy.createController('home');
-   activityIndicator.hide();
+  	REST.getListBookings(function(listBookings) {
+		_.each(listBookings, function(booking) {
+			Ti.API.info(JSON.stringify(booking));
+		});
+		
+		var homeCtrl = Alloy.createController('home');
+   		activityIndicator.hide();
+   	});
+   
+   
 };
