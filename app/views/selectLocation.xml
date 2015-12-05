@@ -1,0 +1,35 @@
+<Alloy>
+	<Window class="container">
+			<TableView backgroundColor="#eee" id="tableProvaId">
+				<TableViewSection >
+					<HeaderView>
+						<View class="view-headerview-form">
+							<Label class="label-tableviewsection-header" text="TITOLO HEADER"/>
+							<View class="view-row-separator" />
+						</View>
+					</HeaderView>
+	
+					<TableViewRow height="70" class="provaStile">
+						<Label class="label-H5" textAlign="center">Select Location.</Label>
+					</TableViewRow>					
+				</TableViewSection>
+				
+				<TableViewSection>
+					<TableViewRow height="70">
+				    <View width="100%" height="70" layout="horizontal">
+						<View width="50%" height="70">
+							<Button id="buttonCancelId" controller="Booking" color="#99f" textAlign="left" bottom="3" onClick="cancel">Cancel</Button>
+						</View>
+						<View width="50%" height="70">
+							<Button id="buttonConfirmId" controller="Booking" color="#99f" textAlign="right" bottom="3" onClick="confirm" numero="2">Confirm</Button>
+						</View>
+					</View>
+						
+					</TableViewRow>										
+				</TableViewSection>
+			</TableView>
+		
+
+
+	</Window>
+</Alloy>

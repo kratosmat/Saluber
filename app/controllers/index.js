@@ -67,6 +67,9 @@ $.password.value = Ti.App.Properties.getString('password');
 function login() {
     //activityIndicator.show();
     
+    // init first step to booking
+    Ti.App.Properties.setString('new-booking', 0);
+    
     username = $.user.value;
     password = $.password.value;
     
