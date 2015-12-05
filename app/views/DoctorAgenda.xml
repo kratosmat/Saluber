@@ -1,0 +1,36 @@
+<Alloy>
+	<View id="mainView" class="mainView">
+		<View id="mainTopBar" class="mainTopBar">
+			<View id="menuButton" class="menuButton" />
+		</View>
+		<View layout="vertical" bubbleParent="false">
+			<View class="header">
+				<Label id="lMonth" />
+				<Button id="btnPrev" class="button button-prev" onClick="prevMonth" />
+				<Button id="btnNext" class="button button-next" onClick="nextMonth" />
+			</View>
+			
+			<Widget id="vCalendar" src="com.imobicloud.calendar" swipeable="true" onChange="calendarChange" />
+			
+			<!--View class="advanced">
+				<Button class="button-advanced" onClick="getDate">Get month</Button>
+				<Button class="button-advanced" onClick="setDate">Set month to Feb 1986</Button>
+				<Button class="button-advanced" onClick="customStyle">Custom Style</Button>
+			</View-->
+			
+			<TableView id="hoursTable">
+				<TableViewSection>
+					<TableViewRow height="20">
+						<Label class="label-H5" id ="Orari" textAlign="center" text="Orari"></Label>
+					</TableViewRow>
+				</TableViewSection>
+				
+				<TableViewSection id="hoursSection">
+					<TableViewRow><Widget src="ti.ux.spacer" height="1" backgroundColor="#aaa"/></TableViewRow>
+					<Widget src="ti.ux.rowitem" title="pippo"/>
+				</TableViewSection>
+			</TableView>
+
+		</View>
+	</View>
+</Alloy>
