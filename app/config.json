@@ -1,6 +1,11 @@
 {
-	"global": {},
-	"env:development": {},
+	"global": {
+        "appName": "Saluber",
+        "theme": "default"
+    },
+	"env:development": {
+		"service_url": "http://192.168.58.1:8080/saluber-services/"
+	},
 	"env:test": {},
 	"env:production": {},
 	"os:android": {},
