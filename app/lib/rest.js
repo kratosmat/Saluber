@@ -1,6 +1,6 @@
 //var ip = Ti.App.Properties.getString('ip');
 
-var url = "http://192.168.1.3:9080/saluber-services/";
+//var url = "http://192.168.1.3:9080/saluber-services/";
 
 var loadedBookings = [];
 var loadedDoctors = [];
@@ -46,10 +46,10 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 	
 //	if (getToken()==="-1"){
 //    	Ti.API.debug("crud - getInfo non si sta utilizzando oauth per la send della richiesta ");
-    	_url = url + specificType;
+    	_url = Alloy.CFG.service_url + specificType;
 		
 		if(idParameter !== "" && idValue !== ""){
-			url += "?" + idParameter + "=" + idValue;
+			_url += "?" + idParameter + "=" + idValue;
 			Ti.API.debug("crud: getInfo IdParameter = " + idParameter);
 			Ti.API.debug("crud: getInfo IdValue = " + idValue);
 
