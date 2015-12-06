@@ -328,7 +328,7 @@
 	height:26,
 	width: 28,
 	visible:false,
-	image:WPATH('warning.png')
+//	image:WPATH('warning.png')
 },
 
 ".activityindicator-forms-text":{

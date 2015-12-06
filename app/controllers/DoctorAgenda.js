@@ -1,9 +1,11 @@
+var args = arguments[0] || {};
+
 var moment = require('moment');
 
 init();
 function init() {
 	$.vCalendar.init();
-  	//$.Calendar.open();
+//  	$.index.open();
 }
 
 function calendarChange(e) {
@@ -17,22 +19,34 @@ function calendarChange(e) {
   	}
 }
 
-var selectedDates = [];
+var selectedDate = null;
+var selectedViewDate = null;
+
 function selectedChange(e) {
 	var date = e.date,
 		view = e.view;
 	
-	if (selectedDates.indexOf(date) === -1) {
-		$.addClass(view, 'imc-calendar-date-selected');
-		$.addClass(view.children[0], 'imc-calendar-date-selected-label');
-		
-		selectedDates.push(date);
-	} else {
-		$.removeClass(view, 'imc-calendar-date-selected');
-		$.removeClass(view.children[0], 'imc-calendar-date-selected-label');
-		
-		selectedDates = _.without(selectedDates, date);
+	if(selectedDate!=null && (!(date>selectedDate) && !(date<selectedDate))) {
+		Ti.API.info("Selezionata la stessa data: " + selectedDate);
+		return;
 	}
+	
+	if(selectedDate!=null && selectedDate!=date) {
+		Ti.API.info("cancelliamo la selezione precedente");
+		$.removeClass(selectedViewDate, 'imc-calendar-date-selected');
+		$.removeClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+		selectedDate = null;
+		selectedViewDate = null;		
+	}
+	selectedDate = date;
+	selectedViewDate = view;
+	
+	$.addClass(selectedViewDate, 'imc-calendar-date-selected');
+	$.addClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+
+	createHoursTable();
+	
+	Ti.API.info("selectedDate: " + selectedDate);	
 }
 
 function prevMonth(e) {
@@ -62,28 +76,11 @@ function customStyle() {
 	});
 };
 
-/*
- params = {
-    column: 0, // from 0 to 6
-   	weekText: "Sun"
- } 
- * */
 function weekFormatter(params) {
   	var vDate = $.UI.create('View', { classes: 'calendar-week calendar-week-' + params.column });
 		vDate.add( $.UI.create('Label', { text: params.weekText, classes: 'calendar-week-label calendar-week-label-' + params.column }) );
 	return vDate;
 }
-
-/*
- params = {
- 	index: 0,  // from 0 to 41, 41 dates of a month view, row = Math.floor(params.index / 7)
- 	column: 0, // from 0 to 6
- 	dateId: "2015-04-23T00:00:00+07:00", // iso string with timezone
- 	dateText: 31,
- 	isThisMonth: true,
- 	isToday: false
- } 
- * */
 function dateFormatter(params) {
   	var  viewClasses = ['calendar-date'],
 		labelClasses = ['calendar-date-label'];
@@ -113,4 +110,26 @@ function dateFormatter(params) {
 		}
 		
 	return vDate;
+}
+
+$.hoursTable.addEventListener("click", function(e) {	
+	Ti.API.debug("hoursTable: e "+JSON.stringify(e));	
+});
+
+var hours = [8.00, 8.30, 9.00, 10.00, 10.30, 11.00, 11.30, 12.00]; 
+
+function createHoursTable() {
+	
+	//$.hoursSection.setData([]);
+	var hourRows = [];
+	_.each(hours, function(hour) {
+		var hourRow = Alloy.createWidget("ti.ux.rowitem", {
+			title : hour,
+		});
+		
+		hourRows.push(hourRow.getView());
+		Ti.API.info(JSON.stringify(hourRow));
+	});
+	$.hoursTable.setData(hourRows); 
+
 }
