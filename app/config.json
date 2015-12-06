@@ -14,6 +14,7 @@
 	"os:mobileweb": {},
 	"os:windows": {},
 	"dependencies": {
+		"it.fusedcloud.pickerWidget": "1.0",
         "com.alcoapps.drawermenu": "1.0",
         "com.criteriastudio.RemoteImageView": "1.0",
         "com.imobicloud.calendar": "1.0",
