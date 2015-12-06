@@ -78,3 +78,19 @@ overrode the settings with other TSS, XML, or JS settings:
     borderWidth: '1',
     borderColor:'#aaa',
 }
+
+
+".mainView":{
+	layout: 'vertical',
+	backgroundColor: '#cacaca'
+},
+".mainTopBar":{
+	width: Ti.UI.FILL,
+	height: "60dp",
+	backgroundColor: '#5B96B2',
+	layout: 'horizontal'
+},
+".menuButton":{
+	width: "60dp",
+	height: "60dp"
+}

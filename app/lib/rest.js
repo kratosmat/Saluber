@@ -42,36 +42,18 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 		callback([]);
 	};
 
-//	var url ="";
+	_url = Alloy.CFG.service_url + specificType;
 	
-//	if (getToken()==="-1"){
-//    	Ti.API.debug("crud - getInfo non si sta utilizzando oauth per la send della richiesta ");
-    	_url = Alloy.CFG.service_url + specificType;
-		
-		if(idParameter !== "" && idValue !== ""){
-			_url += "?" + idParameter + "=" + idValue;
-			Ti.API.debug("crud: getInfo IdParameter = " + idParameter);
-			Ti.API.debug("crud: getInfo IdValue = " + idValue);
+	if(idParameter !== "" && idValue !== ""){
+		_url += "?" + idParameter + "=" + idValue;
+		Ti.API.debug("crud: getInfo IdParameter = " + idParameter);
+		Ti.API.debug("crud: getInfo IdValue = " + idValue);
 
-		}
-		else {
-			Ti.API.debug("crud: richiesta senza oaut e senza parametri utente");
-		}
-/*
-    }
-    else {	
-    	Ti.API.debug("crud - getInfo con parametri oauth per la send della richiesta ");
-		url = ip + "abs-service-rest-web/restapi/api/configurations/" + specificType+"?access_token="+getToken()+"&user="+getUsername();
-		
-		if(idParameter !== "" && idValue !== ""){
-			url += "&" + idParameter + "=" + idValue;
-			Ti.API.debug("crud: getInfo - IdParameter = " + idParameter);
-			Ti.API.debug("crud: getInfo - IdValue = " + idValue);
-		}else {
-			Ti.API.debug("crud: getInfo - Richiesta senza parametri utente");
-		}
 	}
-*/		
+	else {
+		Ti.API.debug("crud: richiesta senza oaut e senza parametri utente");
+	}
+
 	Ti.API.info("crud: getInfo - " + _url);
 	httpClient.open("GET", _url);
 	Ti.API.info("crud: getInfo - invocata get");

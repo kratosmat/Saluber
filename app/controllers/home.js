@@ -1,4 +1,3 @@
-//var controls=require(WPATH('controls'));
 //var gps = require("geo");
 var args = arguments[0];
 
@@ -8,61 +7,20 @@ var mainView;
 
 var activeView = 1;
 
-function getListBookingsView(){
-	view = Alloy.createController('ListBookings');
+function createView(viewName) {
+	Ti.API.info("creating " + viewName + "...");
+	view = Alloy.createController(viewName);
 	view.menuButton.add(getMenuButton({
 		h: '60',
-	    w: '60'
-	 }));
-	 view.menuButton.addEventListener('click',function(){
+		w: '60'
+	}));
+	view.menuButton.addEventListener('click',function(){
 		$.drawermenu.showhidemenu();
 	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
-	 }); 
+	}); 
+	Ti.API.info("created " + viewName); 
 	return view;
 };
-
-function getBookingsView(){
-	Ti.API.info("getBookingsView ");
-	 view = Alloy.createController("Booking");
-	 view.menuButton.add(getMenuButton({
-	    h: '60',
-	    w: '60'
-	 }));
-	 view.menuButton.addEventListener('click',function(){
-		$.drawermenu.showhidemenu();
-	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
-	 }); 
-    return view;
-};
-
-function getUserProileView() {
-	Ti.API.info("home: getUserProileView ");
-	view = Alloy.createController("UserProfile");
-	view.menuButton.add(getMenuButton({
-	    h: '60',
-	    w: '60'
-	 }));
-	view.menuButton.addEventListener('click',function(){
-		$.drawermenu.showhidemenu();
-	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
-	 }); 
-    return view;
-};
-
-function getCalendarView() {
-	Ti.API.info("home: getCalendarView ");
-	view = Alloy.createController("Calendar");
-	view.menuButton.add(getMenuButton({
-	    h: '60',
-	    w: '60'
-	 }));
-	view.menuButton.addEventListener('click',function(){
-		$.drawermenu.showhidemenu();
-	    $.drawermenu.menuOpen=!$.drawermenu.menuOpen;
-	 }); 
-    return view;
-};
-
 
 function getMenuView(){
 	if(menuView==null) {
@@ -76,7 +34,7 @@ function getMenuView(){
 		    if(e.rowData.id==="row1"){
 		        if(activeView!=1){
 		        	$.drawermenu.drawermainview.removeAllChildren();
-		            $.drawermenu.drawermainview.add(getListBookingsView().getView());
+		            $.drawermenu.drawermainview.add(createView('ListBookings').getView());
 		            //getListBookingsView().reloadMap();
 		        }
 				activeView = 1;
@@ -87,21 +45,21 @@ function getMenuView(){
 				    // init first step to booking
 				    Ti.App.Properties.setString('new-booking', 0);						        
 		        	$.drawermenu.drawermainview.removeAllChildren();
-		            $.drawermenu.drawermainview.add(getBookingsView().getView());
+		            $.drawermenu.drawermainview.add(createView('Booking').getView());
 		        } 
 		        activeView = 2;		        
 		    }
 		    if(e.rowData.id==="row3"){
 				if(activeView!=3){
 	        	    $.drawermenu.drawermainview.removeAllChildren();
-	                $.drawermenu.drawermainview.add(getUserProileView().getView());
+	                $.drawermenu.drawermainview.add(createView('UserProfile').getView());
 	            }
 		        activeView = 3;
 		    }
 		    if(e.rowData.id==="row4"){
 				if(activeView!=4){
 	        	    $.drawermenu.drawermainview.removeAllChildren();
-	                $.drawermenu.drawermainview.add(getCalendarView().getView());
+	                $.drawermenu.drawermainview.add(createView('DoctorAgenda').getView());
 	            }
 		        activeView = 4;
 		    }
@@ -131,7 +89,7 @@ function getMenuButton(args){
 
 $.drawermenu.init({
    menuview: getMenuView().getView(),
-   mainview: getListBookingsView().getView(),
+   mainview: createView('ListBookings').getView(),
    duration:200,
    parent: $.home
 });

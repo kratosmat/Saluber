@@ -4,7 +4,7 @@
         "theme": "default"
     },
 	"env:development": {
-		"service_url": "http://192.168.58.1:8080/saluber-services/"
+		"service_url": "http://192.168.43.167:8080/saluber-services/"
 	},
 	"env:test": {},
 	"env:production": {},

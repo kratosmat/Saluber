@@ -1,24 +1,24 @@
 <Alloy>	
-		<View id="mainView">
-			<View id="mainTopBar">
-				<View id="menuButton"/>
-			</View>
-			<View layout="vertical" bubbleParent="false">
-				<TableView id="newCheckTableId">					
-					<TableViewSection id="tableViewBookingSection">
-						<HeaderView>
-							<View class="view-headerview-form">
-								<Label height="70" class="label-H3" text="NEW BOOKING" textAlign="center"/>
-								<View class="view-row-separator" />
-							</View>
-						</HeaderView>
-						<Widget src="ti.ux.forms.row.picker" title="1 - Select Specialization" pickerType="single-column" id="recordRow_0" onChange="changeSpecialization"/>
-						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" title="2 - Select Doctor" controller="selectDoctor" id="recordRow_2" hasChildren="true" />
-						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" title="3 - Select Location" controller="selectLocation" id="recordRow_4" hasChildren="true" />
-					</TableViewSection>				
-				</TableView>			
-			</View>
-		</View>	
+	<View id="mainView" class="mainView">
+		<View id="mainTopBar" class="mainTopBar">
+			<View id="menuButton" class="menuButton" />
+		</View>
+		<View layout="vertical" bubbleParent="false">
+			<TableView id="newCheckTableId">					
+				<TableViewSection id="tableViewBookingSection">
+					<HeaderView>
+						<View class="view-headerview-form">
+							<Label height="70" class="label-H3" text="NEW BOOKING" textAlign="center"/>
+							<View class="view-row-separator" />
+						</View>
+					</HeaderView>
+					<Widget src="ti.ux.forms.row.picker" title="1 - Select Specialization" pickerType="single-column" id="recordRow_0" onChange="changeSpecialization"/>
+					<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
+					<Widget src="ti.ux.rowitem" title="2 - Select Doctor" controller="selectDoctor" id="recordRow_2" hasChildren="true" />
+					<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
+					<Widget src="ti.ux.rowitem" title="3 - Select Location" controller="selectLocation" id="recordRow_4" hasChildren="true" />
+				</TableViewSection>				
+			</TableView>			
+		</View>
+	</View>	
 </Alloy>

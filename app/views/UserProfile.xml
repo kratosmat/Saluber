@@ -1,7 +1,7 @@
 <Alloy>
-	<View id="mainView">
-		<View id="mainTopBar">
-			<View id="menuButton"/>
+	<View id="mainView" class="mainView">
+		<View id="mainTopBar" class="mainTopBar">
+			<View id="menuButton" class="menuButton" />
 		</View>
 		<View layout="vertical" bubbleParent="false">
 			<Label text="UserProfile"></Label>
