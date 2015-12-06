@@ -42,7 +42,8 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 		callback([]);
 	};
 
-	_url = Alloy.CFG.service_url + specificType;
+
+	_url = Alloy.CFG.service_url + "/" + specificType +"?access_token="+ Ti.App.Properties.getString('access_token');
 	
 	if(idParameter !== "" && idValue !== ""){
 		_url += "?" + idParameter + "=" + idValue;

@@ -11,6 +11,9 @@ function init() {
 function calendarChange(e) {
   	if (e.type == 'month') {
   		$.lMonth.text = e.date.format("MM-YYYY");
+  		
+  		Ti.API.info("calendarChange " + e.date.format("MM-YYYY"));
+  		
   		$.btnPrev.title = moment(e.date).subtract(1, 'months').format("MMM");
   		$.btnNext.title = moment(e.date).add(1, 'months').format("MMM");
   	} else if (e.type == 'selected') {
@@ -51,10 +54,12 @@ function selectedChange(e) {
 
 function prevMonth(e) {
   	$.vCalendar.previous();
+  	Ti.API.info("prevMonth");
 }
 
 function nextMonth(e) {
   	$.vCalendar.next();
+  	Ti.API.info("nextMonth");
 }
 
 // Advanced 
@@ -112,22 +117,71 @@ function dateFormatter(params) {
 	return vDate;
 }
 
-$.hoursTable.addEventListener("click", function(e) {	
-	Ti.API.debug("hoursTable: e "+JSON.stringify(e));	
+$.hoursTable.addEventListener("longpress", function(e) {	
+	
+	Ti.API.info("hoursTable: e "+JSON.stringify(e));
+	if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
+		e.row.selected = false;
+		$.removeClass(e.row, 'rowHourSelectedClass');
+		$.addClass(e.row, 'rowHourUnselectedClass');
+	}
+	else {
+		e.row.selected = true;
+		$.addClass(e.row, 'rowHourSelectedClass');
+		$.removeClass(e.row, 'rowHourUnselectedClass');
+	}
+	Ti.API.info("hoursTable: e "+JSON.stringify(e));	
 });
 
-var hours = [8.00, 8.30, 9.00, 10.00, 10.30, 11.00, 11.30, 12.00]; 
+var hours = ["8.00", "8.30", "9.00", "10.00", "10.30", "11.00", "11.30", "12.00"]; 
 
 function createHoursTable() {
 	
-	//$.hoursSection.setData([]);
 	var hourRows = [];
 	_.each(hours, function(hour) {
-		var hourRow = Alloy.createWidget("ti.ux.rowitem", {
-			title : hour,
+		var time_hour = hour.split(".")[0];
+		var time_minute = hour.split(".")[1];
+		
+		Ti.API.debug(time_hour + ", " + time_minute);
+		var startTime = moment().hours(time_hour).minutes(time_minute);
+		
+		var hourView = Ti.UI.createView({
+			layout: 'horizontal'
+		});
+		var startLbl = Ti.UI.createLabel({
+			text: startTime.hours() + ":" + startTime.minutes(),
+			left: 10,
+			top: 5,
+			width: '50',
+			//borderColor: "purple"
+		});
+		startTime.add(30, 'minutes');
+		var endLbl = Ti.UI.createLabel({
+			text: startTime.hours() + ":" + startTime.minutes(),
+			width: '50',
+			top: 5,
+			//borderColor: "purple"
+		});
+		var statusLbl = Ti.UI.createView({
+			borderColor: "purple",
+			width: Ti.UI.FILL
 		});
 		
-		hourRows.push(hourRow.getView());
+		hourView.add(startLbl);
+		hourView.add(endLbl);
+		hourView.add(statusLbl);
+		
+		//Ti.API.info(JSON.stringify(hourView));
+		var hourRow = Ti.UI.createTableViewRow({
+			height: 50,
+			backgroundColor: 'white',
+			id: hour,
+		});
+		
+		
+		hourRow.add(hourView);
+		
+		hourRows.push(hourRow);
 		Ti.API.info(JSON.stringify(hourRow));
 	});
 	$.hoursTable.setData(hourRows); 

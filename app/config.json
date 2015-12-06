@@ -1,20 +1,23 @@
 {
-	"global": {
+    "global": {
         "appName": "Saluber",
         "theme": "default"
     },
-	"env:development": {
-		"service_url": "http://192.168.43.167:8080/saluber-services/"
-	},
-	"env:test": {},
-	"env:production": {},
-	"os:android": {},
-	"os:blackberry": {},
-	"os:ios": {},
-	"os:mobileweb": {},
-	"os:windows": {},
-	"dependencies": {
-		"it.fusedcloud.pickerWidget": "1.0",
+    "env:development": {
+        "service_url": "http://192.168.43.167:8080/saluber-services/api",
+        "service_role_url": "http://192.168.43.167:8080/saluber-services/api/security/roles",
+        "access_token_url": "http://192.168.43.167:8080/saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
+        "refresh_token_url": "http://192.168.43.167:8080/saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
+    },
+    "env:test": {},
+    "env:production": {},
+    "os:android": {},
+    "os:blackberry": {},
+    "os:ios": {},
+    "os:mobileweb": {},
+    "os:windows": {},
+    "dependencies": {
+        "it.fusedcloud.pickerWidget": "1.0",
         "com.alcoapps.drawermenu": "1.0",
         "com.criteriastudio.RemoteImageView": "1.0",
         "com.imobicloud.calendar": "1.0",

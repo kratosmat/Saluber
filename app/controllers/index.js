@@ -1,14 +1,9 @@
-/*
- * Matteo require ACS
- */
+
 var REST = require("rest");
-//var oauth = require("oauth");
+var oauth = require("oauth");
 var rows = [];
 var countRow = 0;
 var lastRowTouch = -1;
-//var selectedVeicle="";
-
-//acs.enablePushNotifications(showToDo);
 
 $.tick.visible = !($.password.passwordMask);
 
@@ -75,78 +70,47 @@ function login() {
     
     Ti.API.info(username + " -> " + savedUsername);
     Ti.API.info(password + " -> " + savedPassword);
-    /*
-    if(savedUsername!=null && savedUsername.length>0 && savedPassword!=null && savedPassword.length>0) {
-		if(username!=savedUsername || password!=savedPassword) {
-			forceDBClean = true;
-	    }    	
-    }
-    */
+    
 	Ti.App.Properties.setString('username', username);
 	Ti.App.Properties.setString('password', password);
     
-    /*
-    oauth.getOAuth(function(response){
-            Ti.API.debug("widget: login - autorizzato. recupera ruolo");
-            
-            var token = response.access_token;
-            
-            Ti.App.Properties.setString('access_token', token);
-            
-            var callbackRole=function(roleRicevuto){
-                Ti.API.debug("widget: login - il ruolo e' "+roleRicevuto+". Creazione della main window");
-                if (roleRicevuto!=='ROLE_ADM00' && roleRicevuto!=='ROLE_AAO03' 
-                    && roleRicevuto!=='ROLE_GBS02' && roleRicevuto!=='ROLE_ADA01'){
-                        alert ('Attenzione il tuo ruolo non è Gestito\r\n contatta l amministratore');
-                        activityIndicator.hide();
-                } 
-                else {
-                    oauth.setUserRole(roleRicevuto);
-                    Ti.App.Properties.setString('role', roleRicevuto);
-                
-                    //Solo per ABS
-                    var homeCtrl = Alloy.createController('home', [forceDBClean]);
-                    
-                    activityIndicator.hide();
-                }
-            };
-            oauth.getRuolo(token,callbackRole);  
-    },username,password,false);
-    */
-   
-  	REST.getListBookings(function(results) {
-		_.each(results, function(result) {
-			Ti.API.info(JSON.stringify(result));
-		});
-		REST.getListDoctors(function(results) {
-			_.each(results, function(result) {
-				Ti.API.info(JSON.stringify(result));
-			});	
-		});			
-		REST.getListPatients(function(results) {
-			_.each(results, function(result) {
-				Ti.API.info(JSON.stringify(result));
-			});	
-		});
-		REST.getListHospitals(function(results) {
-			_.each(results, function(result) {
-				Ti.API.info(JSON.stringify(result));
-			});	
-		});
-		REST.getListMedicalTests(function(results) {
+    oauth.getOAuth(function(response) {
+        Ti.API.info("widget: login - autorizzato. recupera ruolo");
+        
+        REST.getListBookings(function(results) {
 			_.each(results, function(result) {
 				Ti.API.info(JSON.stringify(result));
 			});
-		});
-		REST.getListSpecializations(function(results) {
-			_.each(results, function(result) {
-				Ti.API.info(JSON.stringify(result));
+			REST.getListDoctors(function(results) {
+				_.each(results, function(result) {
+					Ti.API.info(JSON.stringify(result));
+				});	
+			});			
+			REST.getListPatients(function(results) {
+				_.each(results, function(result) {
+					Ti.API.info(JSON.stringify(result));
+				});	
 			});
-		});		
-		
-		var homeCtrl = Alloy.createController('home');
-   		activityIndicator.hide();
-   	});
-   
+			REST.getListHospitals(function(results) {
+				_.each(results, function(result) {
+					Ti.API.info(JSON.stringify(result));
+				});	
+			});
+			REST.getListMedicalTests(function(results) {
+				_.each(results, function(result) {
+					Ti.API.info(JSON.stringify(result));
+				});
+			});
+			REST.getListSpecializations(function(results) {
+				_.each(results, function(result) {
+					Ti.API.info(JSON.stringify(result));
+				});
+			});		
+	   	});
+        
+        var homeCtrl = Alloy.createController('home');
+   	}, username, password, false);
+    
+    
    
 };
