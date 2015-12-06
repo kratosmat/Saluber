@@ -80,13 +80,16 @@ function getMenuView(){
 		            //getListBookingsView().reloadMap();
 		        }
 				activeView = 1;
+				
 		    }
 		    if(e.rowData.id==="row2"){
 		        if(activeView!=2){
+				    // init first step to booking
+				    Ti.App.Properties.setString('new-booking', 0);						        
 		        	$.drawermenu.drawermainview.removeAllChildren();
 		            $.drawermenu.drawermainview.add(getBookingsView().getView());
 		        } 
-		        activeView = 2;
+		        activeView = 2;		        
 		    }
 		    if(e.rowData.id==="row3"){
 				if(activeView!=3){

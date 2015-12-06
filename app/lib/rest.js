@@ -1,6 +1,6 @@
 //var ip = Ti.App.Properties.getString('ip');
 
-var url = "http://192.168.58.1:8080/saluber-services/";
+var url = "http://192.168.1.3:9080/saluber-services/";
 
 var loadedBookings = [];
 var loadedDoctors = [];
@@ -9,6 +9,7 @@ var loadedHospitals = [];
 var loadedMedicalTests = [];
 var loadedSpecializations = [];
 
+var saveNewSpecializations = getSaveNewSpecializations(true);
 
 var getInfo = function(specificType, callback, idParameter, idValue, index) {
 	//serve solo per le prove in locale
@@ -125,11 +126,14 @@ exports.getListHospitals = getListHospitals;
 
 var getListSpecializations = function(callback) {
 	Ti.API.info("crud: getListSpecializations LOADING.......");
-	if(loadedSpecializations!=null && loadedSpecializations.length>0) callback(loadedSpecializations);
+	if(loadedSpecializations!=null && loadedSpecializations.length>0) {
+		callback(loadedSpecializations);
+		return;
+	}
 	
 	getInfo("reference/specializations", function(results) {
 		loadedSpecializations = results;
-		callback(loadedSpecializations);
+		callback(loadedSpecializations);		
 	});	
 };
 exports.getListSpecializations = getListSpecializations;
@@ -138,9 +142,19 @@ var getListMedicalTests = function(callback) {
 	Ti.API.info("crud: getListMedicalTests LOADING.......");
 	if(loadedMedicalTests!=null && loadedMedicalTests.length>0) callback(loadedMedicalTests);
 	
-	getInfo("reference/medicaltests", function(results) {
+	getInfo("reference/medicaltests", function(results) {		
 		loadedMedicalTests = results;
 		callback(loadedMedicalTests);
 	});	
 };
 exports.getListMedicalTests = getListMedicalTests;
+
+
+function getSaveNewSpecializations(empty) {
+	if (empty == true) {
+		saveNewSpecializations = {"id":-1, specialization:{"id":-1, "name":""}};
+	}
+
+	return saveNewSpecializations;
+};
+exports.getSaveNewSpecializations = getSaveNewSpecializations;

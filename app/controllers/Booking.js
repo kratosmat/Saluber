@@ -1,4 +1,5 @@
 var args = arguments[0] || {};
+var REST = require("rest");
 
 $.tableViewBookingSection.getRows()[2].addEventListener('click', function(e){
   openBookingItem(e);
@@ -7,16 +8,10 @@ $.tableViewBookingSection.getRows()[4].addEventListener('click', function(e){
   openBookingItem(e);
 });
 
-
-	
-var REST = require("rest");
-
 initBookingCheck();
 
 var nSpecialization = [];
 REST.getListSpecializations(function(results) {
-	Titanium.API.log('igi:2: viene chiamato due volte!!');
-	nSpecialization = [];
 	_.each(results, function(result) {
     	var nSpec = { 
     		id: result.id,
@@ -25,35 +20,51 @@ REST.getListSpecializations(function(results) {
     	nSpecialization.push(nSpec);
 	});
 });		
-
-	
 $.recordRow_0.selectedValues = null;
 $.recordRow_0.pickerValues = nSpecialization;
 
+function changeSpecialization(e) {
+	var booking = REST.getSaveNewSpecializations(false);
+	booking.specialization.id = e.key;
+	booking.specialization.name = e.value;
+
+	Ti.App.Properties.setString('new-booking', 2);
+	
+	initBookingCheck();
+}
+
+//$.recordRow_0.on('change', function(e) {
+	
+//});
+
 function initBookingCheck() {
-	Titanium.API.log('initBookingCheck');
+	Titanium.API.log('initBookingCheck: ');
 		
 	var numero = Ti.App.Properties.getInt('new-booking');
-	Titanium.API.log('booking step:' + numero);
+	if (numero == "0") {
+		REST.getSaveNewSpecializations(true);
+	}
 	
 	for (i = 0; i <= numero; i=i+2) {
 		$.tableViewBookingSection.getRows()[i].setTouchEnabled(true);
-		//$.tableViewBookingSection.getRows()[i].setBackgroundColor('#B7DBFF');		
+		$.tableViewBookingSection.getRows()[i].setBackgroundColor('#B7DBFF');		
 		
 		var currRecow = 'recordRow_' + i;
-		//$[currRecow].titleLbl.left = 40;			
+		$[currRecow].titleLbl.left = 40;			
 		if (numero != i) {
-			//$[currRecow].icon.setIcon("fa-check-square-o");
+			$[currRecow].icon.setIcon("fa-check-square-o");
+		} else {
+			$[currRecow].icon.setIcon("");
 		}
 	}
 	
 	for (i = (numero + 2); i <= 4; i=i+2) {
 		$.tableViewBookingSection.getRows()[i].setTouchEnabled(false);
-		//$.tableViewBookingSection.getRows()[i].setBackgroundColor('green');
+		$.tableViewBookingSection.getRows()[i].setBackgroundColor('green');
 		
 		var currRecow = 'recordRow_' + i;
-		//$[currRecow].icon.setIcon("fa-times");
-		//$[currRecow].titleLbl.left = 40;
+		$[currRecow].icon.setIcon("fa-times");
+		$[currRecow].titleLbl.left = 40;
 	}
 		
 }
@@ -61,16 +72,15 @@ function initBookingCheck() {
 function openBookingItem(e){
 	Titanium.API.log('openBookingItem');
 	
-	initBookingCheck();
+	// initBookingCheck();
 	var newWin;
 
 	if(!e.row) return;
 	
-//	if (e.row.data && e.row.data.controller && e.row.getTouchEnabled()) {
-	if (e.row.data && e.row.data.controller) {
+	if (e.row.data && e.row.data.controller && e.row.getTouchEnabled()) {
 		newWin = Alloy.createController(e.row.data.controller).getView();
 	} else {
-			alert('non ancora abilitato..');
+		alert('non ancora abilitato..');
 	}
 	
 	

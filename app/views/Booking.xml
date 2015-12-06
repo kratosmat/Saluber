@@ -12,12 +12,11 @@
 								<View class="view-row-separator" />
 							</View>
 						</HeaderView>
-						<Widget src="ti.ux.forms.row.picker" title="1 - Select Specialization" pickerType="single-column" id="recordRow_0" />
-						<!-- Widget src="ti.ux.rowitem" title="1 - Select Location" controller="prova/selectLocation" id="recordRow_0"/ -->
+						<Widget src="ti.ux.forms.row.picker" title="1 - Select Specialization" pickerType="single-column" id="recordRow_0" onChange="changeSpecialization"/>
 						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" title="2 - Select Doctor" controller="selectLocation" id="recordRow_2" hasChildren="true" />
+						<Widget src="ti.ux.rowitem" title="2 - Select Doctor" controller="selectDoctor" id="recordRow_2" hasChildren="true" />
 						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" title="3 - Select Location" controller="prova/selectDoctor" id="recordRow_4" hasChildren="true" />
+						<Widget src="ti.ux.rowitem" title="3 - Select Location" controller="selectLocation" id="recordRow_4" hasChildren="true" />
 					</TableViewSection>				
 				</TableView>			
 			</View>
