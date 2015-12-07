@@ -42,7 +42,6 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 		callback([]);
 	};
 
-
 	_url = Alloy.CFG.service_url + "/" + specificType +"?access_token="+ Ti.App.Properties.getString('access_token');
 	
 	if(idParameter !== "" && idValue !== ""){
@@ -65,70 +64,82 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 var getListBookings = function(callback) {
 	Ti.API.info("crud: getListBookings LOADING.......");
 	if(loadedBookings!=null && loadedBookings.length>0) callback(loadedBookings);
+	else {
+		getInfo("booking/list", function(listBookings) {
+			loadedBookings = listBookings;
+			callback(loadedBookings);
+		});	
+	}
 	
-	getInfo("booking/list", function(listBookings) {
-		loadedBookings = listBookings;
-		callback(loadedBookings);
-	});	
 };
 exports.getListBookings = getListBookings;
 
 
 var getListDoctors = function(callback) {
-	Ti.API.info("crud: getListDoctors LOADING.......");
-	if(loadedDoctors!=null && loadedDoctors.length>0) callback(loadedDoctors);
 	
-	getInfo("doctor/list", function(results) {
-		loadedDoctors = results;
+	if(loadedDoctors!=null && loadedDoctors.length>0) {
+		Ti.API.info("crud: getListDoctors from memory .......");
 		callback(loadedDoctors);
-	});	
+	}
+	else {
+		getInfo("doctor/list", function(results) {
+			Ti.API.info("crud: getListDoctors from server .......");
+			loadedDoctors = results;
+			callback(loadedDoctors);
+		});	
+	}
+	
 };
 exports.getListDoctors = getListDoctors;
 
 var getListPatients = function(callback) {
 	Ti.API.info("crud: getListPatients LOADING.......");
 	if(loadedPatients!=null && loadedPatients.length>0) callback(loadedPatients);
+	else {
+		getInfo("patient/list", function(results) {
+			loadedPatients = results;
+			callback(loadedPatients);			
+		});	
+	}
 	
-	getInfo("patient/list", function(results) {
-		loadedPatients = results;
-		callback(loadedPatients);			
-	});	
 };
 exports.getListPatients = getListPatients;
 
 var getListHospitals = function(callback) {
 	Ti.API.info("crud: getListHospitals LOADING.......");
 	if(loadedHospitals!=null && loadedHospitals.length>0) callback(loadedHospitals);
+	else {
+		getInfo("reference/hospitals", function(results) {
+			loadedHospitals = results;
+			callback(loadedHospitals);
+		});	
+	}
 	
-	getInfo("reference/hospitals", function(results) {
-		loadedHospitals = results;
-		callback(loadedHospitals);
-	});	
 };
 exports.getListHospitals = getListHospitals;
 
 var getListSpecializations = function(callback) {
 	Ti.API.info("crud: getListSpecializations LOADING.......");
-	if(loadedSpecializations!=null && loadedSpecializations.length>0) {
-		callback(loadedSpecializations);
-		return;
+	if(loadedSpecializations!=null && loadedSpecializations.length>0) callback(loadedSpecializations);
+	else {	
+		getInfo("reference/specializations", function(results) {
+			loadedSpecializations = results;
+			callback(loadedSpecializations);		
+		});	
 	}
-	
-	getInfo("reference/specializations", function(results) {
-		loadedSpecializations = results;
-		callback(loadedSpecializations);		
-	});	
 };
 exports.getListSpecializations = getListSpecializations;
 
 var getListMedicalTests = function(callback) {
 	Ti.API.info("crud: getListMedicalTests LOADING.......");
 	if(loadedMedicalTests!=null && loadedMedicalTests.length>0) callback(loadedMedicalTests);
+	else {
+		getInfo("reference/medicaltests", function(results) {		
+			loadedMedicalTests = results;
+			callback(loadedMedicalTests);
+		});	
+	}
 	
-	getInfo("reference/medicaltests", function(results) {		
-		loadedMedicalTests = results;
-		callback(loadedMedicalTests);
-	});	
 };
 exports.getListMedicalTests = getListMedicalTests;
 

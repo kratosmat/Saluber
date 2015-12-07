@@ -1,0 +1,17 @@
+<Alloy>
+	<TableViewRow className="doctorRow">
+		<View class="row">
+			<View class="main_description">
+				<Label id="firstName" />
+				<Label id="lastName" />
+				<Label id="phone" />
+				<!--View class="check">
+					<Label id="booking_checkin" />
+					<Label id="booking_checkout" />
+				</View-->
+			</View>
+			<View id="iconsView"/>
+		</View>
+		
+	</TableViewRow>
+</Alloy>

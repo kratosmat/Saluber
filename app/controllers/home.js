@@ -63,6 +63,13 @@ function getMenuView(){
 	            }
 		        activeView = 4;
 		    }
+		    if(e.rowData.id==="row5"){
+				if(activeView!=5){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(createView('ListDoctors').getView());
+	            }
+		        activeView = 5;
+		    }
 		    Ti.API.debug(e.rowData.id); 
 		});
 	}

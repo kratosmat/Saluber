@@ -8,6 +8,7 @@ menus.push(createMenuRow('row1', 'rowSkull', 'ListBookings'));
 menus.push(createMenuRow('row2', 'rowGear', 'Booking'));
 menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
 menus.push(createMenuRow('row4', 'rowGear', 'Calendar'));
+menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
 
 $.menuTable.data = menus;
 
@@ -43,7 +44,3 @@ function createMenuRow(rowId, rowClass, rowText) {
 	
 	return row;
 }
-
-
-
-//$.menuView.show();
