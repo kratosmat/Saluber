@@ -1,23 +1,34 @@
 <Alloy>
-	<Window navBarHidden="true">
-		<ScrollView id="loginView" width="Ti.UI.FILL" height="Ti.UI.FILL" layout="vertical" backgroundColor="#D4D4D4">
-			<View class="loginForm" layout="vertical">
-				<View class="user">
-					<TextField id="user" ></TextField>
-					<Button class="closeButton" onClick="emptyTextFieldUser" ></Button>
-				</View>
-				<View class="password">
-					<TextField id="password" passwordMask="true"></TextField>
-					<Button class="closeButton" onClick="emptyTextFieldPassword"></Button>					
-				</View>
-				<View class="showPassword">
-					<View id="checkBox" onClick="changeStatus">
-						<ImageView image="tick.png" id="tick"></ImageView>
-					</View>
-					<Label class="mostraPasswordLbl" text="L('SHOW_PASSWORD')"/>
-				</View>				
-				<Button class="buttonToLogin" onClick="login">Login</Button>
-			</View>
-		</ScrollView>
+	<Window navBarHidden="true" backgroundColor="#E74F1E">
+			<TableView left="30" right="30" top="50" height="272" borderRadius="6">					
+				<TableViewSection>
+					<TableViewRow>
+						<View backgroundColor="#FFF">
+							<Label height="70" class="label-Login" text="SALUBER LOGIN" textAlign="center" width="Ti.UI.FILL" />
+							<View class="view-row-separator" backgroundColor="#E74F1E"/>
+						</View>
+					</TableViewRow>
+					
+					<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
+					
+					<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" hintText="Insert Username" id="user" />
+					
+					<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
+					
+					<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" passwordMask="true" hintText="Insert Password" id="password" />
+					
+					<TableViewRow backgroundColor="#FFF" height="25">
+							<Label text="View / Hide Password" right="70" />
+							<Switch id="idPasswordSwitch" right="10" value="false" onChange="changeSwitchStatus"/>
+					</TableViewRow>						
+					
+					<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
+					
+					<TableViewRow backgroundColor="#FFF" height="50">
+						<Button class="buttonToLogin" onClick="login" textAlign="center" height="25">LOGIN</Button>
+					</TableViewRow>
+					
+				</TableViewSection>				
+			</TableView>			
 	</Window>
 </Alloy>

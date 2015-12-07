@@ -5,7 +5,7 @@ var rows = [];
 var countRow = 0;
 var lastRowTouch = -1;
 
-$.tick.visible = !($.password.passwordMask);
+// $.tick.visible = !($.password.passwordMask);
 
 var style;
 if (OS_IOS){
@@ -28,31 +28,12 @@ $.index.add(activityIndicator);
 
 $.index.open();
 
-function changeStatus(e){
-	$.password.passwordMask = $.tick.visible;
-	$.tick.visible = !($.tick.visible);
-	$.password.setSelection($.password.value.length,$.password.value.length);
-	Ti.API.info(JSON.stringify(e.source));
-}
-
 function closeWindow(){
     if (OS_IOS) {
        $.index.close();
     } else {
        $.index.close();
     }    
-}
-
-function emptyTextFieldUser(e) {
-    $.user.value = "";
-}
-
-function emptyTextFieldPassword(e) {
-    $.password.value = "";
-}
-
-function emptyTextFieldVehicle(e) {
-    $.vehicleName.value = "";
 }
 
 $.user.value = Ti.App.Properties.getString('username');
@@ -62,18 +43,12 @@ $.password.value = Ti.App.Properties.getString('password');
 function login() {
     //activityIndicator.show();
         
-    username = $.user.value;
-    password = $.password.value;
+    username = $.user.getValue();
+    password = $.password.getValue();
     
-	var savedUsername = Ti.App.Properties.getString('username');
-    var savedPassword = Ti.App.Properties.getString('password');
-    
-    Ti.API.info(username + " -> " + savedUsername);
-    Ti.API.info(password + " -> " + savedPassword);
-    
-	Ti.App.Properties.setString('username', username);
-	Ti.App.Properties.setString('password', password);
-    
+	Ti.API.info("username: " + username);
+	Ti.API.info("password: " + password);
+	
     oauth.getOAuth(function(response) {
         Ti.API.info("widget: login - autorizzato. recupera ruolo");
         
@@ -110,7 +85,12 @@ function login() {
         
         var homeCtrl = Alloy.createController('home');
    	}, username, password, false);
-    
-    
-   
 };
+
+function changeSwitchStatus(e) {
+	setTimeout(function()
+		{
+		   // $.password.passwordMask = !(e.value) + '';
+		   $.password.setPasswordMask(!e.value);
+		},200);		
+}

@@ -5,7 +5,7 @@
 		
 		<Label class="label-row-title" id="titleLbl" />
 
-		<TextField class="textfield-row-control" id="field" />
+		<TextField class="textfield-row-control" id="field" borderRadius="10" onBlur="onBlurBackColor" onFocus="onFocusBackColor"/>
 		
 		<ActivityIndicator id="actInd" class="activityindicator-forms-text"/>
 

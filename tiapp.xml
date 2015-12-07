@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>72ae056d-3b5e-4054-9777-a213945cd182</guid>
+    <guid>e9b097b0-4553-4e51-9222-7ab549e8e923</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>
@@ -47,7 +47,9 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules/>
+    <modules>
+    	<module platform="android" version="0.6">com.rkam.swiperefreshlayout</module>
+    </modules>
     <deployment-targets>
         <target device="iphone">true</target>
         <target device="ipad">false</target>
@@ -55,7 +57,7 @@
         <target device="mobileweb">false</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>5.1.1.GA</sdk-version>
+    <sdk-version>4.1.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

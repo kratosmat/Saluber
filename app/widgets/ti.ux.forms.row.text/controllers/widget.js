@@ -10,10 +10,38 @@ var CUSTOM_PROPS = [
 
 $.id = args.id || 'none_id'; //not sure how to manage if id is not specified
 
+// valori di default sull'obfocus e onblue
+// si possono cambiare mettendo sul widget l'attributo colorOnBlue e/o colorOnFocus
+var rowTextOnBlueColor = "#CACAFF";
+var rowTextOnFocusColor = "#79FFBC";
+
 initUI();
 
 function initUI(){
-
+	var appoColor = args.colorOnBlue;
+	if (appoColor != undefined) {
+		rowTextOnBlueColor = appoColor;
+	}
+	
+	appoColor = args.colorOnFocus;
+	if (appoColor != undefined) {
+		rowTextOnFocusColor = appoColor;
+	}
+	$.field.backgroundColor = rowTextOnBlueColor;	
+	
+	if (args.borderColor) {
+		$.field.borderColor=args.borderColor;
+	}
+	if (args.borderWidth) {
+		$.field.borderWidth=args.borderWidth;
+	}
+	if (args.height) {
+		$.row.height=args.height;
+	}
+	if (args.passwordMask) {
+		$.field.passwordMask=args.passwordMask;
+	}
+	
 	//not icon? move the title to the left
 	if(!args.icon){
 		$.titleLbl.left = $.icon.getView().left;
@@ -100,12 +128,16 @@ $.getValue = function(){
 	return $.field.value;
 };
 
+$.setPasswordMask = function(isValue){
+	$.field.passwordMask = isValue;
+};
+
 require('WidgetTools').cleanArgs(args);
 
+function onBlurBackColor(e) {
+	$.field.backgroundColor = rowTextOnBlueColor;
+}
 
-
-
-
-
-
-
+function onFocusBackColor(e) {
+	$.field.backgroundColor = rowTextOnFocusColor;
+}

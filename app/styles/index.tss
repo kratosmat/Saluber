@@ -21,13 +21,17 @@ height : Ti.UI.SIZE
 }
 
 ".buttonToLogin":{
-width : 250,
-height : 50,
+width : 100,
 top : 10,
 borderRadius : 5,
 color : "black",
-borderColor : "black",
-backgroundColor : "#A7A7A7"
+borderColor : "#E74F1E",
+borderWidth: 1,
+backgroundColor : "#F9D2C6",
+ font : {
+ 	fontSize : 15,
+ 	fontWeight : "bold"
+ }
 }
 
 ".closeButton":{
@@ -145,6 +149,20 @@ top : 10,
 width : Titanium.UI.FILL,
 height : Titanium.UI.SIZE,
 top : 10
-}
+},
 
-
+".label-Login":{
+	color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:'22dp'
+	},
+	textAlign:'center',
+    height:Ti.UI.SIZE
+},
+".user-pwd":{	
+    backgroundColor: "#F9D2C6",
+    borderRadius: "10",
+    borderColor: "#E74F1E",    
+    width: Titanium.UI.FILL
+},
