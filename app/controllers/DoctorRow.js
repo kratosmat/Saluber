@@ -3,9 +3,12 @@ var doctor = args._doctor;
 
 Ti.API.debug("doctorRow details: " + JSON.stringify(doctor));
 
-$.firstName.text = "Nome: " + doctor.firstName;
-$.lastName.text = "Cognome: " + doctor.lastName;
-$.phone.text = "N.Tel.: " + doctor.phone;
+$.firstRow.text = "Dr. " + doctor.firstName + ' ' + doctor.lastName;
+$.secondRow.text = "Los Angeles CA, America";
+$.thirdRow.text = "N.Tel.: " + doctor.phone;
+
+var currFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images/doctor-" + doctor.id + ".png");
+$.iconImgRowId.setImage(currFile);
 
 var filter = doctor.firstName + ", " + doctor.lastName;
 

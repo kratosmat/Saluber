@@ -165,4 +165,4 @@ top : 10
     borderRadius: "10",
     borderColor: "#E74F1E",    
     width: Titanium.UI.FILL
-},
+}
