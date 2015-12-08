@@ -159,7 +159,6 @@ exports.showAnnotation = function (locationInfo,imagePath,user) {
 		address._areaId = locationInfo.parkingAreaId;
 		Ti.API.info("geo: showAnnotation aggiunta annotation per area sosta -> " + JSON.stringify(address));
 	}
-	Ti.API.info("mapView: " + JSON.stringify(mapView));
 	mapView.addAnnotation(address);		
 };
 

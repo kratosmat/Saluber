@@ -1,6 +1,6 @@
 
 
-"#mapviewtab": {
+"#mapview": {
     userLocation: true,
     animate: true,
     top: 0,

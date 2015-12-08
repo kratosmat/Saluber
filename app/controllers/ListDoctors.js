@@ -20,7 +20,7 @@ function loadDoctors() {
 
 function createRow(doctor) {
 	Ti.API.debug("createRow: " + JSON.stringify(doctor));
-	var row = Alloy.createController("doctorRow", {
+	var row = Alloy.createController("DoctorRow", {
 		_doctor : doctor
 	});
 	return row.getView();		
