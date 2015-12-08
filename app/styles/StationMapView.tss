@@ -1,0 +1,27 @@
+
+
+"#mapviewtab": {
+    userLocation: true,
+    animate: true,
+    top: 0,
+    region: { latitude: 41.9027835, latitudeDelta: 10.05, 
+       longitude: 12.4963655, longitudeDelta: 10.05    }
+}
+
+"#container_map_actions":{
+	bottom : 20,
+	right : 75,
+	backgroundColor : "white",
+	opacity : 0.5,
+	width : Titanium.UI.SIZE,
+	height : Titanium.UI.SIZE,
+	layout : "horizontal"
+}
+
+"#appcHQ" : {
+    latitude: 37.390749,
+    longitude: -122.081651,
+    title: "Appcelerator Headquarters",
+    subtitle: "Mountain View, CA",
+    pincolor: Ti.Map.ANNOTATION_RED
+}

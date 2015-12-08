@@ -1,0 +1,10 @@
+<Alloy>
+	<View layout="vertical"> 
+        <SearchBar id="search" barColor="#000" showCancel="true" height="43" top="0" onChange="onSearch" borderRadius="5" backgroundColor="white"/> 
+		<View id="addressView" height="0" />
+		<View module="ti.map" id="mapview" >	
+			<!--View id="container_map_actions" zIndex="5" borderRadius="3" borderColor="black" borderWidth="1" /-->
+			<!--Annotation id='appcHQ' myid='1' /-->
+		</View>
+	</View>
+</Alloy>

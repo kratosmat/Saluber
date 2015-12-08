@@ -32,11 +32,13 @@ var selectedRowIndex = -1;
 
 function myRefresh(e) {
 	Ti.API.info('refreshstart');
-	loadDoctors();
+	loadBookings();
 }
 
 $.listDoctors.addEventListener("click", function(e) {	
 
+	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));
+	
 	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));
 	
 	var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
@@ -69,5 +71,11 @@ function myLoader(e) {
 	}
 	else {
 		e.error();
+	}
+}
+
+function indietroWindow(){
+	if (OS_IOS){
+		$.nav.close();
 	}
 }

@@ -94,7 +94,7 @@ function getRuolo(callback){
         alert ('Errore nel recupero del ruolo utente '+url+"\r\n"+this.responseText);
     };
 
-    var url = Alloy.CFG.service_role_url + "/" + Ti.App.Properties.getString('username') + "?access_token=" + Ti.App.Properties.getString('access_token');
+    var url = Alloy.CFG.service_role_url + "?access_token=" + Ti.App.Properties.getString('access_token');
     
     Ti.API.info("crud: getRole - " + url);
     httpClient.open("GET",url);

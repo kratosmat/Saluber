@@ -1,0 +1,37 @@
+<Alloy>
+	<TabGroup backgroundColor="white" platform="ios" id="tab" >
+	 	<Tab id="map" title="Map">
+        	<Window id="win1" title="Map" >
+            	<LeftNavButton>
+	      			<Button onClick="indietroWindow" title="L('BACK')"/>
+				</LeftNavButton>
+				<Require type="view" src="StationMapView"/>
+	      	</Window>
+        </Tab>
+        <Tab id="list" title="List">
+            <Window id="win2" title="List" >
+            	<LeftNavButton>
+	      			<Button onClick="indietroWindow" title="L('BACK')"/>
+				</LeftNavButton>
+				<Require type="view" src="StationListView" id="listView"/>
+            </Window>
+        </Tab>
+    </TabGroup>
+	<TabGroup backgroundColor="white" platform="android" onOpen="doOpen" >
+	 	<Menu>
+			<MenuItem icon="Ti.Android.R.drawable.ic_menu_send" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" title="send" onClick="send"></MenuItem>
+		</Menu>
+        <Tab id="veicolo1" title="Veicolo 1">
+            <Window id="win1" title="Veicolo 1" />
+        </Tab>
+        <Tab id="veicolo2" title="Veicolo 2">
+            <Window id="win2" title="Veicolo 2" />
+        </Tab>
+    </TabGroup>
+
+</Alloy>
+
+
+
+
+

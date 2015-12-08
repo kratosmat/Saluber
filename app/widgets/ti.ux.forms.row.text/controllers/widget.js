@@ -128,6 +128,10 @@ $.getValue = function(){
 	return $.field.value;
 };
 
+$.setValue = function(value){
+	$.field.value = value;
+};
+
 $.setPasswordMask = function(isValue){
 	$.field.passwordMask = isValue;
 };

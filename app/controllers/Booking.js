@@ -80,7 +80,15 @@ function openBookingItem(e){
 	if (e.row.data && e.row.data.controller && e.row.getTouchEnabled()) {
 		newWin = Alloy.createController(e.row.data.controller).getView();
 	} else {
-		alert('non ancora abilitato..');
+		
+		//alert('non ancora abilitato..');
+		/*
+		var wListDoctors = Alloy.createController("WindowListDoctors");
+		wListDoctors.getView().open();
+		*/
+		
+		var stationWindow = Alloy.createController("StationWindow");
+		stationWindow.getView().open();
 	}
 	
 	

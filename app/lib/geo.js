@@ -124,24 +124,26 @@ exports.removeAllAnnotations = function(){
 exports.showAnnotation = function (locationInfo,imagePath,user) {  
 	var address;		
     
-	//Ti.API.info("geo: showAnnotation - -> " + JSON.stringify(locationInfo));
+	Ti.API.info("geo: showAnnotation - -> " + JSON.stringify(locationInfo));
 	if(imagePath !== ""){
-	
-			address = map.createAnnotation({
-				latitude : locationInfo.latitude,
-				longitude : locationInfo.longitude,
-				title : locationInfo.formatted_address,				
-				image : imagePath,
-    			animate:true,
-			});	
-	}else{					
-			address = map.createAnnotation({
-			    latitude : locationInfo.latitude,
-			    longitude : locationInfo.longitude,
-			    title : locationInfo.formatted_address,				
-			    pincolor : map.ANNOTATION_RED,
-    			animate:true,
-			});
+		address = map.createAnnotation({
+			latitude : locationInfo.latitude,
+			longitude : locationInfo.longitude,
+			title : locationInfo.name,		
+			subtitle: locationInfo.formatted_address,		
+			image : imagePath,
+			animate:true,
+		});	
+	}
+	else{					
+		address = map.createAnnotation({
+		    latitude : locationInfo.latitude,
+		    longitude : locationInfo.longitude,
+		    title : locationInfo.name,		
+			subtitle: locationInfo.formatted_address,				
+		    pincolor : map.ANNOTATION_RED,
+			animate:true,
+		});
 	}		
 
 	if (user=="YES"){
@@ -152,13 +154,12 @@ exports.showAnnotation = function (locationInfo,imagePath,user) {
         lonCittaSelezionata=locationInfo.longitude;
        Ti.API.debug("geo: showAnnotation LAT latCittaSelezionata-> " + latCittaSelezionata);
        Ti.API.debug("geo: showAnnotation LON lonCittaSelezionata-> " + lonCittaSelezionata);
-
 	}
 	else {
-		address._areaId=locationInfo.parkingAreaId;
-		Ti.API.debug("geo: showAnnotation aggiunta annotation per area sosta -> " + address +" address._areaId "+address._areaId);
-
+		address._areaId = locationInfo.parkingAreaId;
+		Ti.API.info("geo: showAnnotation aggiunta annotation per area sosta -> " + JSON.stringify(address));
 	}
+	Ti.API.info("mapView: " + JSON.stringify(mapView));
 	mapView.addAnnotation(address);		
 };
 

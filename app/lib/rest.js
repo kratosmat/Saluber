@@ -8,6 +8,7 @@ var loadedPatients = [];
 var loadedHospitals = [];
 var loadedMedicalTests = [];
 var loadedSpecializations = [];
+var loadedStations = [];
 
 var saveNewSpecializations = getSaveNewSpecializations(true);
 
@@ -143,6 +144,18 @@ var getListMedicalTests = function(callback) {
 };
 exports.getListMedicalTests = getListMedicalTests;
 
+var getListStations = function(callback) {
+	Ti.API.info("crud: getListStations LOADING.......");
+	if(loadedStations!=null && loadedStations.length>0) callback(loadedStations);
+	else {
+		getInfo("station/list", function(results) {		
+			loadedStations = results;
+			callback(loadedStations);
+		});	
+	}
+	
+};
+exports.getListStations = getListStations;
 
 function getSaveNewSpecializations(empty) {
 	if (empty == true) {
@@ -152,3 +165,61 @@ function getSaveNewSpecializations(empty) {
 	return saveNewSpecializations;
 };
 exports.getSaveNewSpecializations = getSaveNewSpecializations;
+
+var getOrCreateMonth = function(year, month, callback) {
+	Ti.API.info("crud: getOrCreateMonth LOADING.......");
+	getInfo("calendar/month/" + year + "/" + month, function(results) {		
+		callback(results);
+	});	
+};
+exports.getOrCreateMonth = getOrCreateMonth;
+
+
+
+
+function saveMonth(month, callback){
+	var strMonth = JSON.stringify(month);
+	Ti.API.info("saveMonth: saveMonth " + strMonth);
+	
+	var requestHttp = Ti.Network.createHTTPClient({
+		onload: function(e){
+			try{
+				Ti.API.info("booking: createBooking this.status "+this.status);
+				if (this.status === 200) {
+				    Ti.API.debug("booking: createBooking HO EFFETTUATO LA RICHIESTA DI PRENOTAZIONE, QUESTO E' LA RISPOSTA CHE RITORNA -> " + this.responseText);
+				    callback(this.responseText);
+			    } 
+			    else {
+			        Ti.API.info("booking: createBooking Invalid " + this.status);
+			        alert(L(this.responseText, 'Errore durante la ricerca disponibilita.\r\nStato ' + this.status));
+			        callback(this.responseText);
+		        }
+		    }
+		    catch(exc){
+		   	    Ti.API.info("Invalid " + exc);
+		    }
+	    },
+	    onerror : function(e){
+	    	Titanium.API.error('ondatastream called, readyState = '+this.readyState+'\r\nStatus: ' + this.status+'\r\nResponseText: ' + this.responseText+'\r\nconnectionType: ' + this.connectionType+'\r\nlocation: ' + this.location);
+		    alert(L(this.responseText,'Errore durante la creazione della prenotazione.\r\n Codice di errore '+this.responseText));
+	    	callback(this.responseText);
+	    },
+	    onsendstream: function(e) {
+			// function called as data is uploaded
+			Ti.API.info('onsendstream called, readyState = '+this.readyState);
+			callback(this.readyState);
+	    }
+	});
+	var url;
+	url = Alloy.CFG.service_url + "/calendar/save_month_doctor?" +"access_token="+ Ti.App.Properties.getString('access_token');
+    try{
+		requestHttp.open("POST",url);
+		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+		requestHttp.send(strMonth);
+	}
+	catch(excTcp){
+		
+    	Ti.API.info("exc  "+excTcp);		
+	}
+};
+exports.saveMonth = saveMonth;

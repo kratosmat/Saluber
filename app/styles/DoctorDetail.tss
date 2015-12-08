@@ -1,0 +1,60 @@
+".container": {
+	backgroundColor:"#A7A7A7"
+}
+
+".action_bar":{
+	top : 5,
+	width : Ti.UI.FILL,
+	height : 50
+}
+
+
+
+".user":{
+	left : 5,
+	height : Ti.UI.FILL,
+	color : "black"
+}
+
+"#name":{
+	left : 5,
+	height : Ti.UI.FILL,
+	color : "white",
+	font : {
+		fontSize : 18,
+		fontWeight : "bold"
+	}	
+}
+
+".name_area":{	
+	left : 57,
+	right: 5,
+	height : 45,
+	top: 5,
+	color: "white"
+	
+}
+
+".title": {
+	width: Ti.UI.FILL,
+	height: 50,
+	top:5,
+	color: "#fff",
+	font : {
+		fontSize : "22sp",
+		fontWeight : "bold"
+	},
+	left : 30
+}
+
+".row":{
+	width : 200,
+	height : 45,
+	borderRadius:5,
+	borderWidth : 1,
+	borderColor : "black",
+	backgroundColor : "white"
+	
+}
+
+

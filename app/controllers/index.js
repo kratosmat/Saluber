@@ -1,4 +1,3 @@
-
 var REST = require("rest");
 var oauth = require("oauth");
 var rows = [];
@@ -36,12 +35,10 @@ function closeWindow(){
     }    
 }
 
-$.user.value = Ti.App.Properties.getString('username');
-$.password.value = Ti.App.Properties.getString('password');
-
+$.user.setValue(Ti.App.Properties.getString('username'));
+$.password.setValue(Ti.App.Properties.getString('password'));
 
 function login() {
-    //activityIndicator.show();
         
     username = $.user.getValue();
     password = $.password.getValue();
@@ -49,7 +46,10 @@ function login() {
 	Ti.API.info("username: " + username);
 	Ti.API.info("password: " + password);
 	
+	
     oauth.getOAuth(function(response) {
+    	Ti.App.Properties.setString('username', username);
+    	Ti.App.Properties.setString('password', password);
         Ti.API.info("widget: login - autorizzato. recupera ruolo");
         
         REST.getListBookings(function(results) {

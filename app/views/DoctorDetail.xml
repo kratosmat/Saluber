@@ -1,0 +1,28 @@
+<Alloy>
+	<TableView id="mainTable">
+		<TableViewSection>
+			<TableViewRow><Widget src="ti.ux.spacer" height="15"/></TableViewRow>
+			<TableViewRow height="Ti.UI.SIZE" id="areaName"></TableViewRow>
+			<TableViewRow><Widget src="ti.ux.spacer" height="8"/></TableViewRow>
+			<TableViewRow id="areaImage" />
+
+			<TableViewRow><Widget src="ti.ux.spacer" height="10"/></TableViewRow>
+<!--
+			<TableViewRow height="120" platform="ios">
+				<View module="ti.map" id="mapview" />	
+			</TableViewRow>
+-->			
+
+			<TableViewRow id="areaTimings"></TableViewRow>
+			<TableViewRow id="areaLocation"></TableViewRow>
+			<TableViewRow id="areaEmail"></TableViewRow>
+			<TableViewRow><Widget src="ti.ux.spacer" height="10" /></TableViewRow>			
+		</TableViewSection>			
+		
+		<TableViewSection id="areaServices">
+			
+			<TableViewRow><Widget src="ti.ux.spacer" height="4" /></TableViewRow>
+			<TableViewRow><Widget src="ti.ux.spacer" height="1" backgroundColor="#aaa"/></TableViewRow>
+		</TableViewSection>
+	</TableView>
+</Alloy>

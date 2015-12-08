@@ -1,0 +1,77 @@
+".search":{
+	backgroundColor : "#A7A7A7",
+	width : Titanium.UI.FILL,
+	height : "50"
+}
+
+"#search":{
+	font:{
+		fontSize : "18sp"		
+	},
+	
+	left : 42,
+	right : 50,
+	
+	color: '#000',
+	
+	/*borderWidth: 2,
+	borderColor: '#000',
+	borderRadius: 5,		
+	backgroundColor : "white",*/
+	height : Titanium.UI.FILL,
+	
+	textAlign : "center"	
+}
+
+".leftimage":{
+	left : 5,
+	width : 32,
+	height : 32
+}
+
+".rightimage":{
+	right : 5,
+	width : 40,
+	height : 25
+}
+
+
+"Label":{
+	bottom : "1%",
+	font:{
+		fontSize : "18sp"		
+	},
+	
+	color : "#000",	
+	
+	width : "95%",
+	height : Titanium.UI.SIZE,
+	
+	textAlign : "center"
+	
+}
+
+".header_title":{
+	top : 0,
+	font:{
+		fontSize : "20sp"		
+	},
+	
+	backgroundColor : "#A7A7A7",
+	
+	color : "#fff",	
+	
+	width : Titanium.UI.FILL,
+	height : Titanium.UI.SIZE,
+	
+	textAlign : "center"
+}
+
+"#addressList":{	
+	width : Titanium.UI.FILL,	
+	height: Titanium.UI.FILL,
+	backgroundColor : "white",
+	separatorColor : "black",
+	//borderWidth : "1dp",
+	borderColor : "black"
+}

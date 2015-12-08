@@ -1,0 +1,12 @@
+<Alloy>
+	<NavigationWindow platform="ios" id="navWin">
+		<Window backgroundColor="#A7A7A7" title="Uirnet" id="mainWin">
+			<LeftNavButton>
+	      		<Button onClick="indietroWindow" title="L('BACK')"/>
+	      	</LeftNavButton>
+		</Window>
+	</NavigationWindow> 
+	
+	<Window class="container" onOpen="doOpen" platform="android" id="mainWin"/>
+
+</Alloy>
