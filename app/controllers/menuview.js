@@ -9,6 +9,7 @@ menus.push(createMenuRow('row2', 'rowGear', 'Booking'));
 menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
 menus.push(createMenuRow('row4', 'rowGear', 'Calendar'));
 menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
+menus.push(createMenuRow('row6', 'rowGear', 'Stations'));
 
 $.menuTable.data = menus;
 

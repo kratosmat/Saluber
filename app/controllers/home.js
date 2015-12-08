@@ -70,6 +70,13 @@ function getMenuView(){
 	            }
 		        activeView = 5;
 		    }
+		    if(e.rowData.id==="row6"){
+				if(activeView!=6){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(createView('ListStations').getView());
+	            }
+		        activeView = 6;
+		    }
 		    Ti.API.debug(e.rowData.id); 
 		});
 	}

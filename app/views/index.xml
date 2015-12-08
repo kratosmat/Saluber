@@ -1,34 +1,7 @@
 <Alloy>
-	<Window navBarHidden="true" backgroundColor="#E74F1E">
-		<TableView left="30" right="30" top="50" height="272" borderRadius="6">					
-			<TableViewSection>
-				<TableViewRow>
-					<View backgroundColor="#FFF">
-						<Label height="70" class="label-Login" text="SALUBER LOGIN" textAlign="center" width="Ti.UI.FILL" />
-						<View class="view-row-separator" backgroundColor="#E74F1E"/>
-					</View>
-				</TableViewRow>
-				
-				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
-				
-				<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" hintText="Insert Username" id="user" />
-				
-				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
-				
-				<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" passwordMask="true" hintText="Insert Password" id="password" />
-				
-				<TableViewRow backgroundColor="#FFF" height="25">
-						<Label text="View / Hide Password" right="70" />
-						<Switch id="idPasswordSwitch" right="10" value="false" onChange="changeSwitchStatus"/>
-				</TableViewRow>						
-				
-				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
-				
-				<TableViewRow backgroundColor="#FFF" height="50">
-					<Button class="buttonToLogin" onClick="login" textAlign="center" height="25">LOGIN</Button>
-				</TableViewRow>
-				
-			</TableViewSection>				
-		</TableView>			
+	<Window navBarHidden="true">
+		<View  backgroundColor="yellow">
+			<ImageView image="images/init-page.png" width="Titanium.UI.FILL" height="Titanium.UI.FILL" ></ImageView>
+		</View>
 	</Window>
 </Alloy>
