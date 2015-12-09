@@ -10,7 +10,7 @@ menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
 menus.push(createMenuRow('row4', 'rowGear', 'Doctor Agenda'));
 menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
 menus.push(createMenuRow('row6', 'rowGear', 'Station Agenda'));
-menus.push(createMenuRow('row6', 'rowGear', 'Stations'));
+menus.push(createMenuRow('row7', 'rowGear', 'Stations'));
 menus.push(createMenuRow('row10', 'rowGear', 'Logout'));
 
 $.menuTable.data = menus;

@@ -21,6 +21,7 @@ function createView(viewName) {
 	return view;
 };
 
+
 function getMenuView(){
 	if(menuView==null) {
 		
