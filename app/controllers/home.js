@@ -76,6 +76,13 @@ function getMenuView(){
 	            }
 		        activeView = 6;
 		    }
+			if(e.rowData.id==="row7"){
+				if(activeView!=7){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(createView('ListStations').getView());
+	            }
+		        activeView = 7;
+		    }
 		    if(e.rowData.id==="row10") {
 		    	$.home.close();
 		        activeView = 1;
