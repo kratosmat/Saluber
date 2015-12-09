@@ -9,7 +9,7 @@
 				<SearchBar id="searchView" showCancel="true" hintText="L('SEARCH')" />
 				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
 			</TableView>
-			<TableView id="listStations" platform="android" search="searchView" bubbleParent="false" onLongpress="myRefresh">
+			<TableView id="listStations" platform="android" search="searchView" bubbleParent="false">
 				<SearchView id="searchView" ns="Ti.UI.Android" hintText="L('SEARCH')"/>
 				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
 			</TableView>
