@@ -44,6 +44,13 @@ $.newCheckTableId.addEventListener("click", function(e) {
 		}
 		if(e.row.data.id=='location') {
 			var stationWindow = Alloy.createController("StationWindow");
+			stationWindow.on('selectedStation', function(e) {
+				Ti.API.info("selectedStation: " + JSON.stringify(e));
+				REST.findStationById(e.selectedStation, function(_station) {
+					$.location.setValueText(_station.name + " \n" + _station.completeAddress);
+				});
+				
+			});
 			stationWindow.getView().open();
 		}
 		if(e.row.data.id=='date') {
@@ -57,4 +64,8 @@ function indietroWindow(){
 	if (OS_IOS){
 		$.nav.close();
 	}
+}
+
+function send(e) {
+	
 }

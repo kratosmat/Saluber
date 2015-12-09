@@ -1,9 +1,12 @@
 <Alloy>	
 	<NavigationWindow platform="ios" id="nav">
 		<Window class="container" id="mainWin">
-			<LeftNavButton borderColor="purple">
+			<LeftNavButton >
 	      		<Button onClick="indietroWindow" title="L('BACK')"/>
 	      	</LeftNavButton>
+	      	<RightNavButton borderColor="purple">
+	      		<Button onClick="send" title="L('NEXT')"/>
+	      	</RightNavButton>
 	      	<View layout="vertical" bubbleParent="false">
 				<TableView id="newCheckTableId">					
 					<TableViewSection id="tableViewBookingSection">

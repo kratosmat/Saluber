@@ -205,6 +205,15 @@ var getListStations = function(callback) {
 };
 exports.getListStations = getListStations;
 
+function findStationById(id, callback) {
+	getListStations(function(stations) {
+		_stations = _.where(stations, {id: id});
+		if(_stations!=null && _stations.length>0) callback(_stations[0]);
+		else callback(null);
+	});
+}
+exports.findStationById = findStationById;
+
 function getSaveNewSpecializations(empty) {
 	if (empty == true) {
 		saveNewSpecializations = {"id":-1, specialization:{"id":-1, "name":""}};

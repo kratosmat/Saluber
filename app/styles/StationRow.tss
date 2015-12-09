@@ -1,34 +1,4 @@
-"#firstName": {
-	width : Ti.UI.FILL,
-	left : 15,
-	font : {
-		fontFamily : 'Arial',
-		fontWeight : 'bold',
-		size : 18
-	},
-	top : '4dp',
-//	borderColor : "purple"
-},
 
-"#lastName" : {
-	width : Ti.UI.FILL,
-	top : '4dp',
-	left : '15dp',
-	font : {
-		fontFamily : 'Arial',
-	},
-//	borderColor : "purple"
-},
-"#phone" : {
-	width : Ti.UI.FILL,			
-	top : '4dp',
-	left : '15dp',
-	font : {
-		fontFamily : 'Arial',
-	},
-//	color : "#000",
-//	borderColor : "purple"
-},
 ".row" : {
 	width : Titanium.UI.FILL,
 	height : '110dp',

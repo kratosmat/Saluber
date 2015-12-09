@@ -1,17 +1,33 @@
 <Alloy>
+	<TableViewRow className="stationRow" class="rowUnselectedClass" height="60">
+		<View layout="horizontal">
+			<View height="58" width="58" top="2" bottom="2">
+				<ImageView image="images/bleins.jpg" id="iconImgRowId" ></ImageView>
+			</View>
+			<View layout="vertical" width="Titanium.UI.FILL">
+				<View class="label-record-table">
+					<Label color="white" left="20" id="firstRow"></Label>
+				</View>
+				<View class="label-record-table">
+					<Label color="white" left="20" id="secondRow"></Label>
+				</View>
+				<View class="label-record-table">
+					<Label color="white" left="20" id="thirdRow"></Label>
+				</View>
+			</View>
+		</View>	
+	</TableViewRow>	
+	<!--
 	<TableViewRow >
 		<View class="row">
 			<View class="main_description">
 				<Label id="name" />
 				<Label id="address" />
 				<Label id="nroom" />
-				<!--View class="check">
-					<Label id="booking_checkin" />
-					<Label id="booking_checkout" />
-				</View-->
 			</View>
 			<View id="iconsView"/>
 		</View>
 		
 	</TableViewRow>
+	-->
 </Alloy>

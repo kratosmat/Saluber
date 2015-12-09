@@ -50,13 +50,3 @@
 //	borderWidth : 1
 },
 
-".label-record-table":{
-	color:'#000',	
-	font:{
-		fontFamily: Alloy.CFG.fontNormal,
-		fontSize:'22dp'
-	},
-	textAlign:'left',
-    height: 20,
-     backgroundColor: "#E74F1E"
-},

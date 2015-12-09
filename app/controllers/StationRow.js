@@ -3,9 +3,11 @@ var station = args._station;
 
 Ti.API.debug("row details: " + JSON.stringify(station));
 
-$.name.text = "Nome: " + station.name;
-$.address.text = "Indirizzo: " + station.completeAddress;
-$.nroom.text = "N.Room: " + station.nroom;
+$.firstRow.text = "Nome: " + station.name;
+$.secondRow.text = "Indirizzo: " + station.completeAddress;
+$.thirdRow.text = "N.Room: " + station.nroom;
+$.StationRow.selected = false;
+$.StationRow._info = station;
 
 var filter = station.name + ", " + station.completeAddress;
 

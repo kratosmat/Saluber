@@ -119,3 +119,13 @@ overrode the settings with other TSS, XML, or JS settings:
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 //	borderColor: 'purple'
 },
+".label-record-table":{
+	color:'#000',	
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:'22dp'
+	},
+	textAlign:'left',
+    height: 20,
+    backgroundColor: "#E74F1E"
+},

@@ -11,3 +11,11 @@
 	borderWidth : "1dp",
 	borderColor : "grey"
 }
+".rowSelectedClass": {
+	backgroundColor: "black",
+	height: "60"
+}
+".rowUnselectedClass": {
+	backgroundColor: "#E74F1E",
+	height: "60"
+}

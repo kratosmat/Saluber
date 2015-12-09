@@ -13,7 +13,7 @@ function loadData() {
 		$.is.init($.list);
 		$.is.load();
 		
-		$.ptr.hide();
+		//$.ptr.hide();
 	});
 };
 
@@ -29,21 +29,46 @@ loadData();
 
 var selectedRowIndex = -1;
 
+/*
 function myRefresh(e) {
 	Ti.API.info('refreshstart');
 	loadData();
 }
-
+*/
+var selectedStation = null;
 $.list.addEventListener("click", function(e) {	
 
-	Ti.API.info(JSON.stringify("list: e.row. selezionata "+JSON.stringify(e.row)));
-	/*
-	var wDetail = Alloy.createController("WindowDoctorDetail", {
-		doctor : e.row.doctor
-	});
+	Ti.API.info(JSON.stringify("listStations: e selezionata "+JSON.stringify(e)));
+	Ti.API.info(JSON.stringify("listStations: e.row selezionata "+JSON.stringify(e.row)));
+	Ti.API.info(JSON.stringify("listStations: e.source.id selezionata "+JSON.stringify(e.source.id)));
+	Ti.API.info(JSON.stringify("listStations: e.row._info selezionata "+JSON.stringify(e.row._info)));
+	var source = e.source.id;
+	var station = e.row._info;
 	
-	wDoctorDetail.getView().open();
-	*/
+	if(source=="iconImgRowId") {
+		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
+			e.row.selected = false;
+			$.removeClass(e.row, 'rowSelectedClass');
+			$.addClass(e.row, 'rowUnselectedClass');
+			selectedStation = null;
+			Ti.API.info("listStations: unselected");
+		}
+		else if(selectedStation==null) {
+			e.row.selected = true;
+			selectedStation = station.id;
+			$.addClass(e.row, 'rowSelectedClass');
+			$.removeClass(e.row, 'rowUnselectedClass');
+			Ti.API.info("listStations: selected");
+		}
+	}
+	else {
+		/*
+		var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
+			doctor : doctor
+		});
+		wDoctorDetail.getView().open();
+		*/
+	}
 });
 
 
@@ -72,3 +97,7 @@ function myLoader(e) {
 		e.error();
 	}
 }
+
+$.getSelectedStation = function() {
+	return (selectedStation);
+};
