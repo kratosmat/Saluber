@@ -1,6 +1,5 @@
 
 "Window":{
-
 },
 
 "Window[platform=ios]":{
@@ -10,12 +9,6 @@
 },
 
 "NavigationWindow[platform=ios]":{
-	//barImage:Alloy.CFG.barImage,
-/*	barColor: '#fff',
-	includeOpaqueBars:true,
-    extendEdges:[Ti.UI.EXTEND_NONE],
-    translucent: true,
-    statusBarStyle: Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK*/
 },
 
 "Label":{
@@ -24,7 +17,8 @@
 },
 
 "TableView":{
-	backgroundColor:'#eee'
+	backgroundColor:'#eee',
+	borderColor: '#E74F1E'
 },
 
 "TableViewRow":{

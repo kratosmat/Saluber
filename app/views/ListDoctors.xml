@@ -2,6 +2,7 @@
 	<View id="mainView" class="mainView">
 		<View id="mainTopBar" class="mainTopBar">
 			<View id="menuButton" class="menuButton" />
+			<Label class="labelTopBar" text="List Doctors"/>
 		</View>
 		<View layout="vertical" bubbleParent="false">
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresh" platform="ios">

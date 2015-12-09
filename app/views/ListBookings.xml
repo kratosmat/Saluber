@@ -2,9 +2,8 @@
 	<View id="mainView" class="mainView">
 		<View id="mainTopBar" class="mainTopBar">
 			<View id="menuButton" class="menuButton" />
+			<Label class="labelTopBar" text="List Booking"/>
 		</View>
-		<View layout="vertical" bubbleParent="false">
-			<Label text="ListBookings"></Label>
-		</View>
+		<Require type="view" src="BookingListView"/>
 	</View>
 </Alloy>

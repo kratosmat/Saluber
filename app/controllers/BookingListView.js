@@ -5,10 +5,10 @@ var rowPerPage = 10;
 
 function loadData() {
 	$.list.setData([]);
-	REST.getListStations(function(_stations) {
-		data = _stations;
-		_.each(_stations, function(_station, index) {
-			if(index<rowPerPage) $.list.appendRow(createRow(_station));
+	REST.getListBookings(function(_bookings) {
+		data = _bookings;
+		_.each(_bookings, function(_booking, index) {
+			if(index<rowPerPage) $.list.appendRow(createRow(_booking));
 		});
 		$.is.init($.list);
 		$.is.load();
@@ -19,8 +19,8 @@ function loadData() {
 
 function createRow(item) {
 	Ti.API.debug("createRow: " + JSON.stringify(item));
-	var row = Alloy.createController("StationRow", {
-		_station : item
+	var row = Alloy.createController("BookingRow", {
+		_booking : item
 	});
 	return row.getView();		
 }
@@ -71,4 +71,10 @@ function myLoader(e) {
 	else {
 		e.error();
 	}
+}
+
+function newBooking() {
+	Ti.API.info("newBooking");
+	var bookingWindow = Alloy.createController("BookingWindow");
+	bookingWindow.getView().open();
 }

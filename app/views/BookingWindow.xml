@@ -1,0 +1,28 @@
+<Alloy>	
+	<NavigationWindow platform="ios" id="nav">
+		<Window class="container" id="mainWin">
+			<LeftNavButton borderColor="purple">
+	      		<Button onClick="indietroWindow" title="L('BACK')"/>
+	      	</LeftNavButton>
+	      	<View layout="vertical" bubbleParent="false">
+				<TableView id="newCheckTableId">					
+					<TableViewSection id="tableViewBookingSection">
+						<HeaderView>
+							<View class="view-headerview-form">
+								<Label height="70" class="label-H3" text="NEW BOOKING" textAlign="center"/>
+								<View class="view-row-separator" />
+							</View>
+						</HeaderView>
+						<Widget src="ti.ux.forms.row.picker" title="Select Specialization" pickerType="single-column" id="specializaton" icon="fa-h-square" />
+						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
+						<Widget src="ti.ux.rowitem" icon="fa-user-md" title="Select Doctor" id="doctor" hasChildren="true" />
+						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
+						<Widget src="ti.ux.rowitem" icon="fa-map-marker" title="Select Location" id="location" hasChildren="true" />
+						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
+						<Widget src="ti.ux.rowitem" icon="fa-calendar-o" title="Select Date" id="date" hasChildren="true" />
+					</TableViewSection>				
+				</TableView>			
+			</View>
+		</Window>
+	</NavigationWindow> 
+</Alloy>

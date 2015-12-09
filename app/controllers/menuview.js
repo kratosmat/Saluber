@@ -7,8 +7,10 @@ var menus = [];
 menus.push(createMenuRow('row1', 'rowSkull', 'ListBookings'));
 menus.push(createMenuRow('row2', 'rowGear', 'Booking'));
 menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
-menus.push(createMenuRow('row4', 'rowGear', 'Calendar'));
+menus.push(createMenuRow('row4', 'rowGear', 'Doctor Agenda'));
 menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
+menus.push(createMenuRow('row6', 'rowGear', 'Station Agenda'));
+menus.push(createMenuRow('row10', 'rowGear', 'Logout'));
 
 $.menuTable.data = menus;
 

@@ -93,6 +93,15 @@ var getListDoctors = function(callback) {
 };
 exports.getListDoctors = getListDoctors;
 
+function findDoctorById(id, callback) {
+	getListDoctors(function(doctors) {
+		_doctors = _.where(doctors, {id: id});
+		if(_doctors!=null && _doctors.length>0) callback(_doctors[0]);
+		else callback(null);
+	});
+}
+exports.findDoctorById = findDoctorById;
+
 var getListPatients = function(callback) {
 	Ti.API.info("crud: getListPatients LOADING.......");
 	if(loadedPatients!=null && loadedPatients.length>0) callback(loadedPatients);
@@ -105,6 +114,15 @@ var getListPatients = function(callback) {
 	
 };
 exports.getListPatients = getListPatients;
+
+function findPatientById(id, callback) {
+	getListPatients(function(results) {
+		_items = _.where(results, {id: id});
+		if(_items!=null && _items.length>0) callback(_items[0]);
+		else callback(null);
+	});
+}
+exports.findPatientById = findPatientById;
 
 var getListHospitals = function(callback) {
 	Ti.API.info("crud: getListHospitals LOADING.......");
@@ -130,6 +148,15 @@ var getListSpecializations = function(callback) {
 	}
 };
 exports.getListSpecializations = getListSpecializations;
+
+function findSpecializationById(id, callback) {
+	getListSpecializations(function(results) {
+		_items = _.where(results, {id: id});
+		if(_items!=null && _items.length>0) callback(_items[0]);
+		else callback(null);
+	});
+}
+exports.findSpecializationById = findSpecializationById;
 
 var getListMedicalTests = function(callback) {
 	Ti.API.info("crud: getListMedicalTests LOADING.......");
@@ -176,8 +203,7 @@ exports.getOrCreateMonth = getOrCreateMonth;
 
 
 
-
-function saveMonth(month, callback){
+function saveMonth(month, part, callback){
 	var strMonth = JSON.stringify(month);
 	Ti.API.info("saveMonth: saveMonth " + strMonth);
 	
@@ -211,7 +237,7 @@ function saveMonth(month, callback){
 	    }
 	});
 	var url;
-	url = Alloy.CFG.service_url + "/calendar/save_month_doctor?" +"access_token="+ Ti.App.Properties.getString('access_token');
+	url = Alloy.CFG.service_url + "/calendar/" + part + "?" +"access_token="+ Ti.App.Properties.getString('access_token');
     try{
 		requestHttp.open("POST",url);
 		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
@@ -222,4 +248,14 @@ function saveMonth(month, callback){
     	Ti.API.info("exc  "+excTcp);		
 	}
 };
-exports.saveMonth = saveMonth;
+
+function saveMonthDoctor(month, callback) {
+	saveMonth(month, 'save_month_doctor', callback);
+}
+exports.saveMonthDoctor = saveMonthDoctor;
+
+
+function saveMonthStation(month, callback) {
+	saveMonth(month, 'save_month_station', callback);
+}
+exports.saveMonthStation = saveMonthStation;

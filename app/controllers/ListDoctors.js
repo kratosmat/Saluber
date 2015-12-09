@@ -5,7 +5,7 @@ var doctorsData = [];
 var rowPerPage = 10;
 
 function loadDoctors() {
-
+	$.listDoctors.setData([]);
 	REST.getListDoctors(function(_doctors) {
 		doctorsData = _doctors;
 		_.each(_doctors, function(_doctor, index) {

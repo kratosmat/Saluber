@@ -1,4 +1,3 @@
-//var gps = require("geo");
 var args = arguments[0];
 
 // get main and menu view as objects
@@ -11,7 +10,7 @@ function createView(viewName) {
 	Ti.API.info("creating " + viewName + "...");
 	view = Alloy.createController(viewName);
 	view.menuButton.add(getMenuButton({
-		h: '60',
+		h: '43',
 		w: '60'
 	}));
 	view.menuButton.addEventListener('click',function(){
@@ -70,7 +69,19 @@ function getMenuView(){
 	            }
 		        activeView = 5;
 		    }
+		    if(e.rowData.id==="row6"){
+				if(activeView!=6){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(createView('StationAgenda').getView());
+	            }
+		        activeView = 6;
+		    }
+		    if(e.rowData.id==="row10") {
+		    	$.home.close();
+		        activeView = 1;
+		    }
 		    Ti.API.debug(e.rowData.id); 
+		    
 		});
 	}
     return menuView;   
@@ -81,13 +92,13 @@ function getMenuButton(args){
     var v=Ti.UI.createView({
         height: args.h,
         width: args.w,
-        backgroundColor: '#A1D0E0'
+        backgroundColor: 'white'
     });
     
     var b=Ti.UI.createView({
         height: "20dp",
         width: "20dp",
-        backgroundImage: "/106-sliders.png"
+        backgroundImage: "/Menu-25.png"
     });
     
     v.add(b);

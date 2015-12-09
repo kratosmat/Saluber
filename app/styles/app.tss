@@ -101,11 +101,21 @@ overrode the settings with other TSS, XML, or JS settings:
 
 ".mainTopBar":{
 	width: Ti.UI.FILL,
-	height: "60dp",
-	backgroundColor: '#5B96B2',
-	layout: 'horizontal'
+	height: "43dp",
+	backgroundColor: 'purple',
+	layout: 'horizontal',
+//	borderColor: '#E74F1E'
 },
 ".menuButton":{
 	width: "60dp",
-	height: "60dp"
+	height: "43dp"
 }
+".labelTopBar":{
+	width: Ti.UI.FILL,
+	height: "43dp",
+	backgroundColor: 'white',
+	rigth: 100,
+	font: { fontSize: 20, fontFamily: 'HelveticaNeue-Light' },
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+//	borderColor: 'purple'
+},

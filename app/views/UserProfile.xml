@@ -2,6 +2,7 @@
 	<View id="mainView" class="mainView">
 		<View id="mainTopBar" class="mainTopBar">
 			<View id="menuButton" class="menuButton" />
+			<Label class="labelTopBar" text="User Profile"/>
 		</View>
 		<View layout="vertical" bubbleParent="false">
 			<Label text="UserProfile"></Label>
