@@ -73,6 +73,7 @@ function myLoader(e) {
 	}
 }
 
+
 function newBooking() {
 	Ti.API.info("newBooking");
 	var bookingWindow = Alloy.createController("BookingWindow");

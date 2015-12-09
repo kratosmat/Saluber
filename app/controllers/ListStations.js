@@ -13,7 +13,7 @@ function loadStations() {
 		$.is.init($.listStations);
 		$.is.load();
 		
-		$.ptr.hide();
+//		$.ptr.hide();
 	});
 };
 
@@ -29,10 +29,12 @@ loadStations();
 
 var selectedRowIndex = -1;
 
+/*
 function myRefresh(e) {
 	Ti.API.info('refreshstart');
 	loadStations();
 }
+*/
 
 $.listStations.addEventListener("click", function(e) {	
 

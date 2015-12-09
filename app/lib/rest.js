@@ -64,17 +64,16 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 
 var getListBookings = function(callback) {
 	Ti.API.info("crud: getListBookings LOADING.......");
-	if(loadedBookings!=null && loadedBookings.length>0) callback(loadedBookings);
-	else {
+	//if(loadedBookings!=null && loadedBookings.length>0) callback(loadedBookings);
+	//else {
 		getInfo("booking/list", function(listBookings) {
 			loadedBookings = listBookings;
 			callback(loadedBookings);
 		});	
-	}
+	//}
 	
 };
 exports.getListBookings = getListBookings;
-
 
 var getListDoctors = function(callback) {
 	
@@ -101,6 +100,28 @@ function findDoctorById(id, callback) {
 	});
 }
 exports.findDoctorById = findDoctorById;
+
+function findDoctorBySpecialization(specialization_id, callback) {
+	Ti.API.info("findDoctorBySpecialization: " + specialization_id);
+	if(typeof(specialization_id) == undefined || specialization_id==null) {
+		getListDoctors(callback);
+	}
+	else {
+		getListDoctors(function(doctors) {
+			var specializedDoctors = [];
+			_.each(doctors, function(doctor) {
+				Ti.API.info("findDoctorBySpecialization: " + JSON.stringify(doctor));
+				_.each(doctor.specializations, function(specialization) {
+					if(specialization == specialization_id) {
+						specializedDoctors.push(doctor);
+					}
+				});
+			});
+			callback(specializedDoctors);
+		});
+	}
+}
+exports.findDoctorBySpecialization = findDoctorBySpecialization;
 
 var getListPatients = function(callback) {
 	Ti.API.info("crud: getListPatients LOADING.......");

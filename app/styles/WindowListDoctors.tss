@@ -1,0 +1,27 @@
+/*
+"#is" : {
+  
+}
+"#listDoctors" : {
+  
+}
+"#nav" : {
+  
+}
+"#searchView" : {
+  
+}
+".container" : {
+  
+}
+*/
+
+
+".rowSelectedClass": {
+	backgroundColor: "black",
+	height: "60"
+}
+".rowUnselectedClass": {
+	backgroundColor: "#E74F1E",
+	height: "60"
+}

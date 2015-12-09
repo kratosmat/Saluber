@@ -40,6 +40,7 @@ function getMenuView(){
 				activeView = 1;
 				
 		    }
+		    /*
 		    if(e.rowData.id==="row2"){
 		        if(activeView!=2){
 				    // init first step to booking
@@ -49,6 +50,7 @@ function getMenuView(){
 		        } 
 		        activeView = 2;		        
 		    }
+		    */
 		    if(e.rowData.id==="row3"){
 				if(activeView!=3){
 	        	    $.drawermenu.drawermainview.removeAllChildren();

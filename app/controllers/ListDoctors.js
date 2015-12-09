@@ -14,7 +14,7 @@ function loadDoctors() {
 		$.is.init($.listDoctors);
 		$.is.load();
 		
-		$.ptr.hide();
+//		$.ptr.hide();
 	});
 };
 
@@ -29,12 +29,12 @@ function createRow(doctor) {
 loadDoctors();
 
 var selectedRowIndex = -1;
-
+/*
 function myRefresh(e) {
 	Ti.API.info('refreshstart');
 	loadDoctors();
 }
-
+*/
 $.listDoctors.addEventListener("click", function(e) {	
 
 	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));

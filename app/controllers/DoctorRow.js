@@ -1,11 +1,13 @@
 var args = arguments[0] || {};
 var doctor = args._doctor;
 
-Ti.API.debug("doctorRow details: " + JSON.stringify(doctor));
+Ti.API.info("doctorRow details: " + JSON.stringify(doctor));
 
 $.firstRow.text = "Dr. " + doctor.firstName + ' ' + doctor.lastName;
 $.secondRow.text = "Los Angeles CA, America";
 $.thirdRow.text = "N.Tel.: " + doctor.phone;
+$.DoctorRow.selected = false;
+$.DoctorRow._info = doctor;
 
 var currFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images/doctor-" + doctor.id + ".png");
 $.iconImgRowId.setImage(currFile);

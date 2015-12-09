@@ -18,7 +18,7 @@
 
 "TableView":{
 	backgroundColor:'#eee',
-	borderColor: '#E74F1E'
+//	borderColor: '#E74F1E'
 },
 
 "TableViewRow":{

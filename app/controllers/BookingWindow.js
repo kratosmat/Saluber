@@ -8,6 +8,10 @@ $.specializaton.parent = $.mainWin;
 var stalloSelezionato;
 var nSpecialization = [];
 REST.getListSpecializations(function(results) {
+	nSpecialization.push({ 
+		id: null,
+		value: "Nessuna Specializzazione"
+	});
 	_.each(results, function(result) {
     	var nSpec = { 
     		id: result.id,
@@ -21,11 +25,21 @@ $.specializaton.selectedValues = ((stalloSelezionato == null) ? [null] : [stallo
 $.specializaton.pickerValues = nSpecialization;
 
 $.newCheckTableId.addEventListener("click", function(e) {
-	Ti.API.info(JSON.stringify(e));
+	Ti.API.info("newCheckTableId: " + JSON.stringify(e));
+	Ti.API.info("pickerSpecialization: " + $.specializaton.getValue());
 	if(e.row.data!=null) {
 		Ti.API.info(JSON.stringify(e.row.data));
 		if(e.row.data.id=='doctor') {
-			var wListDoctors = Alloy.createController("WindowListDoctors");
+			var wListDoctors = Alloy.createController("WindowListDoctors", {
+				_specialization_id: $.specializaton.getValue()
+			});
+			wListDoctors.on('selectedDoctor', function(e) {
+				Ti.API.info("selectedDoctor: " + JSON.stringify(e));
+				REST.findDoctorById(e.selectedDoctor, function(_doctor) {
+					$.doctor.setValueText("Dr." + _doctor.firstName + " " + _doctor.lastName);
+				});
+				
+			});
 			wListDoctors.getView().open();
 		}
 		if(e.row.data.id=='location') {

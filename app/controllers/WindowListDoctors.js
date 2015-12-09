@@ -1,3 +1,6 @@
+var args = arguments[0] || {};
+var specialization_id = args._specialization_id;
+
 var REST = require("rest");
 //var bookingLib = require(WPATH("booking"));
 
@@ -6,7 +9,8 @@ var rowPerPage = 10;
 
 function loadDoctors() {
 
-	REST.getListDoctors(function(_doctors) {
+	//REST.getListDoctors(function(_doctors) {
+	REST.findDoctorBySpecialization(specialization_id, function(_doctors) {
 		doctorsData = _doctors;
 		_.each(_doctors, function(_doctor, index) {
 			if(index<rowPerPage) $.listDoctors.appendRow(createRow(_doctor));
@@ -14,13 +18,13 @@ function loadDoctors() {
 		$.is.init($.listDoctors);
 		$.is.load();
 		
-		$.ptr.hide();
+		//$.ptr.hide();
 	});
 };
 
 function createRow(doctor) {
 	Ti.API.debug("createRow: " + JSON.stringify(doctor));
-	var row = Alloy.createController("doctorRow", {
+	var row = Alloy.createController("DoctorRow", {
 		_doctor : doctor
 	});
 	return row.getView();		
@@ -30,21 +34,44 @@ loadDoctors();
 
 var selectedRowIndex = -1;
 
+/*
 function myRefresh(e) {
 	Ti.API.info('refreshstart');
 	loadBookings();
 }
+*/
+var selectedDoctor = null;
 
 $.listDoctors.addEventListener("click", function(e) {	
-
-	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));
+	Ti.API.info(JSON.stringify("listDoctors: e selezionata "+JSON.stringify(e)));
+	Ti.API.info(JSON.stringify("listDoctors: e.row selezionata "+JSON.stringify(e.row)));
+	Ti.API.info(JSON.stringify("listDoctors: e.source.id selezionata "+JSON.stringify(e.source.id)));
+	Ti.API.info(JSON.stringify("listDoctors: e.row._info selezionata "+JSON.stringify(e.row._info)));
+	var source = e.source.id;
+	var doctor = e.row._info;
 	
-	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));
-	
-	var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
-		doctor : e.row.doctor
-	});
-	wDoctorDetail.getView().open();
+	if(source=="iconImgRowId") {
+		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
+			e.row.selected = false;
+			$.removeClass(e.row, 'rowSelectedClass');
+			$.addClass(e.row, 'rowUnselectedClass');
+			selectedDoctor = null;
+			Ti.API.info("listDoctors: unselected");
+		}
+		else if(selectedDoctor==null) {
+			e.row.selected = true;
+			selectedDoctor = doctor.id;
+			$.addClass(e.row, 'rowSelectedClass');
+			$.removeClass(e.row, 'rowUnselectedClass');
+			Ti.API.info("listDoctors: selected");
+		}
+	}
+	else {
+		var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
+			doctor : doctor
+		});
+		wDoctorDetail.getView().open();
+	}
 });
 
 
@@ -74,7 +101,13 @@ function myLoader(e) {
 	}
 }
 
-function indietroWindow(){
+function indietroWindow() {
+	//FIXME: questo su android non funziona
+	if(selectedDoctor!=null) {
+		$.trigger('selectedDoctor', {
+			selectedDoctor: selectedDoctor
+		});
+	}
 	if (OS_IOS){
 		$.nav.close();
 	}

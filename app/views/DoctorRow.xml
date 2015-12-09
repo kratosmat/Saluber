@@ -1,5 +1,5 @@
 <Alloy>
-	<TableViewRow className="doctorRow" backgroundColor="#E74F1E" height="60">
+	<TableViewRow className="doctorRow" class="rowUnselectedClass" height="60">
 		<View layout="horizontal">
 			<View height="58" width="58" top="2" bottom="2">
 				<ImageView image="images/bleins.jpg" id="iconImgRowId" ></ImageView>
