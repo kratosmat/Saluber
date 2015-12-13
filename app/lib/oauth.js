@@ -52,7 +52,7 @@ exports.getOAuth = function(callback, username, password, isRefresh) {
             Ti.API.info("crud - getOAuth token "+token);
             Ti.API.info("crud - getOAuth refreshToken "+refreshToken);
             Ti.API.info("crud - getOAuth tokenValidity "+tokenValidity);
-            getRuolo(function(role) {
+            getUserinfo(function(role) {
             	Ti.API.info("crud - getOAuth role " + role);
             	callback(response);
             });  
@@ -79,13 +79,17 @@ exports.getOAuth = function(callback, username, password, isRefresh) {
 
 };
 
-function getRuolo(callback){
+function getUserinfo(callback){
     
 	var httpClient=Titanium.Network.createHTTPClient();
 	
-    httpClient.onload = function(e){
-        Ti.API.info("crud: getRole - ruolo     " + this.responseText);
-        Ti.App.Properties.setString('role', this.responseText[0].description);
+    httpClient.onload = function(e) {
+    	var userinfo = JSON.parse(this.responseText);
+        Ti.API.debug("crud: getUserInfo: " + this.responseText);  
+        Ti.API.info("crud: getUserInfo: " + JSON.stringify(userinfo));       
+        Ti.API.debug("crud: getUserInfo: " + JSON.stringify(e));  
+        Ti.App.Properties.setString('role', userinfo.authorities[0].authority);
+        Ti.App.Properties.setString('organization', userinfo.organization);
         callback(Ti.App.Properties.getString('role'));
     };
     
@@ -94,7 +98,7 @@ function getRuolo(callback){
         alert ('Errore nel recupero del ruolo utente '+url+"\r\n"+this.responseText);
     };
 
-    var url = Alloy.CFG.service_role_url + "?access_token=" + Ti.App.Properties.getString('access_token');
+    var url = Alloy.CFG.userinfo_url + "?access_token=" + Ti.App.Properties.getString('access_token');
     
     Ti.API.info("crud: getRole - " + url);
     httpClient.open("GET",url);

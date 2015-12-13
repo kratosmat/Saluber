@@ -12,29 +12,24 @@ var loadedStations = [];
 
 var saveNewSpecializations = getSaveNewSpecializations(true);
 
-var getInfo = function(specificType, callback, idParameter, idValue, index) {
+var getInfo = function(specificType, callback, idParameter, idValue) {
 	//serve solo per le prove in locale
-	index = (index === undefined)? -1 : index;
 	idParameter = (idParameter === undefined) ? "" : idParameter;
 	idValue = (idValue === undefined) ? "" : idValue;	
 	
-	if (index!=-1){
-		Ti.API.debug("crud: getInfo index = "+index);
-	}
-	
 	var httpClient = Titanium.Network.createHTTPClient();
 	
-	
 	httpClient.onload = function(e){
-		Ti.API.debug("crud: getInfo - risposta "+this.responseText);
-		
-		var response = JSON.parse(this.responseText);	
-		if(index == -1){
+		Ti.API.info("crud: getInfo - risposta " + this.responseText);
+		try {
+			var response = JSON.parse(this.responseText);	
 			callback(response);
 		}
-		else{
-			callback(response,index);
-		}	
+		catch(e) {
+			Ti.API.error(e);
+			callback(this.responseText);
+		}
+		
 	};
 	
 	httpClient.onerror = function(e){
@@ -61,6 +56,51 @@ var getInfo = function(specificType, callback, idParameter, idValue, index) {
 	httpClient.send(null);	
 };
 
+function post(valueObject, url, callback){
+	Ti.API.info("post: " + valueObject);
+	
+	var requestHttp = Ti.Network.createHTTPClient({
+		onload: function(e){
+			try{
+				Ti.API.info("post: this.status " + this.status);
+				if (this.status === 200) {
+				    Ti.API.info("booking: post response -> " + this.responseText);
+				    callback(this.responseText);
+			    } 
+			    else {
+			        Ti.API.info("post: Invalid response: " + this.status);
+			        alert(L(this.responseText, 'Errore: ' + this.status));
+			        callback(this.responseText);
+		        }
+		    }
+		    catch(exc){
+		   	    Ti.API.info("Invalid response" + exc);
+		    }
+	    },
+	    onerror : function(e){
+	    	Titanium.API.error('ondatastream called, readyState = '+this.readyState+'\r\nStatus: ' + this.status+'\r\nResponseText: ' + this.responseText+'\r\nconnectionType: ' + this.connectionType+'\r\nlocation: ' + this.location);
+		    //alert(L(this.responseText,'Errore durante la creazione della prenotazione.\r\n Codice di errore '+this.responseText));
+	    	callback(this.responseText);
+	    },
+	    onsendstream: function(e) {
+			// function called as data is uploaded
+			Ti.API.info('onsendstream called, readyState = ' + this.readyState);
+			//callback(this.readyState);
+	    }
+	});
+	//var url;
+	//url = Alloy.CFG.service_url + "/calendar/save_month?access_token="+ Ti.App.Properties.getString('access_token');
+    try{
+		requestHttp.open("POST",url);
+		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+		requestHttp.send(JSON.stringify(valueObject));
+	}
+	catch(excTcp) {
+		Ti.API.info("exc  "+excTcp);		
+	}
+};
+/* #################### */
+
 
 var getListBookings = function(callback) {
 	Ti.API.info("crud: getListBookings LOADING.......");
@@ -74,6 +114,13 @@ var getListBookings = function(callback) {
 	
 };
 exports.getListBookings = getListBookings;
+
+var saveBooking = function(booking, callback) {
+	var url = Alloy.CFG.service_url + "/booking/save?access_token="+ Ti.App.Properties.getString('access_token');
+	post(booking, url, callback);
+};
+exports.saveBooking = saveBooking;
+
 
 var getListDoctors = function(callback) {
 	
@@ -231,9 +278,19 @@ var getOrCreateMonth = function(year, month, callback) {
 };
 exports.getOrCreateMonth = getOrCreateMonth;
 
+var getAvailability = function(year, month, doctor, station, callback) {
+	
+	getInfo("calendar/month_availability/" + year + "/" + month + "/" + doctor + "/" + station, function(results) {		
+		Ti.API.info("crud: getAvailability LOADING.......");
+		callback(results);
+	});	
+};
+
+exports.getAvailability = getAvailability;
 
 
-function saveMonth(month, part, callback){
+
+function saveMonth(month, callback){
 	var strMonth = JSON.stringify(month);
 	Ti.API.info("saveMonth: saveMonth " + strMonth);
 	
@@ -267,7 +324,7 @@ function saveMonth(month, part, callback){
 	    }
 	});
 	var url;
-	url = Alloy.CFG.service_url + "/calendar/" + part + "?" +"access_token="+ Ti.App.Properties.getString('access_token');
+	url = Alloy.CFG.service_url + "/calendar/save_month?access_token="+ Ti.App.Properties.getString('access_token');
     try{
 		requestHttp.open("POST",url);
 		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
@@ -277,15 +334,6 @@ function saveMonth(month, part, callback){
 		
     	Ti.API.info("exc  "+excTcp);		
 	}
+	
 };
-
-function saveMonthDoctor(month, callback) {
-	saveMonth(month, 'save_month_doctor', callback);
-}
-exports.saveMonthDoctor = saveMonthDoctor;
-
-
-function saveMonthStation(month, callback) {
-	saveMonth(month, 'save_month_station', callback);
-}
-exports.saveMonthStation = saveMonthStation;
+exports.saveMonth = saveMonth;

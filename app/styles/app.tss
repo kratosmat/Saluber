@@ -67,6 +67,11 @@ overrode the settings with other TSS, XML, or JS settings:
 		// ".imc-calendar-date-6": {  }
 			// ".imc-calendar-date-label-6": {  }
 			
+".calendar-events": { width: Ti.UI.SIZE, height: 5, top: 75.5, layout: 'horizontal', touchEnabled: false }
+			".calendar-event": { width: 5, height: 5, left: 1.5, right: 1.5, touchEnabled: false }
+			".calendar-event-yellow": { backgroundColor: '#e8db07' }
+			".calendar-event-blue":   { backgroundColor: '#005ab4' }
+			".calendar-event-red":    { backgroundColor: '#ac1e1f' }	
 
 ".line": {
     height: '1dp',
