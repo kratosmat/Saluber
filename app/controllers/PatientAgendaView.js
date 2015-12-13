@@ -239,12 +239,8 @@ function createHoursTable(selectedDay) {
 						width: 50,
 						color: (slot.stationAvailability ? 'green' : 'red')
 					});
-					/*
-					var statusLbl = Ti.UI.createView({
-						borderColor: "purple",
-						width: Ti.UI.FILL
-					});
-					*/
+					
+
 					hourView.add(select.getView());
 					hourView.add(startLbl);
 					hourView.add(endLbl);

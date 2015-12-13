@@ -4,7 +4,7 @@
 			<View id="menuButton" class="menuButton" />
 			<Label class="labelTopBar" text="Doctor Agenda"/>
 		</View>
-		<View layout="vertical" bubbleParent="false">
+		<View layout="vertical" bubbleParent="false" class="container">
 			<View class="header">
 				<Label id="lMonth" />
 				<Button id="btnPrev" class="button button-prev" onClick="prevMonth" />
@@ -12,12 +12,6 @@
 			</View>
 			
 			<Widget id="vCalendar" src="com.imobicloud.calendar" swipeable="true" onChange="calendarChange"/>
-			
-			<!--View class="advanced">
-				<Button class="button-advanced" onClick="getDate">Get month</Button>
-				<Button class="button-advanced" onClick="setDate">Set month to Feb 1986</Button>
-				<Button class="button-advanced" onClick="customStyle">Custom Style</Button>
-			</View-->
 			
 			<TableView id="hoursTable" />
 

@@ -7,8 +7,12 @@ var currentMonth = null;
 
 init();
 function init() {
-	$.vCalendar.init();
+//	$.vCalendar.init();
 //  	$.index.open();
+	$.vCalendar.init({
+		dateFormatter: dateFormatter,
+		weekFormatter: weekFormatter
+	});
 }
 
 
@@ -48,16 +52,16 @@ function selectedChange(e) {
 	
 	if(selectedDate!=null && selectedDate!=date) {
 		Ti.API.info("cancelliamo la selezione precedente");
-		$.removeClass(selectedViewDate, 'imc-calendar-date-selected');
-		$.removeClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+		$.removeClass(selectedViewDate, 'calendar-date-selected');
+		$.removeClass(selectedViewDate.children[0], 'calendar-date-selected-label');
 		selectedDate = null;
 		selectedViewDate = null;		
 	}
 	selectedDate = date;
 	selectedViewDate = view;
 	
-	$.addClass(selectedViewDate, 'imc-calendar-date-selected');
-	$.addClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+	$.addClass(selectedViewDate, 'calendar-date-selected');
+	$.addClass(selectedViewDate.children[0], 'calendar-date-selected-label');
 
 	createHoursTable(selectedDate.date());
 	
@@ -135,14 +139,12 @@ $.hoursTable.addEventListener("click", function(e) {
 	if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 		e.row.selected = false;
 		updateMonth(e.row._slot, false);
-		$.removeClass(e.row, 'rowHourSelectedClass');
-		$.addClass(e.row, 'rowHourUnselectedClass');
+		e.row.backgroundColor = 'white';
 	}
 	else {
 		e.row.selected = true;
 		updateMonth(e.row._slot, true);
-		$.addClass(e.row, 'rowHourSelectedClass');
-		$.removeClass(e.row, 'rowHourUnselectedClass');
+		e.row.backgroundColor = '#D3D3D3';
 	}
 	
 	Ti.API.info("hoursTable: e "+JSON.stringify(e));	
@@ -170,7 +172,7 @@ function updateMonth(_slot, selected) {
 function createHoursTable(selectedDay) {
 	if(currentMonth != null) {
 		_.each(currentMonth.days, function(day) {
-			Ti.API.info("createHoursTable: " + currentMonth.month + " " + day.number + " "+ selectedDay);
+			Ti.API.debug("createHoursTable: " + currentMonth.month + " " + day.number + " "+ selectedDay);
 			if(day.number == selectedDay) {
 				
 				var hourRows = [];
@@ -181,7 +183,10 @@ function createHoursTable(selectedDay) {
 					var hourView = Ti.UI.createView({
 						layout: 'horizontal'
 					});
-					
+					var select = Alloy.createWidget("ti.ux.iconlabel", {
+						icon: "fa-check-circle",
+						width: 50
+					});
 					var startLbl = Ti.UI.createLabel({
 						text: slot.start,
 						left: 10,
@@ -196,28 +201,31 @@ function createHoursTable(selectedDay) {
 						top: 5,
 						//borderColor: "purple"
 					});
-					var statusLbl = Ti.UI.createView({
-						borderColor: "purple",
-						width: Ti.UI.FILL
+					var stateDoctor = Alloy.createWidget("ti.ux.iconlabel", {
+						icon: "fa-user-md",
+						width: 50,
+						color: (slot.selected?'green' : 'red')
 					});
 					
+					hourView.add(select.getView());
 					hourView.add(startLbl);
 					hourView.add(endLbl);
-					hourView.add(statusLbl);
+					hourView.add(stateDoctor.getView());
 					
 					//Ti.API.info(JSON.stringify(hourView));
 					var hourRow = Ti.UI.createTableViewRow({
-						height: 50,
+						height: 30,
 						backgroundColor: 'white',
 						id: slot.id,
 						_slot: slot,
 						selected: slot.selected
 					});
 					
+					/*
 					if(slot.selected == true) {
 						$.addClass(hourRow, 'rowHourSelectedClass');
 					}
-					
+					*/
 					hourRow.add(hourView);
 					hourRows.push(hourRow);
 				});
@@ -226,19 +234,4 @@ function createHoursTable(selectedDay) {
 			}
 		});
 	}
-	
-	/*
-	_.each(hours, function(hour) {
-		var time_hour = hour.split(".")[0];
-		var time_minute = hour.split(".")[1];
-		
-		Ti.API.debug(time_hour + ", " + time_minute);
-		var startTime = moment().hours(time_hour).minutes(time_minute);
-		
-		
-		Ti.API.info(JSON.stringify(hourRow));
-	});
-	*/
-	
-
 }
