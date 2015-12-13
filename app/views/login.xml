@@ -1,17 +1,17 @@
 <Alloy>
 	<Window navBarHidden="true" backgroundColor="#E74F1E">
-		<TableView left="30" right="30" top="50" height="272" borderRadius="6">					
+		<TableView left="30" right="30" top="50" bottom="30" borderRadius="6">					
 			<TableViewSection>
-				<TableViewRow>
+				<TableViewRow height="100">
 					<View backgroundColor="#FFF">
-						<Label height="70" class="label-Login" text="SALUBER LOGIN" textAlign="center" width="Ti.UI.FILL" />
-						<View class="view-row-separator" backgroundColor="#E74F1E"/>
+						<Label height="70" class="label-Login" text="SALUBER LOGIN" textAlign="center" />
 					</View>
 				</TableViewRow>
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
 				
 				<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" hintText="Insert Username" id="user" />
+				
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
 				

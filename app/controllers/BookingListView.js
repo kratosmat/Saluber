@@ -73,9 +73,20 @@ function myLoader(e) {
 	}
 }
 
-
-function newBooking() {
-	Ti.API.info("newBooking");
-	var bookingWindow = Alloy.createController("BookingWindow");
-	bookingWindow.getView().open();
+if(Ti.App.Properties.getString('role')=='patient') {
+	var addButton = Alloy.createWidget("ti.ux.iconbutton", {
+		id: "addBooking",
+		icon: "fa-plus-circle",
+		bottom: "30",
+		right: "30",
+		zIndex: "9999",
+		iconColor: "green"
+	});
+	addButton.addEventListener("click", function(e) {
+		Ti.API.info("newBooking");
+		var bookingWindow = Alloy.createController("BookingWindow");
+		bookingWindow.getView().open();
+	});
+	
+	$.mainView.add(addButton.getView());
 }

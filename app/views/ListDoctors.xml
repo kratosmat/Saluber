@@ -5,7 +5,7 @@
 			<Label class="labelTopBar" text="List Doctors"/>
 		</View>
 		<View layout="vertical" bubbleParent="false">
-			<TableView id="listDoctors" search="searchView" filterAttribute="filter" bubbleParent="false">
+			<TableView id="listDoctors" search="searchView" filterAttribute="filter" bubbleParent="false" platform="ios">
 				<SearchBar id="searchView" showCancel="true" hintText="L('SEARCH')" />
 				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
 			</TableView>

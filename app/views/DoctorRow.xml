@@ -1,9 +1,7 @@
 <Alloy>
-	<TableViewRow className="doctorRow" class="rowUnselectedClass" height="60">
+	<TableViewRow className="doctorRow" height="60">
 		<View layout="horizontal">
-			<View height="58" width="58" top="2" bottom="2">
-				<ImageView image="images/bleins.jpg" id="iconImgRowId" ></ImageView>
-			</View>
+			<Widget src="ti.ux.iconlabel" icon="fa-check-circle" heigth="40" color="#E74F1E"/>
 			<View layout="vertical" width="Titanium.UI.FILL">
 				<View class="label-record-table">
 					<Label color="white" left="20" id="firstRow"></Label>
@@ -14,6 +12,9 @@
 				<View class="label-record-table">
 					<Label color="white" left="20" id="thirdRow"></Label>
 				</View>
+			</View>
+			<View height="58" width="58" top="2" bottom="2">
+				<ImageView image="images/bleins.jpg" id="iconImgRowId" ></ImageView>
 			</View>
 		</View>	
 	</TableViewRow>	

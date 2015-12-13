@@ -1,24 +1,20 @@
 <Alloy>
-	<View layout="vertical" bubbleParent="false">
+	<View bubbleParent="false" id="mainView">
 		<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresh" platform="ios">
 			<TableView id="list" search="searchView" filterAttribute="filter" bubbleParent="false">
 				<SearchBar id="searchView" showCancel="true" hintText="L('SEARCH')" />
 				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
 			</TableView>
-			
 		</Widget>
+		
 		<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresh" platform="android">
 			<TableView id="list" platform="android" search="searchView" bubbleParent="false" onLongpress="myRefresh">
 				<SearchView id="searchView" ns="Ti.UI.Android" hintText="L('SEARCH')"/>
 				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
 			</TableView>
 		</Widget>
-		<ImageView image="Plus.png" top="0" height="25" width="25" onClick="newBooking" platform="android"/>
-		<Toolbar platform="ios" top="0" borderTop="true" borderBottom="false" platform="ios">
-			<Items>
-                <FlexSpace/>
-           		<ImageView image="Plus.png" top="0" height="25" width="25" onClick="newBooking" />
-		    </Items>
-		</Toolbar>
+		
+		<!--Widget src="ti.ux.iconbutton" id="addBooking" icon="fa-plus-circle" bottom="30" right="30" zIndex="9999" iconColor="green" onClick="newBooking"/-->		
 	</View>
+	
 </Alloy>

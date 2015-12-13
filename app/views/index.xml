@@ -1,7 +1,7 @@
 <Alloy>
 	<Window navBarHidden="true">
-		<View  backgroundColor="yellow">
-			<ImageView image="images/init-page.png" width="Titanium.UI.FILL" height="Titanium.UI.FILL" ></ImageView>
+		<View  backgroundColor="yellow" layout="vertical">
+			<ImageView image="images/init-page.png" width="Titanium.UI.FILL" height="Titanium.UI.FILL" zIndex="1" ></ImageView>
 		</View>
 	</Window>
 </Alloy>

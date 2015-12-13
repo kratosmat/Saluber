@@ -5,9 +5,9 @@
 },
 "#list":{	
 	width : Titanium.UI.FILL,	
-	height: "95%",
+//	height: "95%",
 	backgroundColor : "white",
 	separatorColor : "grey",
-	borderWidth : "1dp",
-	borderColor : "grey"
+//	borderWidth : "1dp",
+//	borderColor : "grey"
 }

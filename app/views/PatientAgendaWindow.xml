@@ -1,0 +1,10 @@
+<Alloy>
+	<NavigationWindow platform="ios" id="nav">
+		<Window class="container" id="mainWin" >
+			<LeftNavButton >
+	      		<Button onClick="indietroWindow" title="L('BACK')"/>
+	      	</LeftNavButton>
+	      	<View layout="vertical" bubbleParent="false"/>
+	    </Window>
+	</NavigationWindow>
+</Alloy>

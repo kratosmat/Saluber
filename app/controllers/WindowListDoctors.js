@@ -50,28 +50,32 @@ $.listDoctors.addEventListener("click", function(e) {
 	var source = e.source.id;
 	var doctor = e.row._info;
 	
-	if(source=="iconImgRowId") {
+	if(source=="iconLbl") {
 		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 			e.row.selected = false;
-			$.removeClass(e.row, 'rowSelectedClass');
-			$.addClass(e.row, 'rowUnselectedClass');
+			//$.removeClass(e.row, 'rowSelectedClass');
+			//$.addClass(e.row, 'rowUnselectedClass');
+			e.row.backgroundColor = "#E74F1E";
 			selectedDoctor = null;
 			Ti.API.info("listDoctors: unselected");
 		}
 		else if(selectedDoctor==null) {
 			e.row.selected = true;
+			e.row.backgroundColor = "#D3D3D3";
 			selectedDoctor = doctor.id;
-			$.addClass(e.row, 'rowSelectedClass');
-			$.removeClass(e.row, 'rowUnselectedClass');
+			//$.addClass(e.row, 'rowSelectedClass');
+			//$.removeClass(e.row, 'rowUnselectedClass');
 			Ti.API.info("listDoctors: selected");
 		}
 	}
+	/*
 	else {
 		var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
 			doctor : doctor
 		});
 		wDoctorDetail.getView().open();
 	}
+	*/
 });
 
 

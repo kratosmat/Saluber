@@ -4,10 +4,11 @@
         "theme": "default"
     },
     "env:development": {
-        "service_url": "http://192.168.43.167:8080/saluber-services/api",
-        "service_role_url": "http://192.168.43.167:8080/saluber-services/api/security/roles",
-        "access_token_url": "http://192.168.43.167:8080/saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
-        "refresh_token_url": "http://192.168.43.167:8080/saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
+        "service_url": "http://192.168.0.100:8080/saluber-services/api",
+        "service_role_url": "http://192.168.0.100:8080/saluber-services/api/security/roles",
+        "userinfo_url": "http://192.168.0.100:8080/saluber-services/api/security/userinfo",
+        "access_token_url": "http://192.168.0.100:8080/saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
+        "refresh_token_url": "http://192.168.0.100:8080/saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
     },
     "env:test": {},
     "env:production": {},

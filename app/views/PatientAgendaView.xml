@@ -1,0 +1,14 @@
+<Alloy>
+	<View layout="vertical" class="container">
+		<View class="header">
+			<Label id="lMonth" />
+			<Button id="btnPrev" class="button button-prev" onClick="prevMonth" />
+			<Button id="btnNext" class="button button-next" onClick="nextMonth" />
+		</View>
+		
+		<Widget id="vCalendar" src="com.imobicloud.calendar" swipeable="true" onChange="calendarChange"/>
+		
+		<TableView id="hoursTable" />
+
+	</View>
+</Alloy>

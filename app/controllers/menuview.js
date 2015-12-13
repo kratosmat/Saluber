@@ -2,15 +2,21 @@ var args = arguments[0] || {};
 
 var menus = [];
 
-//var row1 = createMenuRow('row1', 'rowSkull', 'Mappa');
-
+var role = Ti.App.Properties.getString('role');
+Ti.API.info("menuview role: " + role);
 menus.push(createMenuRow('row1', 'rowSkull', 'ListBookings'));
-//menus.push(createMenuRow('row2', 'rowGear', 'Booking'));
 menus.push(createMenuRow('row3', 'rowGear', 'UserProfile'));
-menus.push(createMenuRow('row4', 'rowGear', 'Doctor Agenda'));
-menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
-menus.push(createMenuRow('row6', 'rowGear', 'Station Agenda'));
-menus.push(createMenuRow('row7', 'rowGear', 'Stations'));
+if(role=='patient') {
+	menus.push(createMenuRow('row5', 'rowGear', 'Doctors'));
+	menus.push(createMenuRow('row7', 'rowGear', 'Stations'));
+}
+if(role=='doctor') {
+	menus.push(createMenuRow('row4', 'rowGear', 'Doctor Agenda'));
+}
+if(role=='station_manager') {
+	menus.push(createMenuRow('row6', 'rowGear', 'Station Agenda'));
+}
+
 menus.push(createMenuRow('row10', 'rowGear', 'Logout'));
 
 $.menuTable.data = menus;

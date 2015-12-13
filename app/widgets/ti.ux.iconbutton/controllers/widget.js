@@ -41,3 +41,21 @@ $.init = function(argsInit){
 
 
 initUI();
+
+
+// Overwrite Backbone methods, as used in the generated code by Alloy:
+// doClick ? $.__views.myWidget.on("click", doClick) : __defers["$.__views.myWidget!click!doClick"] = !0;
+exports.on = $.btn.addEventListener;
+exports.off = $.btn.removeEventListener;
+
+// Overwrite backbone aliasses:
+exports.bind = $.btn.addEventListener;
+exports.unbind = $.btn.removeEventListener;
+
+// Support Titanium methods
+exports.addEventListener = $.btn.addEventListener;
+exports.removeEventListener = $.btn.removeEventListener;
+
+// Overwrite Backbone trigger and Titanium fireEvent methods for convenience
+exports.trigger = $.btn.fireEvent;
+exports.fireEvent = $.btn.fireEvent;
