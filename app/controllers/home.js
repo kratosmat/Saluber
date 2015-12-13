@@ -50,7 +50,6 @@ function getMenuView(){
 		        } 
 		        activeView = 2;		        
 		    }
-		    */
 		    if(e.rowData.id==="row3"){
 				if(activeView!=3){
 	        	    $.drawermenu.drawermainview.removeAllChildren();
@@ -58,6 +57,8 @@ function getMenuView(){
 	            }
 		        activeView = 3;
 		    }
+		    */
+		    
 		    if(e.rowData.id==="row4"){
 				if(activeView!=4){
 	        	    $.drawermenu.drawermainview.removeAllChildren();
@@ -86,7 +87,14 @@ function getMenuView(){
 	            }
 		        activeView = 7;
 		    }
-		    if(e.rowData.id==="row10") {
+		    if(e.rowData.id==="row8"){
+				if(activeView!=8){
+	        	    $.drawermenu.drawermainview.removeAllChildren();
+	                $.drawermenu.drawermainview.add(createView('PatientProfile').getView());
+	            }
+		        activeView = 8;
+		    }
+		    if(e.rowData.id==="row100") {
 		    	$.home.close();
 		        activeView = 1;
 		    }

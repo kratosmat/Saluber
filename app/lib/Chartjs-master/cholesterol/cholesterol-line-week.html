@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<script src="../Chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style/chartjs.css">
+	</head>
+	<body style="margin: 0px;">
+		<div style="width: 360px; height: 260px;">
+			<div class="title">Cholesterol Trend</div>
+			<div style="float: left; height: 225px; width: 360px; text-align: center;">
+				<canvas id="lineWeekId" width="350px" height="225px" ></canvas>
+			</div>
+		</div>
+
+<!--  style="border: 1px solid black;" -->
+
+	<script>
+	var lineChartData = {
+		labels : ["07-Dec","08-Dec","09-Dec","10-Dec","11-Dec","12-Dec","13-Dec"],
+		datasets : [
+			{
+            label: "",
+            fillColor: "rgba(162,147,215,0.2)",
+            strokeColor: "rgba(162,147,215,1)",
+            pointColor: "rgba(162,147,215,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(162,147,215,1)",
+			data : [150, 120, 250, 300 ,180, 170, 190]
+			}
+		]
+
+	}
+    
+window.onload = function(){
+		var ctx = document.getElementById("lineWeekId").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+          responsive : true,
+          scaleOverride: true,
+          scaleSteps: 8,
+          scaleStepWidth: 50,
+          scaleStartValue: 0
+          
+    });
+    
+    var maxValue = 200;
+    		
+    for ( var i = 0; i < myLine.datasets[0].points.length; i++ ) {
+    	var currValue = myLine.datasets[0].points[i].value;
+    	if (currValue <= maxValue) {
+    		// valore normale
+    		myLine.datasets[0].points[i].fillColor = "#A293D7";
+    	} else {
+    		// valore alto
+    		myLine.datasets[0].points[i].fillColor = "#F7464A";
+    	}
+    }
+    
+    myLine.update();
+};
+	</script>
+
+	</body>
+</html>

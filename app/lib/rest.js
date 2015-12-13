@@ -185,7 +185,11 @@ exports.getListPatients = getListPatients;
 
 function findPatientById(id, callback) {
 	getListPatients(function(results) {
-		_items = _.where(results, {id: id});
+		_items = [];
+		_.each(results, function(result) {
+			if(result.id==id) _items.push(result);
+		});
+		Ti.API.info("findPatientById: " + id + " - " + JSON.stringify(_items));
 		if(_items!=null && _items.length>0) callback(_items[0]);
 		else callback(null);
 	});

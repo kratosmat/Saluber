@@ -1,0 +1,40 @@
+<Alloy>
+	<View id="mainView" class="mainView">
+		<View id="mainTopBar" class="mainTopBar">
+			<View id="menuButton" class="menuButton" />
+			<Label class="labelTopBar" text="Patient Profile"/>
+		</View>
+		<View layout="vertical" bubbleParent="false">
+			<TableView  id="mainTable" backgroundColor="white">
+				<TableViewSection>
+					<TableViewRow>
+						<Widget src="ti.ux.image" id="img" 
+							backgroundColor="black"
+							left="0"
+							right="0"
+							zoomable="true"
+							height="250"
+							innerMargin="160"
+							realTop="0"
+							image="images/patient-1.jpg">
+						</Widget>
+					</TableViewRow>
+					<TableViewRow height="Ti.UI.SIZE" id="title" />
+					
+					<TableViewRow id="bod" />
+					<TableViewRow id="phone" />
+					<TableViewRow id="sanitary" />
+				</TableViewSection>			
+				
+				<TableViewSection>
+					<TableViewRow hasChild="true" id="cholesterol" ><Widget src="ti.ux.iconlabel" left='10' text="Cholesterol" height="30" color="#666"/></TableViewRow>
+					<TableViewRow hasChild="true" id="diabetes" ><Widget src="ti.ux.iconlabel" left='10' text="Diabete" height="30" color="#666"/></TableViewRow>
+					<TableViewRow hasChild="true" id="heartrate" ><Widget src="ti.ux.iconlabel" left='10' text="Heartrate" height="30" color="#666"/></TableViewRow>
+					<TableViewRow hasChild="true" id="pressure" ><Widget src="ti.ux.iconlabel" left='10' text="Pressure" height="30" color="#666"/></TableViewRow>
+					<TableViewRow hasChild="true" id="weight" ><Widget src="ti.ux.iconlabel" left='10' text="Weight" height="30" color="#666"/></TableViewRow>
+				</TableViewSection>
+			</TableView>
+	
+		</View>
+	</View>
+</Alloy>

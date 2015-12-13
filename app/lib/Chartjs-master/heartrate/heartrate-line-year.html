@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<script src="../Chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style/chartjs.css">
+	</head>
+	<body style="margin: 0px;">
+		<div style="width: 360px; height: 260px;">
+			<div class="title">Heart Rate Trend</div>
+			<div style="float: left; height: 225px; width: 360px; text-align: center;">
+				<canvas id="lineWeekId" width="350px" height="225px" ></canvas>
+			</div>
+		</div>
+
+<!--  style="border: 1px solid black;" -->
+
+	<script>
+	var lineChartData = {
+		labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+		datasets : [
+			{
+            label: "",
+            fillColor: "rgba(162,147,215,0.2)",
+            strokeColor: "rgba(162,147,215,1)",
+            pointColor: "rgba(162,147,215,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(162,147,215,1)",
+				data : [80, 85, 70, 90 ,80, 110, 80, 85, 100, 90, 80, 85]
+			},
+        {
+            label: "",
+            fillColor: "rgba(87,146,174,0.2)",
+            strokeColor: "rgba(87,146,174,1)",
+            pointColor: "rgba(87,146,174,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [55, 50, 65, 50, 65, 50, 60, 40, 55, 60, 50, 75]
+        }
+		]
+
+	}
+    
+window.onload = function(){
+		var ctx = document.getElementById("lineWeekId").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+          responsive : true,
+          scaleOverride: true,
+          scaleSteps: 4,
+          scaleStepWidth: 25,
+          scaleStartValue: 25
+          
+    });
+    
+    var maxValue1 = 90;    
+    for ( var i = 0; i < myLine.datasets[0].points.length; i++ ) {
+    	var currValue = myLine.datasets[0].points[i].value;
+    	if (currValue <= maxValue1) {
+    		// valore normale
+    		myLine.datasets[0].points[i].fillColor = "#A293D7";
+    	} else {
+    		// valore alto
+    		myLine.datasets[0].points[i].fillColor = "#F7464A";
+    	}
+    }
+    
+    var maxValue2 = 60;    
+    for ( var i = 0; i < myLine.datasets[1].points.length; i++ ) {
+    	var currValue = myLine.datasets[1].points[i].value;
+    	if (currValue <= maxValue2) {
+    		// valore normale
+    		myLine.datasets[1].points[i].fillColor = "#A293D7";
+    	} else {
+    		// valore alto
+    		myLine.datasets[1].points[i].fillColor = "#F7464A";
+    	}
+    }
+    
+    myLine.update();
+};
+	</script>
+
+	</body>
+</html>

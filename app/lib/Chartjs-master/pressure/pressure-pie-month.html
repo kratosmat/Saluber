@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pie Chart</title>
+		<script src="../Chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style/chartjs.css">
+	</head>
+	<body style="margin: 0px;">
+		<div style="width: 360px; height: 260px;">
+			<div class="title">Blood Pressure Percentage</div>
+			<div style="float: left; height: 225px; width: 225px; text-align: center;">
+				<div style="height: 10px; ">&nbsp;</div>
+				<canvas id="chart-area" width="200px" height="200px" ></canvas>
+			</div>
+			<div style="float: left; height: 225px; width: 130px; text-align: center;">
+				<div style="height: 18px; ">&nbsp;</div>
+				<div style=" height: 30px;">
+					<div class="guideLine-topLeft colorLineRed">25%</div>
+					<div class="guideLine-topCenter colorLineRed">HIGH</div>										
+				</div>
+				<div style=" height: 30px;">
+					<div class="guideLine-topLeft colorLineBlue">50%</div>
+					<div class="guideLine-topCenter colorLineBlue">NORMAL</div>										
+				</div>
+				<div style=" height: 25px;">
+					<div class="guideLine-topLeft colorLineGreen">25%</div>
+					<div class="guideLine-topCenter colorLineGreen">LOW</div>										
+				</div>
+				<div class="lineBlack">------------------------</div>
+				<div style="height: 15px;">&nbsp;</div>
+				<div style=" height: 30px;">
+					<div class="guideLine-bottomLeft colorLineRed">HIGHEST</div>
+					<div class="guideLine-bottomCenter colorLineRed">160</div>										
+				</div>
+				<div style=" height: 30px;">
+					<div class="guideLine-bottomLeft colorLineBlue">AVERAGE</div>
+					<div class="guideLine-bottomCenter colorLineBlue">100</div>										
+				</div>
+				<div style=" height: 30px;">
+					<div class="guideLine-bottomLeft colorLineGreen">LOWEST</div>
+					<div class="guideLine-bottomCenter colorLineGreen">60</div>										
+				</div>
+			</div>
+		</div>
+
+
+	<script>
+		var pieData = [
+				{
+					value: 1,
+					color:"#F7464A",
+					highlight: "#FB9799",
+					label: "HIGH"
+				},
+				{
+					value: 1,
+					color: "#00C100",
+					highlight: "#09FF09",
+					label: "LOW"
+				},
+				{
+					value: 2,
+					color: "#A293D7",
+					highlight: "#A4A4FF",
+					label: "NORMAL"
+				}
+
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				var myPie = new Chart(ctx).Doughnut(pieData, {
+					responsive: false 
+				});
+				// alert( myPie.generateLegend() );
+				// document.getElementById("prova").innerHTML = myPie.generateLegend();
+			};
+	</script>
+
+	</body>
+</html>

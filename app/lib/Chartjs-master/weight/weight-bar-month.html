@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		<script src="../Chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style/chartjs.css">
+	</head>
+	<body style="margin: 0px;">
+		<div style="width: 360px; height: 260px;">
+			<div class="title">Weight Trend</div>
+			<div style="float: left; height: 225px; width: 360px; text-align: center;">
+				<canvas id="barWeekId" width="350px" height="225px" ></canvas>
+			</div>
+		</div>
+
+<!--  style="border: 1px solid black;" -->
+
+	<script>
+	var barChartData = {
+		labels : ["16-22 Oct","23-29 Oct","30-06 Dec", "07-13 Dec"],
+		datasets : [
+			{
+				fillColor : "rgba(162,147,215,0.5)",
+				strokeColor : "rgba(162,147,215,0.8)",
+				highlightFill: "rgba(162,147,215,0.75)",
+				highlightStroke: "rgba(162,147,215,1)",
+				data : [78, 82, 80, 79]
+			}
+		]
+
+	}
+    
+window.onload = function(){
+		var ctx = document.getElementById("barWeekId").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {
+          responsive : true,
+          scaleOverride: true,
+          scaleSteps: 8,
+          scaleStepWidth: 5,
+          scaleStartValue: 60
+          
+    });
+    
+    var minValue = 60;
+    var maxValue = 80;
+    
+    for ( var i = 0; i < myBar.datasets[0].bars.length; i++ ) {
+    	var currValue = myBar.datasets[0].bars[i].value;
+    	if (currValue <= maxValue && currValue >= minValue) {
+    		// valore normale
+    		myBar.datasets[0].bars[i].fillColor = "#A293D7";
+    	} else if (currValue < minValue ) {
+    		// valore basso
+    		myBar.datasets[0].bars[i].fillColor = "#00C100";
+    	} else {
+    		// valore alto
+    		myBar.datasets[0].bars[i].fillColor = "#F7464A";
+    	}
+    }
+    
+    myBar.update();
+};
+	</script>
+
+	</body>
+</html>

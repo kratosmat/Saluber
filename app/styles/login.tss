@@ -166,3 +166,11 @@ top : 10
     borderColor: "#E74F1E",    
     width: Titanium.UI.FILL
 },
+"TableView": {
+	separatorColor: 'transparent',
+	backgroundColor: 'white'
+}
+"TableViewRow": {
+	backgroundColor: 'red',
+	color: 'white'
+}

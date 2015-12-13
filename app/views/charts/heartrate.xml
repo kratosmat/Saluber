@@ -1,0 +1,50 @@
+<Alloy>
+	<TabGroup backgroundColor="white" id="tab">
+		<Tab id="map" title="week">
+			<Window title="week">
+				<LeftNavButton>
+	      			<Button onClick="indietroWindow" title="L('BACK')"/>
+				</LeftNavButton>
+				<View borderColor="yellow" layout="vertical">
+					<View  backgroundColor="#DED9F0" height="275">
+						<WebView url="Chartjs-master/heartrate/heartrate-line-week.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+					<View height="275" backgroundColor="#DED9F0">
+						<WebView url="Chartjs-master/heartrate/heartrate-pie-week.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+				</View>
+			</Window>
+		</Tab>
+		<Tab id="map" title="month">
+			<Window title="month">
+				<LeftNavButton>
+	      			<Button onClick="indietroWindow" title="L('BACK')"/>
+				</LeftNavButton>
+				<View borderColor="yellow" layout="vertical">
+					<View  backgroundColor="#DED9F0" height="275">
+						<WebView url="Chartjs-master/heartrate/heartrate-line-month.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+					<View height="275" backgroundColor="#DED9F0">
+						<WebView url="Chartjs-master/heartrate/heartrate-pie-month.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+				</View>
+			</Window>
+		</Tab>
+		<Tab id="map" title="year">
+			<Window title="year">
+				<LeftNavButton>
+	      			<Button onClick="indietroWindow" title="L('BACK')"/>
+				</LeftNavButton>
+				<View borderColor="yellow" layout="vertical">
+					<View  backgroundColor="#DED9F0" height="275">
+						<WebView url="Chartjs-master/heartrate/heartrate-line-year.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+					<View height="275" backgroundColor="#DED9F0">
+						<WebView url="Chartjs-master/heartrate/heartrate-pie-year.html" height="270" left="5" right="5" borderRadius="5" />
+					</View>
+				</View>
+			</Window>
+		</Tab>
+
+	</TabGroup>
+</Alloy>
