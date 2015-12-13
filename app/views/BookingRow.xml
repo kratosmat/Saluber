@@ -1,5 +1,5 @@
 <Alloy>
-	<TableViewRow className="doctorRow" height="100" >
+	<TableViewRow className="doctorRow" height="125" >
 		<View layout="horizontal">
 			<View layout="vertical" width="Titanium.UI.FILL">
 				<View class="view-record-table">
@@ -13,6 +13,9 @@
 				</View>
 				<View class="view-record-table">
 					<Label class="label-record-table" id="fourthRow"></Label>
+				</View>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="fifthRow"></Label>
 				</View>
 			</View>
 		</View>	

@@ -18,8 +18,10 @@ REST.findDoctorById(booking.doctorId, function(doctor) {
 REST.findPatientById(booking.patientId, function(patient) {
 	$.thirdRow.text = "Paziente	Sig.	" + patient.firstName + ' ' + patient.lastName;
 });
-var day = moment.unix(booking.dateStart/1000);
-//Ti.API.info(booking.dateStart);
-$.fourthRow.text = "Data	" + day.format("DD/MMM/YYYY");
+REST.findStationById(booking.stationId, function(station) {
+	$.fourthRow.text = "Presso	" + station.name + ' ' + station.completeAddress;
+});
+
+var day = moment.unix(booking.dateStart/1000);$.fifthRow.text = "Data	" + day.format("DD/MMM/YYYY");
 
 
