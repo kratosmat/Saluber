@@ -2,7 +2,7 @@ var args = arguments[0] || {};
 
 function indietroWindow(e) {
 	//FIXME: questo su android non funziona
-	if($.listView!=null) {
+	if($.listView.getSelectedStation()!=null) {
 		$.trigger('selectedStation', {
 			selectedStation: $.listView.getSelectedStation()
 		});

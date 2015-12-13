@@ -16,13 +16,13 @@
 								<View class="view-row-separator" />
 							</View>
 						</HeaderView>
-						<Widget src="ti.ux.forms.row.picker" title="Select Specialization" pickerType="single-column" id="specializaton" icon="fa-h-square" />
+						<Widget src="ti.ux.forms.row.picker" title="Select Specialization" pickerType="single-column" id="specializaton" icon="fa-h-square" iconColor="#E74F1E" />
 						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" icon="fa-user-md" title="Select Doctor" id="doctor" hasChildren="true" />
+						<Widget src="ti.ux.rowitem" icon="fa-user-md" title="Select Doctor" id="doctor" hasChildren="true" iconColor="#E74F1E" />
 						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" icon="fa-map-marker" title="Select Location" id="location" hasChildren="true" />
+						<Widget src="ti.ux.rowitem" icon="fa-map-marker" title="Select Location" id="location" hasChildren="true" iconColor="#E74F1E" />
 						<TableViewRow><Widget src="ti.ux.spacer" height="1"/></TableViewRow>
-						<Widget src="ti.ux.rowitem" icon="fa-calendar-o" title="Select Date" id="date" hasChildren="true" />
+						<Widget src="ti.ux.rowitem" icon="fa-calendar-o" title="Select Date" id="date" hasChildren="true" iconColor="#E74F1E" />
 					</TableViewSection>				
 				</TableView>			
 			</View>

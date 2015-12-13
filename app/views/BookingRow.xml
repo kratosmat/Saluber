@@ -1,18 +1,18 @@
 <Alloy>
-	<TableViewRow className="doctorRow" backgroundColor="#E74F1E" height="80">
+	<TableViewRow className="doctorRow" height="100" >
 		<View layout="horizontal">
 			<View layout="vertical" width="Titanium.UI.FILL">
-				<View class="label-record-table">
-					<Label color="white" left="20" id="firstRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="firstRow"></Label>
 				</View>
-				<View class="label-record-table">
-					<Label color="white" left="20" id="secondRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="secondRow"></Label>
 				</View>
-				<View class="label-record-table">
-					<Label color="white" left="20" id="thirdRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="thirdRow"></Label>
 				</View>
-				<View class="label-record-table">
-					<Label color="white" left="20" id="fourthRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="fourthRow"></Label>
 				</View>
 			</View>
 		</View>	

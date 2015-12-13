@@ -3,11 +3,3 @@
 	backgroundColor: '#DFDFDF',
 	color: "black"
 },
-"#list":{	
-	width : Titanium.UI.FILL,	
-//	height: "95%",
-	backgroundColor : "white",
-	separatorColor : "grey",
-//	borderWidth : "1dp",
-//	borderColor : "grey"
-}

@@ -45,19 +45,17 @@ $.list.addEventListener("click", function(e) {
 	var source = e.source.id;
 	var station = e.row._info;
 	
-	if(source=="iconImgRowId") {
+	if(source=="iconLbl") {
 		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 			e.row.selected = false;
-			$.removeClass(e.row, 'rowSelectedClass');
-			$.addClass(e.row, 'rowUnselectedClass');
+			e.row.backgroundColor = "white";
 			selectedStation = null;
 			Ti.API.info("listStations: unselected");
 		}
 		else if(selectedStation==null) {
 			e.row.selected = true;
 			selectedStation = station.id;
-			$.addClass(e.row, 'rowSelectedClass');
-			$.removeClass(e.row, 'rowUnselectedClass');
+			e.row.backgroundColor = "#D3D3D3";
 			Ti.API.info("listStations: selected");
 		}
 	}

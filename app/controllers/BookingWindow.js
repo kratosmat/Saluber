@@ -111,6 +111,9 @@ function send(e) {
 	
 	REST.saveBooking(booking, function(response) {
 		alert(response);
+		
+		$.trigger('saved');
+		
 		if (OS_IOS){
 			$.nav.close();
 		}

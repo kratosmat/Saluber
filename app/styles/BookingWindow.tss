@@ -1,0 +1,6 @@
+
+"TableView":{
+	width : Titanium.UI.FILL,
+	backgroundColor : "white",
+	separatorColor: 'transparent'
+},

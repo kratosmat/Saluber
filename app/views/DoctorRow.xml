@@ -1,21 +1,22 @@
 <Alloy>
-	<TableViewRow className="doctorRow" height="60">
-		<View layout="horizontal">
-			<Widget src="ti.ux.iconlabel" icon="fa-check-circle" heigth="40" color="#E74F1E"/>
+	<TableViewRow className="doctorRow" height="75">
+		<View layout="horizontal" backgroundColor="white">
+			<Widget src="ti.ux.iconlabel" icon="fa-check-circle" heigth="40" color="#E74F1E" />
+			<View height="58" width="58" top="8">
+				<ImageView image="images/bleins.jpg" id="iconImgRowId" />
+			</View>
 			<View layout="vertical" width="Titanium.UI.FILL">
-				<View class="label-record-table">
-					<Label color="white" left="20" id="firstRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="firstRow"></Label>
 				</View>
-				<View class="label-record-table">
-					<Label color="white" left="20" id="secondRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="secondRow"></Label>
 				</View>
-				<View class="label-record-table">
-					<Label color="white" left="20" id="thirdRow"></Label>
+				<View class="view-record-table">
+					<Label class="label-record-table" id="thirdRow"></Label>
 				</View>
 			</View>
-			<View height="58" width="58" top="2" bottom="2">
-				<ImageView image="images/bleins.jpg" id="iconImgRowId" ></ImageView>
-			</View>
+			
 		</View>	
 	</TableViewRow>	
 </Alloy>

@@ -27,14 +27,17 @@
 	".advanced": { top: 200, layout: 'vertical' }
 		".button-advanced": { width: 150, height: 30, top: 5, backgroundColor: 'transparent', color: '#fff', font: { fontSize: 12 }, borderColor: '#fff', borderRadius: 5 }
 	
+	".calendar-date-selected": { width: 45, height: 33, top: 1, left: 0.5, backgroundColor: 'orange', borderRadius: 15 }
+		
+	
 	".calendar-week-5": { width: 45, height: 32, left: 0.5 }
 			".calendar-week-label-5": { color: 'blue', font: { fontSize: 13, fontFamily: 'HelveticaNeue-Light'} }
-		".calendar-date-5": { width: 45, height: 33, top: 0.5, left: 0.5 }
+		".calendar-date-5": { width: 45, height: 33, top: 0.5, left: 0.5, touchEnabled: false }
 			".calendar-date-label-5": { color: 'blue', font: { fontSize: 13, fontFamily: 'HelveticaNeue-Light' }, touchEnabled: false }
 			
 		".calendar-week-6": { width: 45, height: 32, left: 0.5 }
 			".calendar-week-label-6": { color: 'blue', font: { fontSize: 13, fontFamily: 'HelveticaNeue-Light'} }
-		".calendar-date-6": { width: 45, height: 33, top: 0.5, left: 0.5 }	
+		".calendar-date-6": { width: 45, height: 33, top: 0.5, left: 0.5, touchEnabled: false }	
 			".calendar-date-label-6": { color: 'blue', font: { fontSize: 13, fontFamily: 'HelveticaNeue-Light' }, touchEnabled: false }
 
 

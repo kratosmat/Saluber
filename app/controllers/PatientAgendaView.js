@@ -71,16 +71,16 @@ function selectedChange(e) {
 	
 	if(selectedDate!=null && selectedDate!=date) {
 		Ti.API.info("cancelliamo la selezione precedente");
-		$.removeClass(selectedViewDate, 'imc-calendar-date-selected');
-		$.removeClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+		$.removeClass(selectedViewDate, 'calendar-date-selected');
+		$.removeClass(selectedViewDate.children[0], 'calendar-date-selected-label');
 		selectedDate = null;
 		selectedViewDate = null;		
 	}
 	selectedDate = date;
 	selectedViewDate = view;
 	
-	$.addClass(selectedViewDate, 'imc-calendar-date-selected');
-	$.addClass(selectedViewDate.children[0], 'imc-calendar-date-selected-label');
+	$.addClass(selectedViewDate, 'calendar-date-selected');
+	$.addClass(selectedViewDate.children[0], 'calendar-date-selected-label');
 
 	createHoursTable(selectedDate.date());
 	
@@ -155,11 +155,13 @@ function dateFormatter(params) {
 
 selectedSlot = null;
 $.getSelectedSlot = function() {
-	return {
-		slotStationId: selectedSlot.stationId,
-		slotDoctorId: selectedSlot.doctorId,
-		date: selectedDate.format()
-	};
+	if(selectedSlot!=null && selectedDate!=null)
+		return {
+			slotStationId: selectedSlot.stationId,
+			slotDoctorId: selectedSlot.doctorId,
+			date: selectedDate.format()
+		};
+	else return null;
 };
 
 $.hoursTable.addEventListener("click", function(e) {	

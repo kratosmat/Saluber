@@ -7,7 +7,7 @@
 		</View>
 		
 		<Widget id="vCalendar" src="com.imobicloud.calendar" swipeable="true" onChange="calendarChange"/>
-		
+		<View height="2" backgroundColor="grey" />
 		<TableView id="hoursTable" />
 
 	</View>

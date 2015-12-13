@@ -80,11 +80,15 @@ if(Ti.App.Properties.getString('role')=='patient') {
 		bottom: "30",
 		right: "30",
 		zIndex: "9999",
-		iconColor: "green"
+		iconColor: "#E74F1E"
 	});
 	addButton.addEventListener("click", function(e) {
 		Ti.API.info("newBooking");
 		var bookingWindow = Alloy.createController("BookingWindow");
+		bookingWindow.on('saved', function(e) {
+			myRefresh(e);
+		});
+		
 		bookingWindow.getView().open();
 	});
 	

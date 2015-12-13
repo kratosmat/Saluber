@@ -75,11 +75,10 @@ overrode the settings with other TSS, XML, or JS settings:
 
 ".line": {
     height: '1dp',
-    bottom: '2dp',
+    //bottom: '2dp',
     left: '0dp',
     right: '0dp',
-    borderWidth: '1',
-    borderColor:'#aaa',
+    borderColor:'#E74F1E',
 }
 
 ".menuview[platform=ios]":{
@@ -124,13 +123,26 @@ overrode the settings with other TSS, XML, or JS settings:
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 //	borderColor: 'purple'
 },
+".view-record-table":{
+	textAlign:'left',
+    height: 25,
+    backgroundColor: "white"
+},
 ".label-record-table":{
-	color:'#000',	
+	left: "20",
+	color:'black',	
 	font:{
 		fontFamily: Alloy.CFG.fontNormal,
-		fontSize:'22dp'
+		fontSize:'14dp'
 	},
 	textAlign:'left',
     height: 20,
-    backgroundColor: "#E74F1E"
+    top: 3
+//    backgroundColor: "#E74F1E"
+},
+
+"TableView":{
+	width : Titanium.UI.FILL,
+	backgroundColor : "white",
+	separatorColor: '#E74F1E'
 },

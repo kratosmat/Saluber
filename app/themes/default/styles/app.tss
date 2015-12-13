@@ -99,7 +99,7 @@
 
 ".view-row-separator":{
 	height:0.5,
-	backgroundColor:'#eee',
+	backgroundColor:'#E74F1E',
 	bottom:0
 },
 
