@@ -4,8 +4,11 @@ var data = [];
 var rowPerPage = 10;
 
 function loadData() {
-	$.list.setData([]);
+	
 	REST.getListBookings(function(_bookings) {
+		$.list.data = null;
+		data = [];
+		$.list.setData([]);
 		data = _bookings;
 		_.each(_bookings, function(_booking, index) {
 			if(index<rowPerPage) $.list.appendRow(createRow(_booking));

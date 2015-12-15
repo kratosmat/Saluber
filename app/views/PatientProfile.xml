@@ -26,6 +26,7 @@
 					<TableViewRow id="sanitary" />
 				</TableViewSection>			
 				
+				
 				<TableViewSection>
 					<TableViewRow hasChild="true" id="cholesterol" ><Widget src="ti.ux.iconlabel" left='10' text="Cholesterol" height="30" color="#666"/></TableViewRow>
 					<TableViewRow hasChild="true" id="diabetes" ><Widget src="ti.ux.iconlabel" left='10' text="Diabete" height="30" color="#666"/></TableViewRow>

@@ -16,7 +16,6 @@
 					<Label class="label-record-table" id="thirdRow"></Label>
 				</View>
 			</View>
-			
 		</View>	
 	</TableViewRow>	
 </Alloy>
