@@ -24,9 +24,9 @@ exports.getOAuth = function(callback, username, password, isRefresh) {
         //password = Titanium.Utils.sha256(password);
         //Ti.API.debug("crud - getOAuth password cript sha= "+password);
             
-    	var url = Alloy.CFG.access_token_url + "&username=" + username + "&password=" + password;
+    	var url = Alloy.CFG.base_url + Alloy.CFG.access_token_url + "&username=" + username + "&password=" + password;
         if (isRefresh){
-            url= Alloy.CFG.refresh_token_url + "&refresh_token=" + refreshToken;
+            url= Alloy.CFG.base_url + Alloy.CFG.refresh_token_url + "&refresh_token=" + refreshToken;
             Ti.API.info("crud: getOAuth - new token refresh request "+url);
         } 
         else {
@@ -98,7 +98,7 @@ function getUserinfo(callback){
         alert ('Errore nel recupero del ruolo utente '+url+"\r\n"+this.responseText);
     };
 
-    var url = Alloy.CFG.userinfo_url + "?access_token=" + Ti.App.Properties.getString('access_token');
+    var url = Alloy.CFG.base_url +  Alloy.CFG.userinfo_url + "?access_token=" + Ti.App.Properties.getString('access_token');
     
     Ti.API.info("crud: getRole - " + url);
     httpClient.open("GET",url);

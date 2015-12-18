@@ -38,7 +38,7 @@ var getInfo = function(specificType, callback, idParameter, idValue) {
 		callback([]);
 	};
 
-	_url = Alloy.CFG.service_url + "/" + specificType +"?access_token="+ Ti.App.Properties.getString('access_token');
+	_url = Alloy.CFG.base_url + Alloy.CFG.service_url + "/" + specificType +"?access_token="+ Ti.App.Properties.getString('access_token');
 	
 	if(idParameter !== "" && idValue !== ""){
 		_url += "?" + idParameter + "=" + idValue;
@@ -88,9 +88,7 @@ function post(valueObject, url, callback){
 			//callback(this.readyState);
 	    }
 	});
-	//var url;
-	//url = Alloy.CFG.service_url + "/calendar/save_month?access_token="+ Ti.App.Properties.getString('access_token');
-    try{
+	try{
 		requestHttp.open("POST",url);
 		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 		requestHttp.send(JSON.stringify(valueObject));
@@ -116,7 +114,7 @@ var getListBookings = function(callback) {
 exports.getListBookings = getListBookings;
 
 var saveBooking = function(booking, callback) {
-	var url = Alloy.CFG.service_url + "/booking/save?access_token="+ Ti.App.Properties.getString('access_token');
+	var url = Alloy.CFG.base_url + Alloy.CFG.service_url + "/booking/save?access_token="+ Ti.App.Properties.getString('access_token');
 	post(booking, url, callback);
 };
 exports.saveBooking = saveBooking;
@@ -328,7 +326,7 @@ function saveMonth(month, callback){
 	    }
 	});
 	var url;
-	url = Alloy.CFG.service_url + "/calendar/save_month?access_token="+ Ti.App.Properties.getString('access_token');
+	url = Alloy.CFG.base_url + Alloy.CFG.service_url + "/calendar/save_month?access_token="+ Ti.App.Properties.getString('access_token');
     try{
 		requestHttp.open("POST",url);
 		requestHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");

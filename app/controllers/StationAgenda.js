@@ -18,6 +18,7 @@ function init() {
 
 function calendarChange(e) {
   	if (e.type == 'month') {
+  		selectedDate = null;
   		if(currentMonth!=null) REST.saveMonth(currentMonth, function(response) {
   			Ti.API.info("calendarChange save: " + response);
   		});

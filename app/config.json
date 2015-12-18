@@ -4,14 +4,29 @@
         "theme": "default"
     },
     "env:development": {
-        "service_url": "http://192.168.0.100:8080/saluber-services/api",
-        "service_role_url": "http://192.168.0.100:8080/saluber-services/api/security/roles",
-        "userinfo_url": "http://192.168.0.100:8080/saluber-services/api/security/userinfo",
-        "access_token_url": "http://192.168.0.100:8080/saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
-        "refresh_token_url": "http://192.168.0.100:8080/saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
+    	"base_url": "http://192.168.0.100:8080/",
+        "service_url": "saluber-services/api",
+        "service_role_url": "saluber-services/api/security/roles",
+        "userinfo_url": "saluber-services/api/security/userinfo",
+        "access_token_url": "saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
+        "refresh_token_url": "saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
     },
-    "env:test": {},
-    "env:production": {},
+    "env:test": {
+     	"base_url": "http://192.168.0.100:8080/",
+        "service_url": "saluber-services/api",
+        "service_role_url": "saluber-services/api/security/roles",
+        "userinfo_url": "saluber-services/api/security/userinfo",
+        "access_token_url": "saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
+        "refresh_token_url": "saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
+    },
+    "env:production": {
+    	"base_url": "http://192.168.0.100:8080/",
+        "service_url": "saluber-services/api",
+        "service_role_url": "saluber-services/api/security/roles",
+        "userinfo_url": "saluber-services/api/security/userinfo",
+        "access_token_url": "saluber-services/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp",
+        "refresh_token_url": "saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
+    },
     "os:android": {},
     "os:blackberry": {},
     "os:ios": {},
