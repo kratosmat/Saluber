@@ -101,3 +101,9 @@ function changeSwitchStatus(e) {
 		},200);		
 }
 
+function switchBaseurl(e) {
+	setTimeout(function() {
+		   $.base_url.setPasswordMask(!e.value);
+		},200);		
+}
+
