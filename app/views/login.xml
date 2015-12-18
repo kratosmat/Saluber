@@ -17,9 +17,13 @@
 				
 				<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" passwordMask="true" hintText="Insert Password" id="password" />
 				
+				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>
+				
+				<Widget src="ti.ux.forms.row.text" borderColor="#E74F1E" height="60" colorOnBlue="#F9D2C6" colorOnFocus="#DDDDFF" hintText="Insert base URL" id="base_url" />
+				
 				<TableViewRow backgroundColor="#FFF" height="25">
-						<Label text="View / Hide Password" right="70" />
-						<Switch id="idPasswordSwitch" right="10" value="false" onChange="changeSwitchStatus"/>
+					<Label text="View / Hide Password" right="70" />
+					<Switch id="idPasswordSwitch" right="10" value="false" onChange="changeSwitchStatus"/>
 				</TableViewRow>						
 				
 				<TableViewRow><Widget src="ti.ux.spacer" height="2" backgroundColor="#E74F1E"/></TableViewRow>

@@ -37,15 +37,21 @@ function closeWindow(){
 
 $.user.setValue(Ti.App.Properties.getString('username'));
 $.password.setValue(Ti.App.Properties.getString('password'));
+$.base_url.setValue(Alloy.CFG.base_url);
 
 function login() {
         
-    username = $.user.getValue();
-    password = $.password.getValue();
+    var username = $.user.getValue();
+    var password = $.password.getValue();
+    var base_url = $.base_url.getValue();
     
 	Ti.API.info("username: " + username);
 	Ti.API.info("password: " + password);
+	Ti.API.info("password: " + base_url);
 	
+	if(base_url!=null && base_url.length>0) {
+		Alloy.CFG.base_url = base_url;
+	}
 	
     oauth.getOAuth(function(response) {
     	Ti.App.Properties.setString('username', username);
