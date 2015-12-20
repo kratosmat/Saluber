@@ -4,7 +4,7 @@
         "theme": "default"
     },
     "env:development": {
-    	"base_url": "http://192.168.0.100:8080/",
+    	"base_url": "http://89.36.210.9:8080/",
         "service_url": "saluber-services/api",
         "service_role_url": "saluber-services/api/security/roles",
         "userinfo_url": "saluber-services/api/security/userinfo",
@@ -12,7 +12,7 @@
         "refresh_token_url": "saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
     },
     "env:test": {
-     	"base_url": "http://192.168.0.100:8080/",
+     	"base_url": "http://89.36.210.9:8080/",
         "service_url": "saluber-services/api",
         "service_role_url": "saluber-services/api/security/roles",
         "userinfo_url": "saluber-services/api/security/userinfo",
@@ -20,7 +20,7 @@
         "refresh_token_url": "saluber-services/oauth/token?grant_type=refresh_token&client_id=restapp&client_secret=restapp"
     },
     "env:production": {
-    	"base_url": "http://192.168.0.100:8080/",
+    	"base_url": "http://89.36.210.9:8080/",
         "service_url": "saluber-services/api",
         "service_role_url": "saluber-services/api/security/roles",
         "userinfo_url": "saluber-services/api/security/userinfo",

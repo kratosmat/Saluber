@@ -50,7 +50,7 @@ $.listDoctors.addEventListener("click", function(e) {
 	var source = e.source.id;
 	var doctor = e.row._info;
 	
-	if(source=="iconLbl") {
+//	if(source=="iconLbl") {
 		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 			e.row.selected = false;
 			e.row.backgroundColor = "white";
@@ -63,6 +63,7 @@ $.listDoctors.addEventListener("click", function(e) {
 			selectedDoctor = doctor.id;
 			Ti.API.info("listDoctors: selected");
 		}
+/*
 	}
 	else {
 		var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
@@ -70,7 +71,7 @@ $.listDoctors.addEventListener("click", function(e) {
 		});
 		wDoctorDetail.getView().open();
 	}
-	
+*/	
 });
 
 

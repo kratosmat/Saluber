@@ -45,7 +45,7 @@ $.list.addEventListener("click", function(e) {
 	var source = e.source.id;
 	var station = e.row._info;
 	
-	if(source=="iconLbl") {
+//	if(source=="iconLbl") {
 		if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 			e.row.selected = false;
 			e.row.backgroundColor = "white";
@@ -58,15 +58,15 @@ $.list.addEventListener("click", function(e) {
 			e.row.backgroundColor = "#D3D3D3";
 			Ti.API.info("listStations: selected");
 		}
+/*
 	}
 	else {
-		/*
 		var wDoctorDetail = Alloy.createController("WindowDoctorDetail", {
 			doctor : doctor
 		});
 		wDoctorDetail.getView().open();
-		*/
 	}
+*/
 });
 
 
