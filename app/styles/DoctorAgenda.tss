@@ -43,18 +43,3 @@
 	width: '50',
 	//borderColor: "purple"
 }
-
-".statusClass": {
-	borderColor: "purple",
-	width: Ti.UI.FILL
-}
-
-".rowHourUnselectedClass": {
-	height: 50,
-	backgroundColor: 'white',
-}
-
-".rowHourSelectedClass": {
-	height: 50,
-	backgroundColor: 'red',
-}

@@ -25,6 +25,10 @@ $.setIcon = function(codename){
 	$.iconLbl.text = fontawesome.icon(codename);	
 };
 
+$.setIconColor = function(color) {
+	$.iconLbl.color = color;
+};
+
 $.init = function(argsInit){
 
 	$.iconLbl.font = {
@@ -32,7 +36,7 @@ $.init = function(argsInit){
 		fontFamily: fontawesome.fontfamily
 	};
 
-	if(argsInit.iconColor) $.iconLbl.color = args.iconColor;
+	if(argsInit.iconColor) $.setIconColor(args.iconColor);
 	
 	if(argsInit.icon) {
 		$.iconLbl.text = fontawesome.icon(args.icon);

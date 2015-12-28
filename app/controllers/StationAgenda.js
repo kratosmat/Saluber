@@ -7,34 +7,34 @@ var currentMonth = null;
 
 init();
 function init() {
-//	$.vCalendar.init();
-//  	$.index.open();
 	$.vCalendar.init({
 		dateFormatter: dateFormatter,
 		weekFormatter: weekFormatter
 	});
 }
 
+function save(e) {
+	if(currentMonth!=null) {
+		REST.saveMonth(currentMonth, function(response) {
+			Ti.API.info("calendarChange save: " + response);
+			monthModified = false;
+		});
+	}	
+}
 
 function calendarChange(e) {
   	if (e.type == 'month') {
   		selectedDate = null;
-  		if(currentMonth!=null) REST.saveMonth(currentMonth, function(response) {
-  			Ti.API.info("calendarChange save: " + response);
-  		});
 		REST.getOrCreateMonth(e.date.year(), e.date.month()+1, function(month) {
   			currentMonth = month;
   			$.lMonth.text = e.date.format("MM-YYYY");
-  		
 	  		Ti.API.info("calendarChange " + e.date.format("MM-YYYY"));
-	  		
 	  		$.btnPrev.title = moment(e.date).subtract(1, 'months').format("MMM");
 	  		$.btnNext.title = moment(e.date).add(1, 'months').format("MMM");
 	  		$.hoursTable.setData([]);
   		});
   	} 
   	else if (e.type == 'selected') {
-  		//alert('Select ' + e.date.format("DD-MM-YYYY"));
   		selectedChange(e);
   	}
 }
@@ -140,20 +140,14 @@ $.hoursTable.addEventListener("click", function(e) {
 	if(typeof(e.row.selected)!=undefined && (e.row.selected==true)) {
 		e.row.selected = false;
 		updateMonth(e.row._slot, false);
-		e.row.backgroundColor = 'white';
+		e.row.backgroundColor = 'red';
 	}
 	else {
 		e.row.selected = true;
 		updateMonth(e.row._slot, true);
-		e.row.backgroundColor = '#D3D3D3';
+		e.row.backgroundColor = 'green';
 	}
-	
-	Ti.API.info("hoursTable: e "+JSON.stringify(e));	
 });
-
-
-
-var hours = ["8.00", "8.30", "9.00", "10.00", "10.30", "11.00", "11.30", "12.00"]; 
 
 function updateMonth(_slot, selected) {
 	Ti.API.info("updateMonth: " + JSON.stringify(_slot));
@@ -164,7 +158,6 @@ function updateMonth(_slot, selected) {
 					slot.selected = selected;
 					Ti.API.info("updateMonth: " + JSON.stringify(slot));
 				}
-				
 			});
 		});
 	}
@@ -182,7 +175,8 @@ function createHoursTable(selectedDay) {
 					
 					Ti.API.debug("createHoursTable: " + slot.id);
 					var hourView = Ti.UI.createView({
-						layout: 'horizontal'
+						layout: 'horizontal',
+						id: 'hourView'
 					});
 					var select = Alloy.createWidget("ti.ux.iconlabel", {
 						icon: "fa-check-circle",
@@ -193,19 +187,17 @@ function createHoursTable(selectedDay) {
 						left: 10,
 						top: 5,
 						width: '50',
-						//borderColor: "purple"
 					});
 					
 					var endLbl = Ti.UI.createLabel({
 						text: slot.end,
 						width: '50',
 						top: 5,
-						//borderColor: "purple"
 					});
-					var stateStation = Alloy.createWidget("ti.ux.iconlabel", {
+					var stateStation = Alloy.createWidget("ti.ux.iconfont", {
 						icon: "fa-map-marker",
 						width: 50,
-						color: (slot.selected ? 'green' : 'red')
+						color: 'black'
 					});
 					
 					hourView.add(select.getView());
@@ -215,7 +207,7 @@ function createHoursTable(selectedDay) {
 
 					var hourRow = Ti.UI.createTableViewRow({
 						height: 30,
-						backgroundColor: 'white',
+						backgroundColor: (slot.selected ? 'green' : 'red'),
 						id: slot.id,
 						_slot: slot,
 						selected: slot.selected

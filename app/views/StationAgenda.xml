@@ -12,9 +12,14 @@
 			</View>
 			
 			<Widget id="vCalendar" src="com.imobicloud.calendar" swipeable="true" onChange="calendarChange"/>
-			
+			<Toolbar>
+				<Items>
+                	<FlexSpace/>
+                	<Button id="send" title="L('SAVE')" style="Ti.UI.iPhone.SystemButtonStyle.DONE" onClick="save" />
+                	<FlexSpace />
+               </Items>
+			</Toolbar>
 			<TableView id="hoursTable" />
-
 		</View>
 	</View>
 </Alloy>

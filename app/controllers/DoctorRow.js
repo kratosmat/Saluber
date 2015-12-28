@@ -3,9 +3,9 @@ var doctor = args._doctor;
 
 Ti.API.info("doctorRow details: " + JSON.stringify(doctor));
 
-$.firstRow.text = "Dr. " + doctor.firstName + ' ' + doctor.lastName;
+$.firstRow.text = "Dr.	" + doctor.firstName + ' ' + doctor.lastName;
 $.secondRow.text = "Los Angeles CA, America";
-$.thirdRow.text = "N.Tel.: " + doctor.phone;
+$.thirdRow.text = "Tel.:	" + doctor.phone;
 $.DoctorRow.selected = false;
 $.DoctorRow._info = doctor;
 

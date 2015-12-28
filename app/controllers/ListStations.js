@@ -12,8 +12,6 @@ function loadStations() {
 		});
 		$.is.init($.listStations);
 		$.is.load();
-		
-//		$.ptr.hide();
 	});
 };
 
@@ -30,12 +28,6 @@ loadStations();
 var selectedRowIndex = -1;
 
 /*
-function myRefresh(e) {
-	Ti.API.info('refreshstart');
-	loadStations();
-}
-*/
-
 $.listStations.addEventListener("click", function(e) {	
 
 	Ti.API.info(JSON.stringify("listStations: e.row. selezionata "+JSON.stringify(e.row)));
@@ -45,11 +37,9 @@ $.listStations.addEventListener("click", function(e) {
 	});
 	wStationDetail.getView().open();
 });
-
+*/
 
 function myLoader(e) {
-	//Ti.API.info("myLoader: " + JSON.stringify(e));
-	
 	var ln = stationsData.length;
 	var nPages =  (ln % rowPerPage)==0 ? (ln - (ln % rowPerPage)) /rowPerPage : ((ln - (ln % rowPerPage)) /rowPerPage)+1;
 	

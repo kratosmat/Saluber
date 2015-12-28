@@ -3,9 +3,9 @@ var station = args._station;
 
 Ti.API.debug("row details: " + JSON.stringify(station));
 
-$.firstRow.text = "Nome: " + station.name;
-$.secondRow.text = "Indirizzo: " + station.completeAddress;
-$.thirdRow.text = "N.Room: " + station.nroom;
+$.firstRow.text = "Name:	" + station.name;
+$.secondRow.text = "Address:	" + station.completeAddress;
+$.thirdRow.text = "N.Room:	" + station.nroom;
 $.StationRow.selected = false;
 $.StationRow._info = station;
 

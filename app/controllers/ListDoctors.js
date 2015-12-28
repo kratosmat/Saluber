@@ -29,12 +29,8 @@ function createRow(doctor) {
 loadDoctors();
 
 var selectedRowIndex = -1;
+
 /*
-function myRefresh(e) {
-	Ti.API.info('refreshstart');
-	loadDoctors();
-}
-*/
 $.listDoctors.addEventListener("click", function(e) {	
 
 	Ti.API.info(JSON.stringify("listDoctors: e.row. selezionata "+JSON.stringify(e.row)));
@@ -44,11 +40,9 @@ $.listDoctors.addEventListener("click", function(e) {
 	});
 	wDoctorDetail.getView().open();
 });
-
+*/
 
 function myLoader(e) {
-	//Ti.API.info("myLoader: " + JSON.stringify(e));
-	
 	var ln = doctorsData.length;
 	var nPages =  (ln % rowPerPage)==0 ? (ln - (ln % rowPerPage)) /rowPerPage : ((ln - (ln % rowPerPage)) /rowPerPage)+1;
 	
