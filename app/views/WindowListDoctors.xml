@@ -4,6 +4,9 @@
 			<LeftNavButton>
 	      		<Button onClick="indietroWindow" title="L('BACK')"/>
 	      	</LeftNavButton>
+			<RightNavButton>
+				<Button onClick="next" title="L('NEXT')"/>
+			</RightNavButton>
 	      	<View layout="vertical" bubbleParent="false">
 				<TableView id="listDoctors" search="searchView" filterAttribute="filter" bubbleParent="false">
 					<SearchBar id="searchView" showCancel="true" hintText="L('SEARCH')" />

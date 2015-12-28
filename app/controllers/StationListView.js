@@ -29,12 +29,6 @@ loadData();
 
 var selectedRowIndex = -1;
 
-/*
-function myRefresh(e) {
-	Ti.API.info('refreshstart');
-	loadData();
-}
-*/
 var selectedStation = null;
 $.list.addEventListener("click", function(e) {	
 

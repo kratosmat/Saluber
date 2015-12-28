@@ -101,14 +101,25 @@ function myLoader(e) {
 	}
 }
 
+
 function indietroWindow() {
+	//FIXME: questo su android non funziona
+	if (OS_IOS){
+		$.nav.close();
+	}
+}
+
+function next() {
 	//FIXME: questo su android non funziona
 	if(selectedDoctor!=null) {
 		$.trigger('selectedDoctor', {
 			selectedDoctor: selectedDoctor
 		});
+		if (OS_IOS){
+			$.nav.close();
+		}
 	}
-	if (OS_IOS){
-		$.nav.close();
-	}
+	else {
+		alert(L('SELECT_A_DOCTOR'));
+	}	
 }

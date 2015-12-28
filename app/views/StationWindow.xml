@@ -5,7 +5,10 @@
             	<LeftNavButton>
 	      			<Button onClick="indietroWindow" title="L('BACK')"/>
 				</LeftNavButton>
-				<Require type="view" src="StationMapView"/>
+				<RightNavButton>
+					<Button onClick="next" title="L('NEXT')"/>
+				</RightNavButton>
+				<Require type="view" src="StationMapView" id="mapView"/>
 	      	</Window>
         </Tab>
         <Tab id="list" title="List">
@@ -13,10 +16,16 @@
             	<LeftNavButton>
 	      			<Button onClick="indietroWindow" title="L('BACK')"/>
 				</LeftNavButton>
+				<RightNavButton>
+					<Button onClick="next" title="L('NEXT')"/>
+				</RightNavButton>
 				<Require type="view" src="StationListView" id="listView"/>
             </Window>
         </Tab>
     </TabGroup>
+
+ 	<!-- ANDROID -->
+
 	<TabGroup backgroundColor="white" platform="android" >
         <Tab id="list" title="List">
             <Window id="win1" title="List">
